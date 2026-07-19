@@ -101,12 +101,6 @@ module "repo-bare-metal-usage-scripts" {
   description = "Scripts for tracking bare metal resource usage"
 }
 
-module "repo-block_on_object" {
-  source     = "./modules/common_repository"
-  name       = "block_on_object"
-  visibility = "private"
-}
-
 module "repo-ceph" {
   source      = "./modules/common_repository"
   name        = "ceph"
