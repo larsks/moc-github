@@ -13,17 +13,19 @@ module "repo-admin-tools" {
 }
 
 module "repo-ansible-k2k" {
-  source     = "./modules/common_repository"
-  name       = "ansible-k2k"
-  has_issues = false
-  archived   = true
+  source      = "./modules/common_repository"
+  name        = "ansible-k2k"
+  description = "Ansible playbook for setting up Keystone-to-Keystone federation with DevStack"
+  has_issues  = false
+  archived    = true
 }
 
 module "repo-ansible-moc-web" {
-  source     = "./modules/common_repository"
-  name       = "ansible-moc-web"
-  visibility = "private"
-  archived   = true
+  source      = "./modules/common_repository"
+  name        = "ansible-moc-web"
+  description = "Ansible playbooks for the MOC web infrastructure"
+  visibility  = "private"
+  archived    = true
 
   collaborators = {
     "xuhang57" = "push"
@@ -31,9 +33,10 @@ module "repo-ansible-moc-web" {
 }
 
 module "repo-ansible-role-httpd" {
-  source   = "./modules/common_repository"
-  name     = "ansible-role-httpd"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "ansible-role-httpd"
+  description = "Ansible role for configuring Apache HTTPD"
+  archived    = true
 
   teams = {
     "ops-core" = "push"
@@ -41,15 +44,17 @@ module "repo-ansible-role-httpd" {
 }
 
 module "repo-ansible-role-mailman" {
-  source   = "./modules/common_repository"
-  name     = "ansible-role-mailman"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "ansible-role-mailman"
+  description = "Ansible role for deploying Mailman mailing list software"
+  archived    = true
 }
 
 module "repo-ansible-role-moc-base" {
-  source   = "./modules/common_repository"
-  name     = "ansible-role-moc-base"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "ansible-role-moc-base"
+  description = "Ansible role for base configuration of MOC hosts"
+  archived    = true
 
   teams = {
     "ops-core" = "push"
@@ -57,15 +62,17 @@ module "repo-ansible-role-moc-base" {
 }
 
 module "repo-ansible-role-moc-control" {
-  source   = "./modules/common_repository"
-  name     = "ansible-role-moc-control"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "ansible-role-moc-control"
+  description = "Ansible role for configuring MOC control nodes"
+  archived    = true
 }
 
 module "repo-ansible-role-moc-firewall" {
-  source   = "./modules/common_repository"
-  name     = "ansible-role-moc-firewall"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "ansible-role-moc-firewall"
+  description = "Ansible role for configuring MOC firewall rules"
+  archived    = true
 
   teams = {
     "ops-core" = "push"
@@ -73,9 +80,10 @@ module "repo-ansible-role-moc-firewall" {
 }
 
 module "repo-ansible-role-moc-sshd" {
-  source   = "./modules/common_repository"
-  name     = "ansible-role-moc-sshd"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "ansible-role-moc-sshd"
+  description = "Ansible role for configuring SSH daemon on MOC hosts"
+  archived    = true
 
   teams = {
     "ops-core" = "push"
@@ -83,15 +91,17 @@ module "repo-ansible-role-moc-sshd" {
 }
 
 module "repo-ansible-role-podman" {
-  source   = "./modules/common_repository"
-  name     = "ansible-role-podman"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "ansible-role-podman"
+  description = "Ansible role for deploying Podman container runtime"
+  archived    = true
 }
 
 module "repo-ansible-role-repomirror" {
-  source   = "./modules/common_repository"
-  name     = "ansible-role-repomirror"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "ansible-role-repomirror"
+  description = "Ansible role for configuring RHEL repository mirrors"
+  archived    = true
 
   teams = {
     "ops-core" = "push"
@@ -99,9 +109,10 @@ module "repo-ansible-role-repomirror" {
 }
 
 module "repo-ansible-role-root-authorized-keys" {
-  source   = "./modules/common_repository"
-  name     = "ansible-role-root-authorized-keys"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "ansible-role-root-authorized-keys"
+  description = "Ansible role for managing root authorized SSH keys"
+  archived    = true
 
   teams = {
     "ops-core" = "push"
@@ -109,9 +120,10 @@ module "repo-ansible-role-root-authorized-keys" {
 }
 
 module "repo-ansible-role-systemd" {
-  source   = "./modules/common_repository"
-  name     = "ansible-role-systemd"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "ansible-role-systemd"
+  description = "Ansible role providing a systemd daemon-reload handler"
+  archived    = true
 
   teams = {
     "ops-core" = "push"
@@ -131,10 +143,11 @@ module "repo-atmosphere-ansible" {
 }
 
 module "repo-cci-moc_github_io" {
-  source     = "./modules/common_repository"
-  name       = "CCI-MOC.github.io"
-  visibility = "private"
-  archived   = true
+  source      = "./modules/common_repository"
+  name        = "CCI-MOC.github.io"
+  description = "GitHub Pages site for the CCI-MOC organization"
+  visibility  = "private"
+  archived    = true
 
   collaborators = {
     "xuhang57" = "push"
@@ -142,9 +155,10 @@ module "repo-cci-moc_github_io" {
 }
 
 module "repo-cephfs-provisioner-example" {
-  source   = "./modules/common_repository"
-  name     = "cephfs-provisioner-example"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "cephfs-provisioner-example"
+  description = "Example CephFS provisioner deployment for Kubernetes"
+  archived    = true
 }
 
 module "repo-django-giji-auth" {
@@ -159,9 +173,10 @@ module "repo-django-giji-auth" {
 }
 
 module "repo-eng1-liberty" {
-  source   = "./modules/common_repository"
-  name     = "eng1-liberty"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "eng1-liberty"
+  description = "OpenStack Liberty deployment for Engage1"
+  archived    = true
 
   collaborators = {
     "kamfonik" = "admin"
@@ -171,9 +186,10 @@ module "repo-eng1-liberty" {
 }
 
 module "repo-flocx" {
-  source   = "./modules/common_repository"
-  name     = "flocx"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "flocx"
+  description = "First Layer of the Open Cloud Exchange"
+  archived    = true
 
   teams = {
     "flocx"        = "pull"
@@ -182,9 +198,10 @@ module "repo-flocx" {
 }
 
 module "repo-flocx-design" {
-  source   = "./modules/common_repository"
-  name     = "flocx-design"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "flocx-design"
+  description = "UI designs for FLOCX and ESI"
+  archived    = true
 
   collaborators = {
     "mairin" = "push"
@@ -192,15 +209,17 @@ module "repo-flocx-design" {
 }
 
 module "repo-flocx-keystone-dev" {
-  source   = "./modules/common_repository"
-  name     = "flocx-keystone-dev"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "flocx-keystone-dev"
+  description = "Docker-based Keystone development environment for FLOCX"
+  archived    = true
 }
 
 module "repo-flocx-market" {
-  source   = "./modules/common_repository"
-  name     = "flocx-market"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "flocx-market"
+  description = "OpenStack marketplace service for FLOCX resource trading"
+  archived    = true
 
   teams = {
     "flocx"        = "pull"
@@ -209,9 +228,10 @@ module "repo-flocx-market" {
 }
 
 module "repo-flocx-matcher" {
-  source   = "./modules/common_repository"
-  name     = "flocx-matcher"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "flocx-matcher"
+  description = "Resource matching service for the FLOCX marketplace"
+  archived    = true
 
   teams = {
     "flocx"        = "pull"
@@ -220,9 +240,10 @@ module "repo-flocx-matcher" {
 }
 
 module "repo-flocx-ui" {
-  source   = "./modules/common_repository"
-  name     = "flocx-ui"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "flocx-ui"
+  description = "Horizon plugin for managing FLOCX bids, offers, and contracts"
+  archived    = true
 
   teams = {
     "flocx-owners" = "admin"
@@ -336,9 +357,10 @@ module "repo-ksproj" {
 }
 
 module "repo-kumo-leasing" {
-  source   = "./modules/common_repository"
-  name     = "kumo-leasing"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "kumo-leasing"
+  description = "Scripts for time-based node leasing and automatic release"
+  archived    = true
 }
 
 module "repo-m2" {
@@ -353,11 +375,12 @@ module "repo-m2" {
 }
 
 module "repo-moc" {
-  source     = "./modules/common_repository"
-  name       = "moc"
-  visibility = "private"
-  has_wiki   = true
-  archived   = true
+  source      = "./modules/common_repository"
+  name        = "moc"
+  description = "Private repository for sensitive MOC configuration files"
+  visibility  = "private"
+  has_wiki    = true
+  archived    = true
 
   teams = {
     "moc-readonly" = "pull"
@@ -370,39 +393,45 @@ module "repo-moc" {
 }
 
 module "repo-moc-ansible-cnv-common" {
-  source   = "./modules/common_repository"
-  name     = "moc-ansible-cnv-common"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "moc-ansible-cnv-common"
+  description = "Ansible roles for managing MOC OpenShift clusters with CNV"
+  archived    = true
 }
 
 module "repo-moc-ansible-idrac" {
-  source   = "./modules/common_repository"
-  name     = "moc-ansible-idrac"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "moc-ansible-idrac"
+  description = "Ansible playbooks for managing Dell iDRAC interfaces"
+  archived    = true
 }
 
 module "repo-moc-ansible-infra" {
-  source   = "./modules/common_repository"
-  name     = "moc-ansible-infra"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "moc-ansible-infra"
+  description = "Ansible playbooks for MOC infrastructure management"
+  archived    = true
 }
 
 module "repo-moc-ansible-inventory" {
-  source   = "./modules/common_repository"
-  name     = "moc-ansible-inventory"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "moc-ansible-inventory"
+  description = "Ansible inventory for MOC infrastructure"
+  archived    = true
 }
 
 module "repo-moc-ansible-mailman" {
-  source   = "./modules/common_repository"
-  name     = "moc-ansible-mailman"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "moc-ansible-mailman"
+  description = "Ansible collection for managing Mailman mailing lists"
+  archived    = true
 }
 
 module "repo-moc-ansible-netbox" {
-  source   = "./modules/common_repository"
-  name     = "moc-ansible-netbox"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "moc-ansible-netbox"
+  description = "Ansible playbooks for populating MOC NetBox instance"
+  archived    = true
 
   teams = {
     "ops-core" = "admin"
@@ -410,9 +439,10 @@ module "repo-moc-ansible-netbox" {
 }
 
 module "repo-moc-ansible-ops-common" {
-  source   = "./modules/common_repository"
-  name     = "moc-ansible-ops-common"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "moc-ansible-ops-common"
+  description = "Common Ansible roles for MOC operations"
+  archived    = true
 
   teams = {
     "ops-core" = "push"
@@ -420,16 +450,18 @@ module "repo-moc-ansible-ops-common" {
 }
 
 module "repo-moc-ansible-ssh" {
-  source   = "./modules/common_repository"
-  name     = "moc-ansible-ssh"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "moc-ansible-ssh"
+  description = "Ansible playbooks for SSH configuration on MOC hosts"
+  archived    = true
 }
 
 module "repo-moc-billing" {
-  source     = "./modules/common_repository"
-  name       = "moc-billing"
-  visibility = "private"
-  archived   = true
+  source      = "./modules/common_repository"
+  name        = "moc-billing"
+  description = "Flask application for MOC resource allocation and usage reporting"
+  visibility  = "private"
+  archived    = true
 
   collaborators = {
     "tiwarid" = "pull"
@@ -437,16 +469,18 @@ module "repo-moc-billing" {
 }
 
 module "repo-moc-forms" {
-  source   = "./modules/common_repository"
-  name     = "moc-forms"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "moc-forms"
+  description = "Web forms for the Mass Open Cloud"
+  archived    = true
 }
 
 module "repo-moc-prometheus" {
-  source     = "./modules/common_repository"
-  name       = "moc-prometheus"
-  visibility = "private"
-  archived   = true
+  source      = "./modules/common_repository"
+  name        = "moc-prometheus"
+  description = "Prometheus monitoring configuration for the MOC"
+  visibility  = "private"
+  archived    = true
 
   teams = {
     "monitoring" = "admin"
@@ -480,9 +514,10 @@ module "repo-moc-pyslurm" {
 }
 
 module "repo-moc-website" {
-  source   = "./modules/common_repository"
-  name     = "moc-website"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "moc-website"
+  description = "Development pipeline for the MOC WordPress website"
+  archived    = true
 
   teams = {
     "moc-website"         = "triage"
@@ -492,9 +527,10 @@ module "repo-moc-website" {
 }
 
 module "repo-mocbot-k8s" {
-  source   = "./modules/common_repository"
-  name     = "mocbot-k8s"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "mocbot-k8s"
+  description = "Kubernetes deployment for the MOC Slack bot"
+  archived    = true
 
   teams = {
     "ops-core" = "push"
@@ -533,9 +569,10 @@ module "repo-ocp-on-power9" {
 }
 
 module "repo-old-ui" {
-  source   = "./modules/common_repository"
-  name     = "old-UI"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "old-UI"
+  description = "Legacy user interface for the MOC"
+  archived    = true
 
   collaborators = {
     "lokI8" = "admin"
@@ -543,9 +580,10 @@ module "repo-old-ui" {
 }
 
 module "repo-openstack-quota-migration" {
-  source   = "./modules/common_repository"
-  name     = "openstack-quota-migration"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "openstack-quota-migration"
+  description = "Tools for migrating OpenStack quotas between environments"
+  archived    = true
 }
 
 module "repo-ore" {
@@ -584,9 +622,10 @@ module "repo-puppetlabs-openstack" {
 }
 
 module "repo-python-flocxclient" {
-  source   = "./modules/common_repository"
-  name     = "python-flocxclient"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "python-flocxclient"
+  description = "Python client for the FLOCX Market API"
+  archived    = true
 
   teams = {
     "flocx-owners"  = "admin"
@@ -604,9 +643,10 @@ module "repo-python-novaclient" {
 }
 
 module "repo-rhosp-director-config" {
-  source   = "./modules/common_repository"
-  name     = "rhosp-director-config"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "rhosp-director-config"
+  description = "Red Hat OpenStack Platform Director configuration files"
+  archived    = true
 }
 
 module "repo-service-directory" {
@@ -617,9 +657,10 @@ module "repo-service-directory" {
 }
 
 module "repo-setpass" {
-  source   = "./modules/common_repository"
-  name     = "setpass"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "setpass"
+  description = "Microservice for setting initial OpenStack user passwords"
+  archived    = true
 
   teams = {
     "moc-rw" = "pull"
@@ -627,9 +668,10 @@ module "repo-setpass" {
 }
 
 module "repo-sosreporter" {
-  source   = "./modules/common_repository"
-  name     = "sosreporter"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "sosreporter"
+  description = "Ansible playbook for automating sosreport collection"
+  archived    = true
 }
 
 module "repo-sprint-tools" {
@@ -644,9 +686,10 @@ module "repo-sprint-tools" {
 }
 
 module "repo-ui" {
-  source   = "./modules/common_repository"
-  name     = "ui"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "ui"
+  description = "Alternative OpenStack Dashboard to Horizon for the MOC"
+  archived    = true
 
   collaborators = {
     "xuhang57" = "push"
@@ -679,7 +722,8 @@ module "repo-zabbix-config" {
 }
 
 module "repo-zabbix-libvirt" {
-  source   = "./modules/common_repository"
-  name     = "zabbix-libvirt"
-  archived = true
+  source      = "./modules/common_repository"
+  name        = "zabbix-libvirt"
+  description = "Zabbix monitoring scripts for virtual machines using the libvirt API"
+  archived    = true
 }
