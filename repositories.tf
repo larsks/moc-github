@@ -1,1442 +1,1030 @@
-resource "github_repository" "repo-2020-nsf-convergence" {
-  name         = "2020-NSF-convergence"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-2020-nsf-convergence" {
+  source     = "./modules/common_repository"
+  name       = "2020-NSF-convergence"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-abmi" {
-  name         = "ABMI"
-  description  = "Agentless Bare-Metal Introspection"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-abmi" {
+  source      = "./modules/common_repository"
+  name        = "ABMI"
+  description = "Agentless Bare-Metal Introspection"
 }
 
-resource "github_repository" "repo-access-requests" {
-  name         = "access-requests"
-  description  = "Tracks issues for access requests to the environment that cannot be completed with other tools"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-access-requests" {
+  source      = "./modules/common_repository"
+  name        = "access-requests"
+  description = "Tracks issues for access requests to the environment that cannot be completed with other tools"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-account-request" {
-  name         = "Account-Request"
-  description  = "A simple server to handle account requests"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-account-request" {
+  source      = "./modules/common_repository"
+  name        = "Account-Request"
+  description = "A simple server to handle account requests"
 }
 
-resource "github_repository" "repo-adjutant" {
+module "repo-adjutant" {
+  source       = "./modules/common_repository"
   name         = "adjutant"
   description  = "A simple workflow framework to help automate admin and user tasks in and around OpenStack via a pluggable API exposing tasks made up of easily chainable actions."
-  visibility   = "public"
   has_issues   = false
-  has_projects = false
-  has_wiki     = false
   homepage_url = "http://openstack.org"
 }
 
-resource "github_repository" "repo-adjutant-moc" {
-  name         = "adjutant-moc"
-  description  = "MOC Onboarding plugin for Adjutant"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-adjutant-moc" {
+  source      = "./modules/common_repository"
+  name        = "adjutant-moc"
+  description = "MOC Onboarding plugin for Adjutant"
+  has_wiki    = true
 }
 
-resource "github_repository" "repo-ai-accelerator" {
-  name         = "ai-accelerator"
-  description  = "The AI Accelerator is a template project for setting up Red Hat OpenShift AI using GitOps"
-  visibility   = "public"
-  has_issues   = false
-  has_projects = false
-  has_wiki     = false
+module "repo-ai-accelerator" {
+  source      = "./modules/common_repository"
+  name        = "ai-accelerator"
+  description = "The AI Accelerator is a template project for setting up Red Hat OpenShift AI using GitOps"
+  has_issues  = false
 }
 
-resource "github_repository" "repo-ai-ivp" {
-  name         = "ai-ivp"
-  description  = "AI-Infrastructure Validated Pattern"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-ai-ivp" {
+  source      = "./modules/common_repository"
+  name        = "ai-ivp"
+  description = "AI-Infrastructure Validated Pattern"
 }
 
-resource "github_repository" "repo-al-folio" {
-  name         = "al-folio"
-  description  = "A beautiful, simple, clean, and responsive Jekyll theme for academics"
-  visibility   = "public"
-  has_issues   = false
-  has_projects = false
-  has_wiki     = false
-  is_template  = true
+module "repo-al-folio" {
+  source      = "./modules/common_repository"
+  name        = "al-folio"
+  description = "A beautiful, simple, clean, and responsive Jekyll theme for academics"
+  has_issues  = false
+  is_template = true
 }
 
-resource "github_repository" "repo-ansible-switches" {
-  name         = "ansible-switches"
-  description  = "Ansible site for MOC/OCT switches"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-ansible-switches" {
+  source      = "./modules/common_repository"
+  name        = "ansible-switches"
+  description = "Ansible site for MOC/OCT switches"
 }
 
-resource "github_repository" "repo-ansible-switches-auto-deploy" {
-  name         = "ansible-switches-auto-deploy"
-  description  = "Automated deployment of MOC/OCT switches on commit to ansible-switches repo"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-ansible-switches-auto-deploy" {
+  source      = "./modules/common_repository"
+  name        = "ansible-switches-auto-deploy"
+  description = "Automated deployment of MOC/OCT switches on commit to ansible-switches repo"
 }
 
-resource "github_repository" "repo-bare-metal-usage-scripts" {
-  name         = "bare-metal-usage-scripts"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-bare-metal-usage-scripts" {
+  source = "./modules/common_repository"
+  name   = "bare-metal-usage-scripts"
 }
 
-resource "github_repository" "repo-block_on_object" {
-  name         = "block_on_object"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-block_on_object" {
+  source     = "./modules/common_repository"
+  name       = "block_on_object"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-ceph" {
-  name         = "ceph"
-  description  = "Collaboration area with Redhat partner"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-ceph" {
+  source      = "./modules/common_repository"
+  name        = "ceph"
+  description = "Collaboration area with Redhat partner"
+  has_wiki    = true
 }
 
-resource "github_repository" "repo-chromogenic" {
-  name         = "chromogenic"
-  description  = "The chromogenic cloud library can be used to create machine images from instances or existing images and make them portable across providers, as well as support for exporting to localized virtualization (i.e. Virtualbox/VMware)."
-  visibility   = "public"
-  has_issues   = false
-  has_projects = false
-  has_wiki     = false
+module "repo-chromogenic" {
+  source      = "./modules/common_repository"
+  name        = "chromogenic"
+  description = "The chromogenic cloud library can be used to create machine images from instances or existing images and make them portable across providers, as well as support for exporting to localized virtualization (i.e. Virtualbox/VMware)."
+  has_issues  = false
 }
 
-resource "github_repository" "repo-cici2017" {
-  name         = "cici2017"
-  description  = "proposal"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-cici2017" {
+  source      = "./modules/common_repository"
+  name        = "cici2017"
+  description = "proposal"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-clank" {
-  name         = "clank"
-  description  = "clankity clankity clankity clank"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-clank" {
+  source      = "./modules/common_repository"
+  name        = "clank"
+  description = "clankity clankity clankity clank"
+  has_wiki    = true
 }
 
-resource "github_repository" "repo-cloud-apps" {
-  name         = "cloud-apps"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-cloud-apps" {
+  source     = "./modules/common_repository"
+  name       = "cloud-apps"
+  visibility = "private"
+  has_wiki   = true
 }
 
-resource "github_repository" "repo-cloud_dataverse" {
-  name         = "cloud_dataverse"
-  description  = "repository for papers for cloud data verse"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-cloud_dataverse" {
+  source      = "./modules/common_repository"
+  name        = "cloud_dataverse"
+  description = "repository for papers for cloud data verse"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-clouddv" {
-  name         = "cloudDV"
-  description  = "Anything Cloud Dataverse"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-clouddv" {
+  source      = "./modules/common_repository"
+  name        = "cloudDV"
+  description = "Anything Cloud Dataverse"
+  visibility  = "private"
+  has_wiki    = true
 }
 
-resource "github_repository" "repo-cloudman" {
-  name         = "cloudman"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-cloudman" {
+  source     = "./modules/common_repository"
+  name       = "cloudman"
+  visibility = "private"
+  has_wiki   = true
 }
 
-resource "github_repository" "repo-coldfront" {
+module "repo-coldfront" {
+  source       = "./modules/common_repository"
   name         = "coldfront"
   description  = "HPC Resource Allocation System"
-  visibility   = "public"
   has_issues   = false
-  has_projects = false
-  has_wiki     = false
   homepage_url = "https://coldfront.readthedocs.io"
 }
 
-resource "github_repository" "repo-coldfront-plugin-allocation-api" {
-  name         = "coldfront-plugin-allocation-api"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-coldfront-plugin-allocation-api" {
+  source = "./modules/common_repository"
+  name   = "coldfront-plugin-allocation-api"
 }
 
-resource "github_repository" "repo-curator-openshift-infra" {
-  name         = "curator-openshift-infra"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-curator-openshift-infra" {
+  source     = "./modules/common_repository"
+  name       = "curator-openshift-infra"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-curator-openshift-install" {
-  name         = "curator-openshift-install"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-curator-openshift-install" {
+  source     = "./modules/common_repository"
+  name       = "curator-openshift-install"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-dbex" {
-  name         = "dbex"
-  description  = "a DataBase EXample that reproduces dropping connections when connected using python. "
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-dbex" {
+  source      = "./modules/common_repository"
+  name        = "dbex"
+  description = "a DataBase EXample that reproduces dropping connections when connected using python. "
 }
 
-resource "github_repository" "repo-debugconnectiontimeout" {
-  name         = "debugConnectionTimeout"
-  description  = "This is a test repo to debug the connection timeout issue discovered when connecting to mariadb"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-debugconnectiontimeout" {
+  source      = "./modules/common_repository"
+  name        = "debugConnectionTimeout"
+  description = "This is a test repo to debug the connection timeout issue discovered when connecting to mariadb"
 }
 
-resource "github_repository" "repo-demo-esi-api" {
-  name         = "demo-esi-api"
-  description  = "For integrating with ESI for requesting bare metal servers"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-demo-esi-api" {
+  source      = "./modules/common_repository"
+  name        = "demo-esi-api"
+  description = "For integrating with ESI for requesting bare metal servers"
 }
 
-resource "github_repository" "repo-distro-packages" {
-  name         = "distro-packages"
-  description  = "Scripts for making distro packages for software used by the MOC"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-distro-packages" {
+  source      = "./modules/common_repository"
+  name        = "distro-packages"
+  description = "Scripts for making distro packages for software used by the MOC"
 }
 
-resource "github_repository" "repo-documentation" {
-  name         = "documentation"
-  description  = "This is where we host all MOC documentation"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-documentation" {
+  source      = "./modules/common_repository"
+  name        = "documentation"
+  description = "This is where we host all MOC documentation"
 }
 
-resource "github_repository" "repo-doe-2022-objects" {
-  name         = "DOE-2022-objects"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-doe-2022-objects" {
+  source     = "./modules/common_repository"
+  name       = "DOE-2022-objects"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-e1-metrics" {
-  name         = "e1-metrics"
-  description  = "Any source code for metrics related software of Engage1"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-e1-metrics" {
+  source      = "./modules/common_repository"
+  name        = "e1-metrics"
+  description = "Any source code for metrics related software of Engage1"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-engage1" {
-  name         = "Engage1"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-engage1" {
+  source     = "./modules/common_repository"
+  name       = "Engage1"
+  visibility = "private"
+  has_wiki   = true
 }
 
-resource "github_repository" "repo-esi" {
-  name         = "esi"
-  description  = "Elastic Secure Infrastructure project"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-esi" {
+  source      = "./modules/common_repository"
+  name        = "esi"
+  description = "Elastic Secure Infrastructure project"
 }
 
-resource "github_repository" "repo-esi-common" {
-  name         = "esi-common"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-esi-common" {
+  source = "./modules/common_repository"
+  name   = "esi-common"
 }
 
-resource "github_repository" "repo-esi-event-actions" {
-  name         = "esi-event-actions"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-esi-event-actions" {
+  source = "./modules/common_repository"
+  name   = "esi-event-actions"
 }
 
-resource "github_repository" "repo-esi-ha-config" {
-  name         = "esi-ha-config"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-esi-ha-config" {
+  source = "./modules/common_repository"
+  name   = "esi-ha-config"
 }
 
-resource "github_repository" "repo-esi-leap" {
-  name         = "esi-leap"
-  description  = "ESI lease policy manager"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-esi-leap" {
+  source      = "./modules/common_repository"
+  name        = "esi-leap"
+  description = "ESI lease policy manager"
 }
 
-resource "github_repository" "repo-esi-pilot" {
-  name         = "esi-pilot"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-esi-pilot" {
+  source = "./modules/common_repository"
+  name   = "esi-pilot"
 }
 
-resource "github_repository" "repo-esi-pilot-cluster" {
-  name         = "esi-pilot-cluster"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-esi-pilot-cluster" {
+  source     = "./modules/common_repository"
+  name       = "esi-pilot-cluster"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-esi-rally-plugin" {
-  name         = "esi-rally-plugin"
-  description  = "Contains a plugin for running ESI commands with Rally"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-esi-rally-plugin" {
+  source      = "./modules/common_repository"
+  name        = "esi-rally-plugin"
+  description = "Contains a plugin for running ESI commands with Rally"
 }
 
-resource "github_repository" "repo-esi-sandbox" {
-  name         = "esi-sandbox"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-esi-sandbox" {
+  source = "./modules/common_repository"
+  name   = "esi-sandbox"
 }
 
-resource "github_repository" "repo-esi-ui" {
-  name         = "esi-ui"
-  description  = "OpenStack Horizon plugin that supports ESI"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-esi-ui" {
+  source      = "./modules/common_repository"
+  name        = "esi-ui"
+  description = "OpenStack Horizon plugin that supports ESI"
 }
 
-resource "github_repository" "repo-esisdk" {
-  name         = "esisdk"
-  description  = "Unified SDK for ESI"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-esisdk" {
+  source      = "./modules/common_repository"
+  name        = "esisdk"
+  description = "Unified SDK for ESI"
 }
 
-resource "github_repository" "repo-everpure-moc" {
-  name         = "everpure-moc"
-  description  = "Repo housing instructions and manifests for deploying and managing Pure storage resources in the MOC"
-  visibility   = "public"
-  has_issues   = false
-  has_projects = false
-  has_wiki     = false
+module "repo-everpure-moc" {
+  source      = "./modules/common_repository"
+  name        = "everpure-moc"
+  description = "Repo housing instructions and manifests for deploying and managing Pure storage resources in the MOC"
+  has_issues  = false
 }
 
-resource "github_repository" "repo-fx2-ansible" {
-  name         = "fx2-ansible"
-  description  = "Ansible playbooks for deploying FX2 machines"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-fx2-ansible" {
+  source      = "./modules/common_repository"
+  name        = "fx2-ansible"
+  description = "Ansible playbooks for deploying FX2 machines"
 }
 
-resource "github_repository" "repo-gh-tools-image" {
-  name         = "gh-tools-image"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-gh-tools-image" {
+  source = "./modules/common_repository"
+  name   = "gh-tools-image"
 }
 
-resource "github_repository" "repo-github-event-sandbox" {
-  name         = "github-event-sandbox"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-github-event-sandbox" {
+  source = "./modules/common_repository"
+  name   = "github-event-sandbox"
 }
 
-resource "github_repository" "repo-gpfs-storage" {
-  name         = "gpfs-storage"
-  description  = "Collection of notes and scripts for IBM Scale"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-gpfs-storage" {
+  source      = "./modules/common_repository"
+  name        = "gpfs-storage"
+  description = "Collection of notes and scripts for IBM Scale"
 }
 
-resource "github_repository" "repo-haas-ui" {
-  name         = "haas-ui"
-  description  = "Django-based UI for HaaS"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-haas-ui" {
+  source      = "./modules/common_repository"
+  name        = "haas-ui"
+  description = "Django-based UI for HaaS"
 }
 
-resource "github_repository" "repo-hadhcp" {
-  name         = "hadhcp"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-hadhcp" {
+  source = "./modules/common_repository"
+  name   = "hadhcp"
 }
 
-resource "github_repository" "repo-hammerdb" {
+module "repo-hammerdb" {
+  source       = "./modules/common_repository"
   name         = "HammerDB"
   description  = "HammerDB Database Load Testing and Benchmarking Tool"
-  visibility   = "public"
   has_issues   = false
-  has_projects = false
-  has_wiki     = false
   homepage_url = "http://www.hammerdb.com"
 }
 
-resource "github_repository" "repo-horizon-onboarding" {
-  name         = "horizon-onboarding"
-  description  = "Horizon-based Dashboard for MOC Onboarding"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-horizon-onboarding" {
+  source      = "./modules/common_repository"
+  name        = "horizon-onboarding"
+  description = "Horizon-based Dashboard for MOC Onboarding"
 }
 
-resource "github_repository" "repo-hpc" {
-  name         = "hpc"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-hpc" {
+  source     = "./modules/common_repository"
+  name       = "hpc"
+  visibility = "private"
+  has_wiki   = true
 }
 
-resource "github_repository" "repo-ic-cloud-2013" {
-  name         = "ic-cloud-2013"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-ic-cloud-2013" {
+  source     = "./modules/common_repository"
+  name       = "ic-cloud-2013"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-image-workflow-example" {
-  name         = "image-workflow-example"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-image-workflow-example" {
+  source = "./modules/common_repository"
+  name   = "image-workflow-example"
 }
 
-resource "github_repository" "repo-invoicing" {
-  name         = "invoicing"
-  description  = "Invoicing system for the NERC"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-invoicing" {
+  source      = "./modules/common_repository"
+  name        = "invoicing"
+  description = "Invoicing system for the NERC"
 }
 
-resource "github_repository" "repo-invoicing-private-data" {
-  name         = "invoicing-private-data"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-invoicing-private-data" {
+  source     = "./modules/common_repository"
+  name       = "invoicing-private-data"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-issue-sandbox" {
-  name         = "issue-sandbox"
-  description  = "A place for playing around with the github api"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-issue-sandbox" {
+  source      = "./modules/common_repository"
+  name        = "issue-sandbox"
+  description = "A place for playing around with the github api"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-iucrc-stuff" {
-  name         = "iucrc-stuff"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-iucrc-stuff" {
+  source     = "./modules/common_repository"
+  name       = "iucrc-stuff"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-johonnot-pdf-to-csv" {
-  name         = "johonnot-pdf-to-csv"
-  description  = "Script to convert wipe report PDFs into a csv file"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-johonnot-pdf-to-csv" {
+  source      = "./modules/common_repository"
+  name        = "johonnot-pdf-to-csv"
+  description = "Script to convert wipe report PDFs into a csv file"
 }
 
-resource "github_repository" "repo-k-hammer" {
-  name         = "k-hammer"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-k-hammer" {
+  source = "./modules/common_repository"
+  name   = "k-hammer"
 }
 
-resource "github_repository" "repo-k2k-fed" {
-  name         = "k2k-fed"
-  description  = "k2k federation automation"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-k2k-fed" {
+  source      = "./modules/common_repository"
+  name        = "k2k-fed"
+  description = "k2k federation automation"
+  has_wiki    = true
 }
 
-resource "github_repository" "repo-k2k-proxy" {
+module "repo-k2k-proxy" {
+  source       = "./modules/common_repository"
   name         = "k2k-proxy"
   description  = "K2K-Aware Proxy for OpenStack"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
   homepage_url = "http://k2k-proxy.readthedocs.io"
 }
 
-resource "github_repository" "repo-k8s-tools-image" {
-  name         = "k8s-tools-image"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-k8s-tools-image" {
+  source = "./modules/common_repository"
+  name   = "k8s-tools-image"
 }
 
-resource "github_repository" "repo-kaizen-metrics" {
-  name         = "kaizen-metrics"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-kaizen-metrics" {
+  source     = "./modules/common_repository"
+  name       = "kaizen-metrics"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-kaizen-quota-data" {
-  name         = "kaizen-quota-data"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-kaizen-quota-data" {
+  source     = "./modules/common_repository"
+  name       = "kaizen-quota-data"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-kaizen2-configuration" {
-  name         = "kaizen2-configuration"
-  description  = "Currently this hosts the nagios configuration files. Could probably keep other configuration files."
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-kaizen2-configuration" {
+  source      = "./modules/common_repository"
+  name        = "kaizen2-configuration"
+  description = "Currently this hosts the nagios configuration files. Could probably keep other configuration files."
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-keystone-migration" {
-  name         = "keystone-migration"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-keystone-migration" {
+  source = "./modules/common_repository"
+  name   = "keystone-migration"
 }
 
-resource "github_repository" "repo-logstash-config" {
-  name         = "logstash-config"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-logstash-config" {
+  source = "./modules/common_repository"
+  name   = "logstash-config"
 }
 
-resource "github_repository" "repo-lsvd-atc24" {
-  name         = "lsvd-atc24"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-lsvd-atc24" {
+  source     = "./modules/common_repository"
+  name       = "lsvd-atc24"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-lsvd-rbd" {
-  name         = "lsvd-rbd"
-  description  = "Log Structured Virtual Disk"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-lsvd-rbd" {
+  source      = "./modules/common_repository"
+  name        = "lsvd-rbd"
+  description = "Log Structured Virtual Disk"
+  has_wiki    = true
 }
 
-resource "github_repository" "repo-lsvd-research" {
-  name         = "lsvd-research"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-lsvd-research" {
+  source     = "./modules/common_repository"
+  name       = "lsvd-research"
+  visibility = "private"
+  has_wiki   = true
 }
 
-resource "github_repository" "repo-macs" {
-  name         = "macs"
-  description  = "Notes and other stuff for MACs/OpenStack security research"
-  visibility   = "private"
-  has_issues   = false
-  has_projects = false
-  has_wiki     = true
+module "repo-macs" {
+  source      = "./modules/common_repository"
+  name        = "macs"
+  description = "Notes and other stuff for MACs/OpenStack security research"
+  visibility  = "private"
+  has_issues  = false
+  has_wiki    = true
 }
 
-resource "github_repository" "repo-mariadb-nese-test" {
-  name         = "mariadb-nese-test"
-  description  = "Docker files for mariadb tests with NESE"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-mariadb-nese-test" {
+  source      = "./modules/common_repository"
+  name        = "mariadb-nese-test"
+  description = "Docker files for mariadb tests with NESE"
 }
 
-resource "github_repository" "repo-mghpcc" {
-  name         = "MGHPCC"
-  visibility   = "public"
-  has_issues   = false
-  has_projects = false
-  has_wiki     = false
+module "repo-mghpcc" {
+  source     = "./modules/common_repository"
+  name       = "MGHPCC"
+  has_issues = false
 }
 
-resource "github_repository" "repo-mghpcc-cablelength-calculator" {
-  name         = "mghpcc-cablelength-calculator"
-  description  = "JS app to calculate cable length between racks"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-mghpcc-cablelength-calculator" {
+  source      = "./modules/common_repository"
+  name        = "mghpcc-cablelength-calculator"
+  description = "JS app to calculate cable length between racks"
 }
 
-resource "github_repository" "repo-mlsc" {
-  name         = "mlsc"
-  description  = "mslc operations"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-mlsc" {
+  source      = "./modules/common_repository"
+  name        = "mlsc"
+  description = "mslc operations"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-moc-apps" {
+module "repo-moc-apps" {
+  source                 = "./modules/common_repository"
   name                   = "moc-apps"
   description            = "ArgoCD applications deployed on MOC managed OpenShift clusters"
-  visibility             = "public"
-  has_issues             = true
-  has_projects           = false
-  has_wiki               = false
   allow_auto_merge       = true
   delete_branch_on_merge = true
 }
 
-resource "github_repository" "repo-moc-aws" {
-  name         = "moc-aws"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-aws" {
+  source = "./modules/common_repository"
+  name   = "moc-aws"
 }
 
-resource "github_repository" "repo-moc-dns" {
-  name         = "moc-dns"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-dns" {
+  source = "./modules/common_repository"
+  name   = "moc-dns"
 }
 
-resource "github_repository" "repo-moc-esi-network-config" {
-  name         = "moc-esi-network-config"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-esi-network-config" {
+  source = "./modules/common_repository"
+  name   = "moc-esi-network-config"
 }
 
-resource "github_repository" "repo-moc-iam" {
-  name         = "moc-iam"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-iam" {
+  source     = "./modules/common_repository"
+  name       = "moc-iam"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-moc-infra-config" {
-  name         = "moc-infra-config"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-infra-config" {
+  source = "./modules/common_repository"
+  name   = "moc-infra-config"
 }
 
-resource "github_repository" "repo-moc-inventory-dev" {
-  name         = "moc-inventory-dev"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-inventory-dev" {
+  source = "./modules/common_repository"
+  name   = "moc-inventory-dev"
 }
 
-resource "github_repository" "repo-moc-inventory-prod" {
-  name         = "moc-inventory-prod"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-inventory-prod" {
+  source = "./modules/common_repository"
+  name   = "moc-inventory-prod"
 }
 
-resource "github_repository" "repo-moc-issues" {
-  name         = "MOC-issues"
-  description  = "MOC is moving away from non NIST HIPAA compliant platforms and therefore we need a fresh start to help keep track of work post non NIST HIPAA compliant platforms"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
-  template {
+module "repo-moc-issues" {
+  source      = "./modules/common_repository"
+  name        = "MOC-issues"
+  description = "MOC is moving away from non NIST HIPAA compliant platforms and therefore we need a fresh start to help keep track of work post non NIST HIPAA compliant platforms"
+  template = {
     owner      = "CCI-MOC"
     repository = "moc-template"
   }
 }
 
-resource "github_repository" "repo-moc-labels" {
-  name         = "moc-labels"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-labels" {
+  source = "./modules/common_repository"
+  name   = "moc-labels"
 }
 
-resource "github_repository" "repo-moc-nerc-migration-image" {
-  name         = "moc-nerc-migration-image"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-nerc-migration-image" {
+  source = "./modules/common_repository"
+  name   = "moc-nerc-migration-image"
 }
 
-resource "github_repository" "repo-moc-openshift-projects" {
+module "repo-moc-openshift-projects" {
+  source           = "./modules/common_repository"
   name             = "moc-openshift-projects"
   visibility       = "private"
-  has_issues       = true
-  has_projects     = false
-  has_wiki         = false
   allow_auto_merge = true
 }
 
-resource "github_repository" "repo-moc-openshift-tools" {
-  name         = "moc-openshift-tools"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-moc-openshift-tools" {
+  source     = "./modules/common_repository"
+  name       = "moc-openshift-tools"
+  visibility = "private"
+  has_wiki   = true
 }
 
-resource "github_repository" "repo-moc-openstack-tools" {
-  name         = "moc-openstack-tools"
-  description  = "Tools for OpenStack administration, user/project management, etc."
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-openstack-tools" {
+  source      = "./modules/common_repository"
+  name        = "moc-openstack-tools"
+  description = "Tools for OpenStack administration, user/project management, etc."
 }
 
-resource "github_repository" "repo-moc-openstackwatcher" {
-  name         = "moc-OpenstackWatcher"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-openstackwatcher" {
+  source     = "./modules/common_repository"
+  name       = "moc-OpenstackWatcher"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-moc-project-api-spec" {
-  name         = "moc-project-api-spec"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-project-api-spec" {
+  source = "./modules/common_repository"
+  name   = "moc-project-api-spec"
 }
 
-resource "github_repository" "repo-moc-project-tool" {
+module "repo-moc-project-tool" {
+  source           = "./modules/common_repository"
   name             = "moc-project-tool"
-  visibility       = "public"
-  has_issues       = true
-  has_projects     = false
-  has_wiki         = false
   allow_auto_merge = true
 }
 
-resource "github_repository" "repo-moc-status" {
-  name         = "moc-status"
-  visibility   = "public"
-  has_issues   = false
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-status" {
+  source     = "./modules/common_repository"
+  name       = "moc-status"
+  has_issues = false
 }
 
-resource "github_repository" "repo-moc-switch-ansible" {
-  name         = "moc-switch-ansible"
-  description  = "Ansible playbooks for network switches"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-switch-ansible" {
+  source      = "./modules/common_repository"
+  name        = "moc-switch-ansible"
+  description = "Ansible playbooks for network switches"
 }
 
-resource "github_repository" "repo-moc-template" {
-  name         = "moc-template"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
-  is_template  = true
+module "repo-moc-template" {
+  source      = "./modules/common_repository"
+  name        = "moc-template"
+  is_template = true
 }
 
-resource "github_repository" "repo-moc-wordpress" {
-  name         = "moc-wordpress"
-  description  = "MOC Wordpress site"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-wordpress" {
+  source      = "./modules/common_repository"
+  name        = "moc-wordpress"
+  description = "MOC Wordpress site"
 }
 
-resource "github_repository" "repo-moc-wp-plugin" {
-  name         = "moc-wp-plugin"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc-wp-plugin" {
+  source = "./modules/common_repository"
+  name   = "moc-wp-plugin"
 }
 
-resource "github_repository" "repo-moc_theme" {
-  name         = "moc_theme"
-  description  = "Horizon theme"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-moc_theme" {
+  source      = "./modules/common_repository"
+  name        = "moc_theme"
+  description = "Horizon theme"
 }
 
-resource "github_repository" "repo-moca-requests" {
+module "repo-moca-requests" {
+  source       = "./modules/common_repository"
   name         = "moca-requests"
   description  = "Technical support requests for MOCA projects and services"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
   homepage_url = "https://massopen.cloud/"
 }
 
-resource "github_repository" "repo-mocmon" {
-  name         = "mocmon"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-mocmon" {
+  source     = "./modules/common_repository"
+  name       = "mocmon"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-mocosppuppet" {
-  name         = "MOCOSPpuppet"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-mocosppuppet" {
+  source = "./modules/common_repository"
+  name   = "MOCOSPpuppet"
 }
 
-resource "github_repository" "repo-nerc-bmh" {
-  name         = "nerc-bmh"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-nerc-bmh" {
+  source = "./modules/common_repository"
+  name   = "nerc-bmh"
 }
 
-resource "github_repository" "repo-nerc-ocp-config" {
+module "repo-nerc-ocp-config" {
+  source       = "./modules/common_repository"
   name         = "nerc-ocp-config"
   description  = "Configuration of NERC OpenShift clusters"
-  visibility   = "public"
   has_issues   = false
-  has_projects = false
-  has_wiki     = false
   homepage_url = "https://nerc.mghpcc.org"
 }
 
-resource "github_repository" "repo-nerc-rates" {
-  name         = "nerc-rates"
-  description  = "Rates and invoicing configuration for the NERC"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
-  template {
+module "repo-nerc-rates" {
+  source      = "./modules/common_repository"
+  name        = "nerc-rates"
+  description = "Rates and invoicing configuration for the NERC"
+  template = {
     owner      = "CCI-MOC"
     repository = "moc-template"
   }
 }
 
-resource "github_repository" "repo-netbox-ansible" {
-  name         = "netbox-ansible"
-  description  = "Ansible site to keep netbox up-to-date"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-netbox-ansible" {
+  source      = "./modules/common_repository"
+  name        = "netbox-ansible"
+  description = "Ansible site to keep netbox up-to-date"
 }
 
-resource "github_repository" "repo-netbox-docker-plugins" {
+module "repo-netbox-docker-plugins" {
+  source       = "./modules/common_repository"
   name         = "netbox-docker-plugins"
   description  = "🐳  Docker Image of NetBox, with MOC plugins included"
-  visibility   = "public"
   has_issues   = false
-  has_projects = false
-  has_wiki     = false
   homepage_url = "https://github.com/netbox-community/netbox-docker/wiki"
 }
 
-resource "github_repository" "repo-netbox-sync" {
-  name         = "netbox-sync"
-  description  = "Script to sync two netbox sites for specific cabinets"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-netbox-sync" {
+  source      = "./modules/common_repository"
+  name        = "netbox-sync"
+  description = "Script to sync two netbox sites for specific cabinets"
 }
 
-resource "github_repository" "repo-netbox-topology" {
-  name         = "netbox-topology"
-  description  = "Image from https://github.com/netbox-community/netbox-docker extended with topology plugin"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-netbox-topology" {
+  source      = "./modules/common_repository"
+  name        = "netbox-topology"
+  description = "Image from https://github.com/netbox-community/netbox-docker extended with topology plugin"
 }
 
-resource "github_repository" "repo-network-runner" {
-  name         = "network-runner"
-  description  = "Ansible Network Runner"
-  visibility   = "public"
-  has_issues   = false
-  has_projects = false
-  has_wiki     = false
+module "repo-network-runner" {
+  source      = "./modules/common_repository"
+  name        = "network-runner"
+  description = "Ansible Network Runner"
+  has_issues  = false
 }
 
-resource "github_repository" "repo-networking-ansible" {
-  name         = "networking-ansible"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-networking-ansible" {
+  source = "./modules/common_repository"
+  name   = "networking-ansible"
 }
 
-resource "github_repository" "repo-notmonero" {
-  name         = "notmonero"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-notmonero" {
+  source     = "./modules/common_repository"
+  name       = "notmonero"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-nsf-13-602" {
-  name         = "NSF-13-602"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-nsf-13-602" {
+  source     = "./modules/common_repository"
+  name       = "NSF-13-602"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-nsf-18-531" {
-  name         = "NSF-18-531"
-  visibility   = "private"
-  has_issues   = false
-  has_projects = false
-  has_wiki     = false
+module "repo-nsf-18-531" {
+  source     = "./modules/common_repository"
+  name       = "NSF-18-531"
+  visibility = "private"
+  has_issues = false
 }
 
-resource "github_repository" "repo-nsf-19-512-open-cloudlab" {
-  name         = "NSF-19-512-Open-CloudLab"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-nsf-19-512-open-cloudlab" {
+  source     = "./modules/common_repository"
+  name       = "NSF-19-512-Open-CloudLab"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-nsf-ccc" {
-  name         = "NSF-CCC"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-nsf-ccc" {
+  source     = "./modules/common_repository"
+  name       = "NSF-CCC"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-objects-for-all" {
-  name         = "objects-for-all"
-  description  = "Grant proposal 2019"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-objects-for-all" {
+  source      = "./modules/common_repository"
+  name        = "objects-for-all"
+  description = "Grant proposal 2019"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-ocp-nerc-storage-tests" {
-  name         = "ocp-nerc-storage-tests"
-  description  = "Manifests for Storage Tests run on NERC Infra"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-ocp-nerc-storage-tests" {
+  source      = "./modules/common_repository"
+  name        = "ocp-nerc-storage-tests"
+  description = "Manifests for Storage Tests run on NERC Infra"
 }
 
-resource "github_repository" "repo-ocp-prod-clusterwide-entitlements" {
-  name         = "ocp-prod-clusterwide-entitlements"
-  description  = "Holds the necessary configuration for creating clusterwide entitlements on ocp-prod openshift cluster "
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-ocp-prod-clusterwide-entitlements" {
+  source      = "./modules/common_repository"
+  name        = "ocp-prod-clusterwide-entitlements"
+  description = "Holds the necessary configuration for creating clusterwide entitlements on ocp-prod openshift cluster "
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-ocp-prod-openshift-install" {
-  name         = "ocp-prod-openshift-install"
-  description  = "Holds the necessary files required for our production OCP installation"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-ocp-prod-openshift-install" {
+  source      = "./modules/common_repository"
+  name        = "ocp-prod-openshift-install"
+  description = "Holds the necessary files required for our production OCP installation"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-oct-powermon" {
-  name         = "oct-powermon"
-  description  = "Files for OCT power monitoring"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-oct-powermon" {
+  source      = "./modules/common_repository"
+  name        = "oct-powermon"
+  description = "Files for OCT power monitoring"
 }
 
-resource "github_repository" "repo-ocx-library" {
-  name         = "ocx-library"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-ocx-library" {
+  source = "./modules/common_repository"
+  name   = "ocx-library"
 }
 
-resource "github_repository" "repo-onboarding-tools" {
-  name         = "onboarding-tools"
-  description  = "Tools and testing for MOC Onboarding."
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-onboarding-tools" {
+  source      = "./modules/common_repository"
+  name        = "onboarding-tools"
+  description = "Tools and testing for MOC Onboarding."
 }
 
-resource "github_repository" "repo-openshift" {
-  name         = "openshift"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-openshift" {
+  source     = "./modules/common_repository"
+  name       = "openshift"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-openshift-acct-mgt" {
-  name         = "openshift-acct-mgt"
-  description  = "REST API for managing Users, Namespaces and ResourceQuotas on OpenShift"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-openshift-acct-mgt" {
+  source      = "./modules/common_repository"
+  name        = "openshift-acct-mgt"
+  description = "REST API for managing Users, Namespaces and ResourceQuotas on OpenShift"
 }
 
-resource "github_repository" "repo-openshift-rev-proxy" {
-  name         = "openshift-rev-proxy"
-  description  = "This is a reverse proxy server to do 2way authentication"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-openshift-rev-proxy" {
+  source      = "./modules/common_repository"
+  name        = "openshift-rev-proxy"
+  description = "This is a reverse proxy server to do 2way authentication"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-openshift-schemas" {
-  name         = "openshift-schemas"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-openshift-schemas" {
+  source = "./modules/common_repository"
+  name   = "openshift-schemas"
 }
 
-resource "github_repository" "repo-openshift-usage-scripts" {
+module "repo-openshift-usage-scripts" {
+  source              = "./modules/common_repository"
   name                = "openshift-usage-scripts"
-  visibility          = "public"
-  has_issues          = true
-  has_projects        = false
-  has_wiki            = false
   allow_update_branch = true
 }
 
-resource "github_repository" "repo-openstack-billing-from-db" {
-  name         = "openstack-billing-from-db"
-  description  = "Simple billing from the database"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-openstack-billing-from-db" {
+  source      = "./modules/common_repository"
+  name        = "openstack-billing-from-db"
+  description = "Simple billing from the database"
 }
 
-resource "github_repository" "repo-openstack-validation" {
-  name         = "openstack-validation"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-openstack-validation" {
+  source = "./modules/common_repository"
+  name   = "openstack-validation"
 }
 
-resource "github_repository" "repo-ops-docs" {
-  name         = "ops-docs"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-ops-docs" {
+  source = "./modules/common_repository"
+  name   = "ops-docs"
 }
 
-resource "github_repository" "repo-ops-issues" {
+module "repo-ops-issues" {
+  source          = "./modules/common_repository"
   name            = "ops-issues"
-  visibility      = "public"
-  has_issues      = true
-  has_projects    = false
-  has_wiki        = false
   has_discussions = true
 }
 
-resource "github_repository" "repo-ops-private" {
-  name         = "ops-private"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-ops-private" {
+  source     = "./modules/common_repository"
+  name       = "ops-private"
+  visibility = "private"
+  has_wiki   = true
 }
 
-resource "github_repository" "repo-osprofiler" {
+module "repo-osprofiler" {
+  source       = "./modules/common_repository"
   name         = "osprofiler"
   description  = "OpenStack cross service/project profiler"
-  visibility   = "public"
   has_issues   = false
-  has_projects = false
-  has_wiki     = false
   homepage_url = "http://openstack.org"
 }
 
-resource "github_repository" "repo-ovirt-scripts" {
-  name         = "ovirt-scripts"
-  description  = "Repository to store our ovirt/rhev related configuration files and scripts."
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-ovirt-scripts" {
+  source      = "./modules/common_repository"
+  name        = "ovirt-scripts"
+  description = "Repository to store our ovirt/rhev related configuration files and scripts."
 }
 
-resource "github_repository" "repo-ovirt-servers" {
-  name         = "ovirt-servers"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-ovirt-servers" {
+  source = "./modules/common_repository"
+  name   = "ovirt-servers"
 }
 
-resource "github_repository" "repo-papers" {
-  name         = "papers"
-  visibility   = "private"
-  has_issues   = false
-  has_projects = false
-  has_wiki     = false
+module "repo-papers" {
+  source     = "./modules/common_repository"
+  name       = "papers"
+  visibility = "private"
+  has_issues = false
 }
 
-resource "github_repository" "repo-partner_y3" {
-  name         = "partner_y3"
-  description  = "1 page reports to partners for end of year 3"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-partner_y3" {
+  source      = "./modules/common_repository"
+  name        = "partner_y3"
+  description = "1 page reports to partners for end of year 3"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-pfsense-firewall-ansible" {
-  name         = "pfsense-firewall-ansible"
-  description  = "Ansible playbooks to manage our pfsense firewalls"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-pfsense-firewall-ansible" {
+  source      = "./modules/common_repository"
+  name        = "pfsense-firewall-ansible"
+  description = "Ansible playbooks to manage our pfsense firewalls"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-pfsense-tools" {
-  name         = "pfsense-tools"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-pfsense-tools" {
+  source = "./modules/common_repository"
+  name   = "pfsense-tools"
 }
 
-resource "github_repository" "repo-postgres-k8s-example" {
-  name         = "postgres-k8s-example"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-postgres-k8s-example" {
+  source = "./modules/common_repository"
+  name   = "postgres-k8s-example"
 }
 
-resource "github_repository" "repo-prototype-reporting" {
-  name         = "prototype-reporting"
-  description  = "A prototype reporting project"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-prototype-reporting" {
+  source      = "./modules/common_repository"
+  name        = "prototype-reporting"
+  description = "A prototype reporting project"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-pvc-obc-example" {
-  name         = "pvc-obc-example"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-pvc-obc-example" {
+  source = "./modules/common_repository"
+  name   = "pvc-obc-example"
 }
 
-resource "github_repository" "repo-python-esiclient" {
+module "repo-python-esiclient" {
+  source           = "./modules/common_repository"
   name             = "python-esiclient"
-  visibility       = "public"
-  has_issues       = true
-  has_projects     = false
-  has_wiki         = false
   allow_auto_merge = true
 }
 
-resource "github_repository" "repo-python-esiclient-1" {
-  name         = "python-esiclient-1"
-  visibility   = "public"
-  has_issues   = false
-  has_projects = false
-  has_wiki     = false
+module "repo-python-esiclient-1" {
+  source     = "./modules/common_repository"
+  name       = "python-esiclient-1"
+  has_issues = false
 }
 
-resource "github_repository" "repo-python-esileapclient" {
-  name         = "python-esileapclient"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-python-esileapclient" {
+  source = "./modules/common_repository"
+  name   = "python-esileapclient"
 }
 
-resource "github_repository" "repo-quotes" {
-  name         = "quotes"
-  description  = "Quotes for MOC Alliance"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-quotes" {
+  source      = "./modules/common_repository"
+  name        = "quotes"
+  description = "Quotes for MOC Alliance"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-racadm-scripts" {
-  name         = "racadm-scripts"
-  description  = "Some scripts for Dell machine provisioning using racadm"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-racadm-scripts" {
+  source      = "./modules/common_repository"
+  name        = "racadm-scripts"
+  description = "Some scripts for Dell machine provisioning using racadm"
 }
 
-resource "github_repository" "repo-repomirror-rhel-6" {
-  name         = "repomirror-rhel-6"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-repomirror-rhel-6" {
+  source = "./modules/common_repository"
+  name   = "repomirror-rhel-6"
 }
 
-resource "github_repository" "repo-reporting" {
-  name         = "reporting"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-reporting" {
+  source = "./modules/common_repository"
+  name   = "reporting"
 }
 
-resource "github_repository" "repo-rfi-iarpa-seccloud-17" {
-  name         = "RFI-iarpa-seccloud-17"
-  description  = "response to RFI from IARPA-RFI-17-04"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-rfi-iarpa-seccloud-17" {
+  source      = "./modules/common_repository"
+  name        = "RFI-iarpa-seccloud-17"
+  description = "response to RFI from IARPA-RFI-17-04"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-rhosp-13-post-deploy" {
-  name         = "rhosp-13-post-deploy"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-rhosp-13-post-deploy" {
+  source = "./modules/common_repository"
+  name   = "rhosp-13-post-deploy"
 }
 
-resource "github_repository" "repo-roce-testing" {
-  name         = "roce-testing"
-  description  = "Testing scripts for RoCE in the MOC/NERC"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-roce-testing" {
+  source      = "./modules/common_repository"
+  name        = "roce-testing"
+  description = "Testing scripts for RoCE in the MOC/NERC"
 }
 
-resource "github_repository" "repo-rubicon-issues" {
-  name         = "rubicon-issues"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-rubicon-issues" {
+  source   = "./modules/common_repository"
+  name     = "rubicon-issues"
+  has_wiki = true
 }
 
-resource "github_repository" "repo-rucs-paper" {
-  name         = "RUCS-Paper"
-  description  = "RUCS paper"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-rucs-paper" {
+  source      = "./modules/common_repository"
+  name        = "RUCS-Paper"
+  description = "RUCS paper"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-seccloud" {
-  name         = "seccloud"
-  description  = "Secure Cloud stuff"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-seccloud" {
+  source      = "./modules/common_repository"
+  name        = "seccloud"
+  description = "Secure Cloud stuff"
+  visibility  = "private"
 }
 
-resource "github_repository" "repo-seccloud_13" {
-  name         = "seccloud_13"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-seccloud_13" {
+  source     = "./modules/common_repository"
+  name       = "seccloud_13"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-sensu-checks" {
-  name         = "sensu-checks"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-sensu-checks" {
+  source     = "./modules/common_repository"
+  name       = "sensu-checks"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-service-tag-lookup" {
-  name         = "service-tag-lookup"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-service-tag-lookup" {
+  source = "./modules/common_repository"
+  name   = "service-tag-lookup"
 }
 
-resource "github_repository" "repo-sprint-notes" {
-  name         = "sprint-notes"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-sprint-notes" {
+  source     = "./modules/common_repository"
+  name       = "sprint-notes"
+  visibility = "private"
 }
 
-resource "github_repository" "repo-sso" {
+module "repo-sso" {
+  source       = "./modules/common_repository"
   name         = "sso"
   description  = "Ansible automation for deployment of SSO"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
   has_wiki     = true
   homepage_url = "https://sso.massopen.cloud"
 }
 
-resource "github_repository" "repo-storage-benchmarks" {
-  name         = "storage-benchmarks"
-  description  = "Measuring NERC storage performance"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-storage-benchmarks" {
+  source      = "./modules/common_repository"
+  name        = "storage-benchmarks"
+  description = "Measuring NERC storage performance"
+  has_wiki    = true
 }
 
-resource "github_repository" "repo-tracing" {
-  name         = "tracing"
-  visibility   = "private"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = true
+module "repo-tracing" {
+  source     = "./modules/common_repository"
+  name       = "tracing"
+  visibility = "private"
+  has_wiki   = true
 }
 
-resource "github_repository" "repo-virtual-desktop-docs" {
-  name         = "virtual-desktop-docs"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-virtual-desktop-docs" {
+  source = "./modules/common_repository"
+  name   = "virtual-desktop-docs"
 }
 
-resource "github_repository" "repo-virtualbmc" {
-  name         = "virtualbmc"
-  visibility   = "public"
-  has_issues   = true
-  has_projects = false
-  has_wiki     = false
+module "repo-virtualbmc" {
+  source = "./modules/common_repository"
+  name   = "virtualbmc"
 }
