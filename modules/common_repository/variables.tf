@@ -69,3 +69,15 @@ variable "template" {
   })
   default = null
 }
+
+variable "teams" {
+  description = "Map of team slug to permission level (e.g. {\"my-team\" = \"push\"})"
+  type        = map(string)
+  default     = {}
+}
+
+variable "collaborators" {
+  description = "Map of GitHub username to permission level (e.g. {\"username\" = \"push\"})"
+  type        = map(string)
+  default     = {}
+}
