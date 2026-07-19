@@ -24,12 +24,20 @@ module "repo-ansible-moc-web" {
   name       = "ansible-moc-web"
   visibility = "private"
   archived   = true
+
+  collaborators = {
+    "xuhang57" = "push"
+  }
 }
 
 module "repo-ansible-role-httpd" {
   source   = "./modules/common_repository"
   name     = "ansible-role-httpd"
   archived = true
+
+  teams = {
+    "ops-core" = "push"
+  }
 }
 
 module "repo-ansible-role-mailman" {
@@ -42,6 +50,10 @@ module "repo-ansible-role-moc-base" {
   source   = "./modules/common_repository"
   name     = "ansible-role-moc-base"
   archived = true
+
+  teams = {
+    "ops-core" = "push"
+  }
 }
 
 module "repo-ansible-role-moc-control" {
@@ -54,12 +66,20 @@ module "repo-ansible-role-moc-firewall" {
   source   = "./modules/common_repository"
   name     = "ansible-role-moc-firewall"
   archived = true
+
+  teams = {
+    "ops-core" = "push"
+  }
 }
 
 module "repo-ansible-role-moc-sshd" {
   source   = "./modules/common_repository"
   name     = "ansible-role-moc-sshd"
   archived = true
+
+  teams = {
+    "ops-core" = "push"
+  }
 }
 
 module "repo-ansible-role-podman" {
@@ -72,18 +92,30 @@ module "repo-ansible-role-repomirror" {
   source   = "./modules/common_repository"
   name     = "ansible-role-repomirror"
   archived = true
+
+  teams = {
+    "ops-core" = "push"
+  }
 }
 
 module "repo-ansible-role-root-authorized-keys" {
   source   = "./modules/common_repository"
   name     = "ansible-role-root-authorized-keys"
   archived = true
+
+  teams = {
+    "ops-core" = "push"
+  }
 }
 
 module "repo-ansible-role-systemd" {
   source   = "./modules/common_repository"
   name     = "ansible-role-systemd"
   archived = true
+
+  teams = {
+    "ops-core" = "push"
+  }
 }
 
 module "repo-atmosphere-ansible" {
@@ -92,6 +124,10 @@ module "repo-atmosphere-ansible" {
   description = "Ansible instance deployment code for Atmosphere"
   has_issues  = false
   archived    = true
+
+  collaborators = {
+    "xuhang57" = "push"
+  }
 }
 
 module "repo-cci-moc_github_io" {
@@ -99,6 +135,10 @@ module "repo-cci-moc_github_io" {
   name       = "CCI-MOC.github.io"
   visibility = "private"
   archived   = true
+
+  collaborators = {
+    "xuhang57" = "push"
+  }
 }
 
 module "repo-cephfs-provisioner-example" {
@@ -112,24 +152,43 @@ module "repo-django-giji-auth" {
   name        = "django-giji-auth"
   description = "Support Keystone Auth in GIJI"
   archived    = true
+
+  collaborators = {
+    "xuhang57" = "push"
+  }
 }
 
 module "repo-eng1-liberty" {
   source   = "./modules/common_repository"
   name     = "eng1-liberty"
   archived = true
+
+  collaborators = {
+    "kamfonik" = "admin"
+    "lokI8" = "admin"
+    "rahulait" = "admin"
+  }
 }
 
 module "repo-flocx" {
   source   = "./modules/common_repository"
   name     = "flocx"
   archived = true
+
+  teams = {
+    "flocx" = "pull"
+    "flocx-owners" = "admin"
+  }
 }
 
 module "repo-flocx-design" {
   source   = "./modules/common_repository"
   name     = "flocx-design"
   archived = true
+
+  collaborators = {
+    "mairin" = "push"
+  }
 }
 
 module "repo-flocx-keystone-dev" {
@@ -142,18 +201,33 @@ module "repo-flocx-market" {
   source   = "./modules/common_repository"
   name     = "flocx-market"
   archived = true
+
+  teams = {
+    "flocx" = "pull"
+    "flocx-owners" = "admin"
+  }
 }
 
 module "repo-flocx-matcher" {
   source   = "./modules/common_repository"
   name     = "flocx-matcher"
   archived = true
+
+  teams = {
+    "flocx" = "pull"
+    "flocx-owners" = "admin"
+  }
 }
 
 module "repo-flocx-ui" {
   source   = "./modules/common_repository"
   name     = "flocx-ui"
   archived = true
+
+  teams = {
+    "flocx-owners" = "admin"
+    "flocx-workers" = "push"
+  }
 }
 
 module "repo-giji-backend" {
@@ -162,6 +236,10 @@ module "repo-giji-backend" {
   description  = "GIJI API Server"
   archived     = true
   homepage_url = "https://giji.massopen.cloud"
+
+  collaborators = {
+    "xuhang57" = "push"
+  }
 }
 
 module "repo-giji-frontend" {
@@ -170,6 +248,10 @@ module "repo-giji-frontend" {
   description  = "GIJI  web client"
   archived     = true
   homepage_url = "https://giji.massopen.cloud"
+
+  collaborators = {
+    "xuhang57" = "push"
+  }
 }
 
 module "repo-giji-rtwo" {
@@ -177,6 +259,10 @@ module "repo-giji-rtwo" {
   name        = "giji-rtwo"
   description = "a unified interface into multiple cloud providers."
   archived    = true
+
+  collaborators = {
+    "xuhang57" = "push"
+  }
 }
 
 module "repo-gui-backend" {
@@ -184,6 +270,10 @@ module "repo-gui-backend" {
   name        = "GUI-Backend"
   description = "MOC simple GUI built on top of Atmosphere "
   archived    = true
+
+  collaborators = {
+    "xuhang57" = "admin"
+  }
 }
 
 module "repo-gui-frontend" {
@@ -191,6 +281,10 @@ module "repo-gui-frontend" {
   name        = "GUI-Frontend"
   description = "MOC simple GUI built on top of Troposphere"
   archived    = true
+
+  collaborators = {
+    "xuhang57" = "admin"
+  }
 }
 
 module "repo-hil" {
@@ -199,6 +293,11 @@ module "repo-hil" {
   description = "Hardware Isolation Layer, formerly Hardware as a Service"
   has_wiki    = true
   archived    = true
+
+  teams = {
+    "haas-rw" = "push"
+    "hil-affil" = "pull"
+  }
 }
 
 module "repo-hil-vpn" {
@@ -206,6 +305,10 @@ module "repo-hil-vpn" {
   name        = "hil-vpn"
   description = "vpn microservice for use with HIL"
   archived    = true
+
+  teams = {
+    "haas-rw" = "pull"
+  }
 }
 
 module "repo-kilo-puppet" {
@@ -213,6 +316,16 @@ module "repo-kilo-puppet" {
   name        = "kilo-puppet"
   description = "Puppet modules to configure openstack kilo"
   archived    = true
+
+  collaborators = {
+    "LeonLee88" = "pull"
+    "anuj-rt" = "pull"
+    "genagain" = "pull"
+    "kamfonik" = "admin"
+    "lokI8" = "admin"
+    "qqli" = "pull"
+    "rahulait" = "admin"
+  }
 }
 
 module "repo-ksproj" {
@@ -234,6 +347,10 @@ module "repo-m2" {
   name        = "m2"
   description = "Bare Metal Imaging (Malleable Metal as a Service)"
   archived    = true
+
+  teams = {
+    "haas-rw" = "pull"
+  }
 }
 
 module "repo-moc" {
@@ -242,6 +359,15 @@ module "repo-moc" {
   visibility = "private"
   has_wiki   = true
   archived   = true
+
+  teams = {
+    "moc-readonly" = "pull"
+    "moc-rw" = "push"
+  }
+  collaborators = {
+    "portante" = "push"
+    "tiwarid" = "pull"
+  }
 }
 
 module "repo-moc-ansible-cnv-common" {
@@ -278,12 +404,20 @@ module "repo-moc-ansible-netbox" {
   source   = "./modules/common_repository"
   name     = "moc-ansible-netbox"
   archived = true
+
+  teams = {
+    "ops-core" = "admin"
+  }
 }
 
 module "repo-moc-ansible-ops-common" {
   source   = "./modules/common_repository"
   name     = "moc-ansible-ops-common"
   archived = true
+
+  teams = {
+    "ops-core" = "push"
+  }
 }
 
 module "repo-moc-ansible-ssh" {
@@ -297,6 +431,10 @@ module "repo-moc-billing" {
   name       = "moc-billing"
   visibility = "private"
   archived   = true
+
+  collaborators = {
+    "tiwarid" = "pull"
+  }
 }
 
 module "repo-moc-forms" {
@@ -310,6 +448,10 @@ module "repo-moc-prometheus" {
   name       = "moc-prometheus"
   visibility = "private"
   archived   = true
+
+  teams = {
+    "monitoring" = "admin"
+  }
 }
 
 module "repo-moc-public" {
@@ -319,6 +461,11 @@ module "repo-moc-public" {
   has_wiki     = true
   archived     = true
   homepage_url = "http://massopencloud.org/"
+
+  teams = {
+    "moc-rw" = "push"
+    "white-paper" = "push"
+  }
 }
 
 module "repo-moc-pyslurm" {
@@ -327,18 +474,32 @@ module "repo-moc-pyslurm" {
   description  = "Python Interface to Slurm"
   archived     = true
   homepage_url = "https://slurm.schedmd.com"
+
+  collaborators = {
+    "xuhang57" = "push"
+  }
 }
 
 module "repo-moc-website" {
   source   = "./modules/common_repository"
   name     = "moc-website"
   archived = true
+
+  teams = {
+    "moc-website" = "triage"
+    "moc-website-owners" = "admin"
+    "moc-website-workers" = "push"
+  }
 }
 
 module "repo-mocbot-k8s" {
   source   = "./modules/common_repository"
   name     = "mocbot-k8s"
   archived = true
+
+  teams = {
+    "ops-core" = "push"
+  }
 }
 
 module "repo-nova" {
@@ -355,6 +516,10 @@ module "repo-obmd" {
   name        = "obmd"
   description = "OBM management microservice for use with HIL"
   archived    = true
+
+  teams = {
+    "haas-rw" = "push"
+  }
 }
 
 module "repo-ocp-on-power9" {
@@ -362,12 +527,20 @@ module "repo-ocp-on-power9" {
   name        = "ocp-on-power9"
   description = " OCP on Power 9 IL Project"
   archived    = true
+
+  teams = {
+    "rubicon" = "maintain"
+  }
 }
 
 module "repo-old-ui" {
   source   = "./modules/common_repository"
   name     = "old-UI"
   archived = true
+
+  collaborators = {
+    "lokI8" = "admin"
+  }
 }
 
 module "repo-openstack-quota-migration" {
@@ -389,6 +562,10 @@ module "repo-puppet-csail-examples" {
   description = "a redacted version of puppet bits from CSAIL's Openstack deploy"
   visibility  = "private"
   archived    = true
+
+  teams = {
+    "csail" = "admin"
+  }
 }
 
 module "repo-puppet-internal" {
@@ -411,6 +588,12 @@ module "repo-python-flocxclient" {
   source   = "./modules/common_repository"
   name     = "python-flocxclient"
   archived = true
+
+  teams = {
+    "flocx-owners" = "admin"
+    "flocx-viewers" = "pull"
+    "flocx-workers" = "push"
+  }
 }
 
 module "repo-python-novaclient" {
@@ -439,6 +622,10 @@ module "repo-setpass" {
   source   = "./modules/common_repository"
   name     = "setpass"
   archived = true
+
+  teams = {
+    "moc-rw" = "pull"
+  }
 }
 
 module "repo-sosreporter" {
@@ -452,12 +639,20 @@ module "repo-sprint-tools" {
   name        = "sprint-tools"
   description = "Task automation for MOC sprint planning"
   archived    = true
+
+  teams = {
+    "ops-core" = "admin"
+  }
 }
 
 module "repo-ui" {
   source   = "./modules/common_repository"
   name     = "ui"
   archived = true
+
+  collaborators = {
+    "xuhang57" = "push"
+  }
 }
 
 module "repo-xdmod-cntr" {
@@ -465,6 +660,10 @@ module "repo-xdmod-cntr" {
   name        = "xdmod-cntr"
   description = "A project to prototype the use of XDMOD with OpenStack and OpenShift on the MOC"
   archived    = true
+
+  teams = {
+    "ops-core" = "admin"
+  }
 }
 
 module "repo-zabbix-ceph" {
