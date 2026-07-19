@@ -1,5 +1,7 @@
 #!/bin/bash
 
+: "${GITHUB_ORG:=CCI-MOC}"
+
 log() {
   level=$1
   shift
@@ -40,17 +42,17 @@ managed_teams=$(
 
 log info "finding github repositories"
 github_repositories=$(
-  gh api --paginate /orgs/cci-moc/repos | jq '.[]|.name' -r | sort
+  gh api --paginate "/orgs/${GITHUB_ORG}/repos" | jq '.[]|.name' -r | sort
 )
 
 log info "finding github members"
 github_members=$(
-  gh api --paginate /orgs/cci-moc/members | jq '.[]|.login' -r | sort
+  gh api --paginate "/orgs/${GITHUB_ORG}/members" | jq '.[]|.login' -r | sort
 )
 
 log info "finding github teams"
 github_teams=$(
-  gh api --paginate /orgs/cci-moc/teams | jq '.[]|.slug' -r | sort
+  gh api --paginate "/orgs/${GITHUB_ORG}/teams" | jq '.[]|.slug' -r | sort
 )
 
 unmanaged_repositories=$(comm -13 <(echo "$managed_repositories") <(echo "$github_repositories"))
