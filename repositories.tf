@@ -1,7 +1,8 @@
 module "repo-2020-nsf-convergence" {
-  source     = "./modules/common_repository"
-  name       = "2020-NSF-convergence"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "2020-NSF-convergence"
+  description = "NSF 2020 Convergence Accelerator proposal materials"
+  visibility  = "private"
 
   collaborators = {
     "kolaczyk-bu" = "admin"
@@ -21,7 +22,7 @@ module "repo-access-requests" {
   visibility  = "private"
 
   teams = {
-    "ai-ivp" = "triage"
+    "ai-ivp"                   = "triage"
     "ai-ivp-bastion-reviewers" = "maintain"
   }
 }
@@ -64,9 +65,9 @@ module "repo-ai-ivp" {
   description = "AI-Infrastructure Validated Pattern"
 
   teams = {
-    "ai-ivp" = "maintain"
+    "ai-ivp"          = "maintain"
     "external-triage" = "triage"
-    "redhat" = "maintain"
+    "redhat"          = "maintain"
   }
 }
 
@@ -95,8 +96,9 @@ module "repo-ansible-switches-auto-deploy" {
 }
 
 module "repo-bare-metal-usage-scripts" {
-  source = "./modules/common_repository"
-  name   = "bare-metal-usage-scripts"
+  source      = "./modules/common_repository"
+  name        = "bare-metal-usage-scripts"
+  description = "Scripts for tracking bare metal resource usage"
 }
 
 module "repo-block_on_object" {
@@ -131,8 +133,8 @@ module "repo-cici2017" {
 
   collaborators = {
     "frederickjansen" = "push"
-    "lapets" = "push"
-    "mercecrosas" = "push"
+    "lapets"          = "push"
+    "mercecrosas"     = "push"
   }
 }
 
@@ -148,10 +150,11 @@ module "repo-clank" {
 }
 
 module "repo-cloud-apps" {
-  source     = "./modules/common_repository"
-  name       = "cloud-apps"
-  visibility = "private"
-  has_wiki   = true
+  source      = "./modules/common_repository"
+  name        = "cloud-apps"
+  description = "Research on science and HPC application performance in cloud environments"
+  visibility  = "private"
+  has_wiki    = true
 }
 
 module "repo-cloud_dataverse" {
@@ -178,10 +181,11 @@ module "repo-clouddv" {
 }
 
 module "repo-cloudman" {
-  source     = "./modules/common_repository"
-  name       = "cloudman"
-  visibility = "private"
-  has_wiki   = true
+  source      = "./modules/common_repository"
+  name        = "cloudman"
+  description = "Cloud manager for provisioning and managing compute clusters on cloud infrastructure"
+  visibility  = "private"
+  has_wiki    = true
 }
 
 module "repo-coldfront" {
@@ -193,20 +197,23 @@ module "repo-coldfront" {
 }
 
 module "repo-coldfront-plugin-allocation-api" {
-  source = "./modules/common_repository"
-  name   = "coldfront-plugin-allocation-api"
+  source      = "./modules/common_repository"
+  name        = "coldfront-plugin-allocation-api"
+  description = "ColdFront plugin providing an allocation API"
 }
 
 module "repo-curator-openshift-infra" {
-  source     = "./modules/common_repository"
-  name       = "curator-openshift-infra"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "curator-openshift-infra"
+  description = "OpenShift infrastructure management using Curator"
+  visibility  = "private"
 }
 
 module "repo-curator-openshift-install" {
-  source     = "./modules/common_repository"
-  name       = "curator-openshift-install"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "curator-openshift-install"
+  description = "OpenShift installation automation using Curator"
+  visibility  = "private"
 }
 
 module "repo-dbex" {
@@ -244,9 +251,10 @@ module "repo-documentation" {
 }
 
 module "repo-doe-2022-objects" {
-  source     = "./modules/common_repository"
-  name       = "DOE-2022-objects"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "DOE-2022-objects"
+  description = "DOE 2022 object storage proposal materials"
+  visibility  = "private"
 
   collaborators = {
     "trachten" = "push"
@@ -265,10 +273,11 @@ module "repo-e1-metrics" {
 }
 
 module "repo-engage1" {
-  source     = "./modules/common_repository"
-  name       = "Engage1"
-  visibility = "private"
-  has_wiki   = true
+  source      = "./modules/common_repository"
+  name        = "Engage1"
+  description = "Engage1 project collaboration and documentation"
+  visibility  = "private"
+  has_wiki    = true
 
   teams = {
     "engage1" = "push"
@@ -281,36 +290,38 @@ module "repo-esi" {
   description = "Elastic Secure Infrastructure project"
 
   teams = {
-    "esi" = "push"
-    "esi-core" = "admin"
+    "esi"         = "push"
+    "esi-core"    = "admin"
     "esi-viewers" = "push"
-    "nercdev" = "pull"
-    "ops-collab" = "triage"
-    "redhat" = "maintain"
+    "nercdev"     = "pull"
+    "ops-collab"  = "triage"
+    "redhat"      = "maintain"
   }
   collaborators = {
-    "aayushi363" = "push"
-    "rd4398" = "push"
-    "samuel-zuk" = "push"
+    "aayushi363"  = "push"
+    "rd4398"      = "push"
+    "samuel-zuk"  = "push"
     "sheldor1510" = "push"
   }
 }
 
 module "repo-esi-common" {
-  source = "./modules/common_repository"
-  name   = "esi-common"
+  source      = "./modules/common_repository"
+  name        = "esi-common"
+  description = "Shared OpenStack library for the ESI project"
 
   teams = {
-    "esi-core" = "admin"
-    "flocx" = "pull"
+    "esi-core"     = "admin"
+    "flocx"        = "pull"
     "flocx-owners" = "admin"
-    "redhat" = "maintain"
+    "redhat"       = "maintain"
   }
 }
 
 module "repo-esi-event-actions" {
-  source = "./modules/common_repository"
-  name   = "esi-event-actions"
+  source      = "./modules/common_repository"
+  name        = "esi-event-actions"
+  description = "Event listener that runs scripts in response to messaging queue events"
 
   teams = {
     "redhat" = "maintain"
@@ -318,8 +329,9 @@ module "repo-esi-event-actions" {
 }
 
 module "repo-esi-ha-config" {
-  source = "./modules/common_repository"
-  name   = "esi-ha-config"
+  source      = "./modules/common_repository"
+  name        = "esi-ha-config"
+  description = "High availability configuration for ESI"
 
   teams = {
     "redhat" = "maintain"
@@ -332,34 +344,36 @@ module "repo-esi-leap" {
   description = "ESI lease policy manager"
 
   teams = {
-    "esi-core" = "admin"
+    "esi-core"       = "admin"
     "esi-leap-admin" = "admin"
-    "flocx" = "pull"
-    "flocx-owners" = "admin"
-    "ops-core" = "push"
-    "redhat" = "maintain"
+    "flocx"          = "pull"
+    "flocx-owners"   = "admin"
+    "ops-core"       = "push"
+    "redhat"         = "maintain"
   }
 }
 
 module "repo-esi-pilot" {
-  source = "./modules/common_repository"
-  name   = "esi-pilot"
+  source      = "./modules/common_repository"
+  name        = "esi-pilot"
+  description = "Configuration and scripts for the ESI pilot deployment"
 
   teams = {
-    "esi-core" = "admin"
+    "esi-core"    = "admin"
     "esi-workers" = "maintain"
-    "ops-core" = "push"
-    "redhat" = "maintain"
+    "ops-core"    = "push"
+    "redhat"      = "maintain"
   }
 }
 
 module "repo-esi-pilot-cluster" {
-  source     = "./modules/common_repository"
-  name       = "esi-pilot-cluster"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "esi-pilot-cluster"
+  description = "ESI pilot cluster deployment configuration"
+  visibility  = "private"
 
   teams = {
-    "esi" = "admin"
+    "esi"    = "admin"
     "redhat" = "maintain"
   }
 }
@@ -375,12 +389,13 @@ module "repo-esi-rally-plugin" {
 }
 
 module "repo-esi-sandbox" {
-  source = "./modules/common_repository"
-  name   = "esi-sandbox"
+  source      = "./modules/common_repository"
+  name        = "esi-sandbox"
+  description = "Standalone TripleO deployment for ESI development and testing"
 
   teams = {
     "esi-core" = "admin"
-    "redhat" = "maintain"
+    "redhat"   = "maintain"
   }
 }
 
@@ -418,13 +433,15 @@ module "repo-fx2-ansible" {
 }
 
 module "repo-gh-tools-image" {
-  source = "./modules/common_repository"
-  name   = "gh-tools-image"
+  source      = "./modules/common_repository"
+  name        = "gh-tools-image"
+  description = "Container image with tools for managing GitHub repositories"
 }
 
 module "repo-github-event-sandbox" {
-  source = "./modules/common_repository"
-  name   = "github-event-sandbox"
+  source      = "./modules/common_repository"
+  name        = "github-event-sandbox"
+  description = "Sandbox for testing GitHub event webhooks"
 }
 
 module "repo-gpfs-storage" {
@@ -440,8 +457,9 @@ module "repo-haas-ui" {
 }
 
 module "repo-hadhcp" {
-  source = "./modules/common_repository"
-  name   = "hadhcp"
+  source      = "./modules/common_repository"
+  name        = "hadhcp"
+  description = "Highly available DHCP service using ISC DHCPd"
 }
 
 module "repo-hammerdb" {
@@ -459,10 +477,11 @@ module "repo-horizon-onboarding" {
 }
 
 module "repo-hpc" {
-  source     = "./modules/common_repository"
-  name       = "hpc"
-  visibility = "private"
-  has_wiki   = true
+  source      = "./modules/common_repository"
+  name        = "hpc"
+  description = "HPC infrastructure planning and documentation"
+  visibility  = "private"
+  has_wiki    = true
 
   teams = {
     "moc-hpc" = "push"
@@ -470,14 +489,16 @@ module "repo-hpc" {
 }
 
 module "repo-ic-cloud-2013" {
-  source     = "./modules/common_repository"
-  name       = "ic-cloud-2013"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "ic-cloud-2013"
+  visibility  = "private"
+  description = "Towards a Cloud Marketplace paper"
 }
 
 module "repo-image-workflow-example" {
-  source = "./modules/common_repository"
-  name   = "image-workflow-example"
+  source      = "./modules/common_repository"
+  name        = "image-workflow-example"
+  description = "Example of automated Docker image building and tagging with GitHub workflows"
 }
 
 module "repo-invoicing" {
@@ -486,23 +507,24 @@ module "repo-invoicing" {
   description = "Invoicing system for the NERC"
 
   teams = {
-    "moc-openshift-people" = "triage"
+    "moc-openshift-people"     = "triage"
     "open-source-contributors" = "triage"
-    "ops-core" = "maintain"
+    "ops-core"                 = "maintain"
   }
 }
 
 module "repo-invoicing-private-data" {
-  source     = "./modules/common_repository"
-  name       = "invoicing-private-data"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "invoicing-private-data"
+  description = "Private billing exclusion data for NERC invoicing"
+  visibility  = "private"
 
   teams = {
-    "mghpcc" = "push"
-    "nercdev" = "push"
-    "nercpis" = "pull"
+    "mghpcc"                   = "push"
+    "nercdev"                  = "push"
+    "nercpis"                  = "pull"
     "open-source-contributors" = "pull"
-    "ops-core" = "maintain"
+    "ops-core"                 = "maintain"
   }
 }
 
@@ -514,9 +536,10 @@ module "repo-issue-sandbox" {
 }
 
 module "repo-iucrc-stuff" {
-  source     = "./modules/common_repository"
-  name       = "iucrc-stuff"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "iucrc-stuff"
+  description = "IUCRC project materials and documentation"
+  visibility  = "private"
 }
 
 module "repo-johonnot-pdf-to-csv" {
@@ -526,8 +549,9 @@ module "repo-johonnot-pdf-to-csv" {
 }
 
 module "repo-k-hammer" {
-  source = "./modules/common_repository"
-  name   = "k-hammer"
+  source      = "./modules/common_repository"
+  name        = "k-hammer"
+  description = "Kubernetes jobs for running HammerDB database benchmarks"
 }
 
 module "repo-k2k-fed" {
@@ -549,20 +573,23 @@ module "repo-k2k-proxy" {
 }
 
 module "repo-k8s-tools-image" {
-  source = "./modules/common_repository"
-  name   = "k8s-tools-image"
+  source      = "./modules/common_repository"
+  name        = "k8s-tools-image"
+  description = "Container image with Kubernetes and OpenShift management tools"
 }
 
 module "repo-kaizen-metrics" {
-  source     = "./modules/common_repository"
-  name       = "kaizen-metrics"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "kaizen-metrics"
+  description = "OpenStack usage metrics and charts for the Kaizen cluster"
+  visibility  = "private"
 }
 
 module "repo-kaizen-quota-data" {
-  source     = "./modules/common_repository"
-  name       = "kaizen-quota-data"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "kaizen-quota-data"
+  description = "Quota data for the Kaizen OpenStack cluster"
+  visibility  = "private"
 }
 
 module "repo-kaizen2-configuration" {
@@ -573,19 +600,22 @@ module "repo-kaizen2-configuration" {
 }
 
 module "repo-keystone-migration" {
-  source = "./modules/common_repository"
-  name   = "keystone-migration"
+  source      = "./modules/common_repository"
+  name        = "keystone-migration"
+  description = "Tools for migrating users between Keystone installations"
 }
 
 module "repo-logstash-config" {
-  source = "./modules/common_repository"
-  name   = "logstash-config"
+  source      = "./modules/common_repository"
+  name        = "logstash-config"
+  description = "Logstash configuration files for log aggregation"
 }
 
 module "repo-lsvd-atc24" {
-  source     = "./modules/common_repository"
-  name       = "lsvd-atc24"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "lsvd-atc24"
+  description = "LSVD paper submission for USENIX ATC 2024"
+  visibility  = "private"
 }
 
 module "repo-lsvd-rbd" {
@@ -595,7 +625,7 @@ module "repo-lsvd-rbd" {
   has_wiki    = true
 
   teams = {
-    "ops-core" = "push"
+    "ops-core"         = "push"
     "storage-research" = "maintain"
   }
   collaborators = {
@@ -604,10 +634,11 @@ module "repo-lsvd-rbd" {
 }
 
 module "repo-lsvd-research" {
-  source     = "./modules/common_repository"
-  name       = "lsvd-research"
-  visibility = "private"
-  has_wiki   = true
+  source      = "./modules/common_repository"
+  name        = "lsvd-research"
+  description = "Research papers and experimental scripts for LSVD"
+  visibility  = "private"
+  has_wiki    = true
 
   teams = {
     "storage-research" = "maintain"
@@ -623,12 +654,12 @@ module "repo-macs" {
   has_wiki    = true
 
   teams = {
-    "macs" = "push"
+    "macs"   = "push"
     "moc-rw" = "pull"
   }
   collaborators = {
-    "henn" = "push"
-    "kamfonik" = "push"
+    "henn"      = "push"
+    "kamfonik"  = "push"
     "kylehogan" = "push"
   }
 }
@@ -640,9 +671,10 @@ module "repo-mariadb-nese-test" {
 }
 
 module "repo-mghpcc" {
-  source     = "./modules/common_repository"
-  name       = "MGHPCC"
-  has_issues = false
+  source      = "./modules/common_repository"
+  name        = "MGHPCC"
+  description = "Scripts for collecting and archiving MassDOT data feeds at MGHPCC"
+  has_issues  = false
 }
 
 module "repo-mghpcc-cablelength-calculator" {
@@ -671,13 +703,15 @@ module "repo-moc-apps" {
 }
 
 module "repo-moc-aws" {
-  source = "./modules/common_repository"
-  name   = "moc-aws"
+  source      = "./modules/common_repository"
+  name        = "moc-aws"
+  description = "OpenTofu management of AWS resources for the Mass Open Cloud"
 }
 
 module "repo-moc-dns" {
-  source = "./modules/common_repository"
-  name   = "moc-dns"
+  source      = "./modules/common_repository"
+  name        = "moc-dns"
+  description = "DNS configuration for the Mass Open Cloud"
 
   teams = {
     "ops-core" = "admin"
@@ -685,30 +719,34 @@ module "repo-moc-dns" {
 }
 
 module "repo-moc-esi-network-config" {
-  source = "./modules/common_repository"
-  name   = "moc-esi-network-config"
+  source      = "./modules/common_repository"
+  name        = "moc-esi-network-config"
+  description = "Ansible playbook for connecting ESI private networks to floating IPs"
 }
 
 module "repo-moc-iam" {
-  source     = "./modules/common_repository"
-  name       = "moc-iam"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "moc-iam"
+  description = "AWS IAM configuration for the Mass Open Cloud"
+  visibility  = "private"
 }
 
 module "repo-moc-infra-config" {
-  source = "./modules/common_repository"
-  name   = "moc-infra-config"
+  source      = "./modules/common_repository"
+  name        = "moc-infra-config"
+  description = "ArgoCD applications for the MOC-managed moc-infra OpenShift cluster"
 
   teams = {
-    "moc-openshift-people" = "push"
+    "moc-openshift-people"     = "push"
     "open-source-contributors" = "triage"
-    "ops-core" = "push"
+    "ops-core"                 = "push"
   }
 }
 
 module "repo-moc-inventory-dev" {
-  source = "./modules/common_repository"
-  name   = "moc-inventory-dev"
+  source      = "./modules/common_repository"
+  name        = "moc-inventory-dev"
+  description = "Ansible inventory for MOC development environment"
 
   teams = {
     "ops-core" = "push"
@@ -716,8 +754,9 @@ module "repo-moc-inventory-dev" {
 }
 
 module "repo-moc-inventory-prod" {
-  source = "./modules/common_repository"
-  name   = "moc-inventory-prod"
+  source      = "./modules/common_repository"
+  name        = "moc-inventory-prod"
+  description = "Ansible inventory for MOC production environment"
 
   teams = {
     "ops-core" = "push"
@@ -734,18 +773,19 @@ module "repo-moc-issues" {
   }
 
   teams = {
-    "ai-ivp" = "maintain"
+    "ai-ivp"                   = "maintain"
     "ai-ivp-bastion-reviewers" = "push"
-    "marcomm" = "triage"
-    "ops-collab" = "triage"
-    "ops-core" = "pull"
-    "redhat" = "maintain"
+    "marcomm"                  = "triage"
+    "ops-collab"               = "triage"
+    "ops-core"                 = "pull"
+    "redhat"                   = "maintain"
   }
 }
 
 module "repo-moc-labels" {
-  source = "./modules/common_repository"
-  name   = "moc-labels"
+  source      = "./modules/common_repository"
+  name        = "moc-labels"
+  description = "GitHub issue and PR label taxonomy with automated application"
 
   teams = {
     "ops-core" = "push"
@@ -753,27 +793,30 @@ module "repo-moc-labels" {
 }
 
 module "repo-moc-nerc-migration-image" {
-  source = "./modules/common_repository"
-  name   = "moc-nerc-migration-image"
+  source      = "./modules/common_repository"
+  name        = "moc-nerc-migration-image"
+  description = "Scripts to build an image for OpenStack volume migrations"
 }
 
 module "repo-moc-openshift-projects" {
   source           = "./modules/common_repository"
   name             = "moc-openshift-projects"
+  description      = "Project management for the MOC production OpenShift cluster"
   visibility       = "private"
   allow_auto_merge = true
 
   teams = {
     "moc-project-makers" = "push"
-    "ops-core" = "maintain"
+    "ops-core"           = "maintain"
   }
 }
 
 module "repo-moc-openshift-tools" {
-  source     = "./modules/common_repository"
-  name       = "moc-openshift-tools"
-  visibility = "private"
-  has_wiki   = true
+  source      = "./modules/common_repository"
+  name        = "moc-openshift-tools"
+  description = "Scripts and configurations for OpenShift setup and maintenance"
+  visibility  = "private"
+  has_wiki    = true
 }
 
 module "repo-moc-openstack-tools" {
@@ -783,31 +826,35 @@ module "repo-moc-openstack-tools" {
 }
 
 module "repo-moc-openstackwatcher" {
-  source     = "./modules/common_repository"
-  name       = "moc-OpenstackWatcher"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "moc-OpenstackWatcher"
+  description = "OpenStack resource monitoring and alerting"
+  visibility  = "private"
 
   collaborators = {
     "thaorell" = "pull"
-    "tiwarid" = "pull"
+    "tiwarid"  = "pull"
   }
 }
 
 module "repo-moc-project-api-spec" {
-  source = "./modules/common_repository"
-  name   = "moc-project-api-spec"
+  source      = "./modules/common_repository"
+  name        = "moc-project-api-spec"
+  description = "OpenAPI specification for a project management API"
 }
 
 module "repo-moc-project-tool" {
   source           = "./modules/common_repository"
   name             = "moc-project-tool"
+  description      = "Ansible tool for managing OpenShift projects, quotas, and groups"
   allow_auto_merge = true
 }
 
 module "repo-moc-status" {
-  source     = "./modules/common_repository"
-  name       = "moc-status"
-  has_issues = false
+  source      = "./modules/common_repository"
+  name        = "moc-status"
+  description = "MOC service status page"
+  has_issues  = false
 
   teams = {
     "ops-core" = "push"
@@ -823,6 +870,7 @@ module "repo-moc-switch-ansible" {
 module "repo-moc-template" {
   source      = "./modules/common_repository"
   name        = "moc-template"
+  description = "Template repository for the CCI-MOC GitHub organization"
   is_template = true
 
   teams = {
@@ -841,8 +889,9 @@ module "repo-moc-wordpress" {
 }
 
 module "repo-moc-wp-plugin" {
-  source = "./modules/common_repository"
-  name   = "moc-wp-plugin"
+  source      = "./modules/common_repository"
+  name        = "moc-wp-plugin"
+  description = "WordPress plugin for MOC site customizations"
 }
 
 module "repo-moc_theme" {
@@ -859,15 +908,16 @@ module "repo-moca-requests" {
 
   teams = {
     "moca-request-workers" = "triage"
-    "ops-core" = "admin"
-    "redhat" = "maintain"
+    "ops-core"             = "admin"
+    "redhat"               = "maintain"
   }
 }
 
 module "repo-mocmon" {
-  source     = "./modules/common_repository"
-  name       = "mocmon"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "mocmon"
+  description = "Sensu monitoring configuration for the MOC"
+  visibility  = "private"
 
   collaborators = {
     "tiwarid" = "push"
@@ -875,13 +925,15 @@ module "repo-mocmon" {
 }
 
 module "repo-mocosppuppet" {
-  source = "./modules/common_repository"
-  name   = "MOCOSPpuppet"
+  source      = "./modules/common_repository"
+  name        = "MOCOSPpuppet"
+  description = "Puppet manifests for MOC OpenStack Platform deployment"
 }
 
 module "repo-nerc-bmh" {
-  source = "./modules/common_repository"
-  name   = "nerc-bmh"
+  source      = "./modules/common_repository"
+  name        = "nerc-bmh"
+  description = "Bare metal host configuration for NERC OpenShift"
 }
 
 module "repo-nerc-ocp-config" {
@@ -903,7 +955,7 @@ module "repo-nerc-rates" {
 
   teams = {
     "open-source-contributors" = "triage"
-    "ops-core" = "maintain"
+    "ops-core"                 = "maintain"
   }
 }
 
@@ -941,8 +993,9 @@ module "repo-network-runner" {
 }
 
 module "repo-networking-ansible" {
-  source = "./modules/common_repository"
-  name   = "networking-ansible"
+  source      = "./modules/common_repository"
+  name        = "networking-ansible"
+  description = "OpenStack ML2 mechanism driver using Ansible Networking"
 
   teams = {
     "ops-core" = "maintain"
@@ -950,21 +1003,23 @@ module "repo-networking-ansible" {
 }
 
 module "repo-notmonero" {
-  source     = "./modules/common_repository"
-  name       = "notmonero"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "notmonero"
+  description = "Research on Monero cryptocurrency privacy attacks and countermeasures"
+  visibility  = "private"
 
   collaborators = {
     "EthanHeilman" = "admin"
-    "HenryHeffan" = "push"
-    "ShashvatS" = "push"
+    "HenryHeffan"  = "push"
+    "ShashvatS"    = "push"
   }
 }
 
 module "repo-nsf-13-602" {
-  source     = "./modules/common_repository"
-  name       = "NSF-13-602"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "NSF-13-602"
+  description = "NSF 13-602 grant proposal materials"
+  visibility  = "private"
 
   teams = {
     "nsfcloud" = "push"
@@ -972,34 +1027,37 @@ module "repo-nsf-13-602" {
 }
 
 module "repo-nsf-18-531" {
-  source     = "./modules/common_repository"
-  name       = "NSF-18-531"
-  visibility = "private"
-  has_issues = false
+  source      = "./modules/common_repository"
+  name        = "NSF-18-531"
+  description = "NSF 18-531 grant proposal materials"
+  visibility  = "private"
+  has_issues  = false
 
   collaborators = {
-    "SaulYoussef" = "push"
-    "jtgoodhue" = "push"
-    "lapets" = "push"
+    "SaulYoussef"   = "push"
+    "jtgoodhue"     = "push"
+    "lapets"        = "push"
     "rajivshridhar" = "push"
   }
 }
 
 module "repo-nsf-19-512-open-cloudlab" {
-  source     = "./modules/common_repository"
-  name       = "NSF-19-512-Open-CloudLab"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "NSF-19-512-Open-CloudLab"
+  description = "NSF CCRI proposal for Open CloudLab"
+  visibility  = "private"
 
   collaborators = {
     "martinherbordt" = "admin"
-    "mleeser" = "admin"
+    "mleeser"        = "admin"
   }
 }
 
 module "repo-nsf-ccc" {
-  source     = "./modules/common_repository"
-  name       = "NSF-CCC"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "NSF-CCC"
+  description = "NSF Computing Community Consortium proposal materials"
+  visibility  = "private"
 
   teams = {
     "white-paper" = "push"
@@ -1040,8 +1098,9 @@ module "repo-oct-powermon" {
 }
 
 module "repo-ocx-library" {
-  source = "./modules/common_repository"
-  name   = "ocx-library"
+  source      = "./modules/common_repository"
+  name        = "ocx-library"
+  description = "Client library for Open Cloud Exchange services"
 }
 
 module "repo-onboarding-tools" {
@@ -1051,9 +1110,10 @@ module "repo-onboarding-tools" {
 }
 
 module "repo-openshift" {
-  source     = "./modules/common_repository"
-  name       = "openshift"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "openshift"
+  description = "OpenShift installation guides and image build sources"
+  visibility  = "private"
 }
 
 module "repo-openshift-acct-mgt" {
@@ -1074,18 +1134,20 @@ module "repo-openshift-rev-proxy" {
 }
 
 module "repo-openshift-schemas" {
-  source = "./modules/common_repository"
-  name   = "openshift-schemas"
+  source      = "./modules/common_repository"
+  name        = "openshift-schemas"
+  description = "JSON schemas for OpenShift resource validation with Kubeval"
 }
 
 module "repo-openshift-usage-scripts" {
   source              = "./modules/common_repository"
   name                = "openshift-usage-scripts"
+  description         = "Scripts for collecting and reporting OpenShift usage metrics"
   allow_update_branch = true
 
   teams = {
     "open-source-contributors" = "triage"
-    "redhat" = "maintain"
+    "redhat"                   = "maintain"
   }
 }
 
@@ -1096,21 +1158,23 @@ module "repo-openstack-billing-from-db" {
 
   teams = {
     "open-source-contributors" = "triage"
-    "ops-core" = "triage"
+    "ops-core"                 = "triage"
   }
 }
 
 module "repo-openstack-validation" {
-  source = "./modules/common_repository"
-  name   = "openstack-validation"
+  source      = "./modules/common_repository"
+  name        = "openstack-validation"
+  description = "Ansible playbooks for testing OpenStack cloud features"
 }
 
 module "repo-ops-docs" {
-  source = "./modules/common_repository"
-  name   = "ops-docs"
+  source      = "./modules/common_repository"
+  name        = "ops-docs"
+  description = "Operational policies and practices documentation for the Mass Open Cloud"
 
   teams = {
-    "nercpis" = "pull"
+    "nercpis"  = "pull"
     "ops-core" = "admin"
   }
 }
@@ -1118,29 +1182,31 @@ module "repo-ops-docs" {
 module "repo-ops-issues" {
   source          = "./modules/common_repository"
   name            = "ops-issues"
+  description     = "High-level tracking of MOC operational issues"
   has_discussions = true
 
   teams = {
-    "external-triage" = "triage"
-    "marcomm" = "triage"
-    "nercdev" = "triage"
-    "okd" = "triage"
+    "external-triage"          = "triage"
+    "marcomm"                  = "triage"
+    "nercdev"                  = "triage"
+    "okd"                      = "triage"
     "open-source-contributors" = "triage"
-    "ops-collab" = "push"
-    "ops-core" = "admin"
-    "redhat" = "maintain"
+    "ops-collab"               = "push"
+    "ops-core"                 = "admin"
+    "redhat"                   = "maintain"
   }
 }
 
 module "repo-ops-private" {
-  source     = "./modules/common_repository"
-  name       = "ops-private"
-  visibility = "private"
-  has_wiki   = true
+  source      = "./modules/common_repository"
+  name        = "ops-private"
+  description = "Private operational documentation for the Mass Open Cloud"
+  visibility  = "private"
+  has_wiki    = true
 
   teams = {
     "communications" = "triage"
-    "ops-core" = "maintain"
+    "ops-core"       = "maintain"
   }
 }
 
@@ -1163,19 +1229,21 @@ module "repo-ovirt-scripts" {
 }
 
 module "repo-ovirt-servers" {
-  source = "./modules/common_repository"
-  name   = "ovirt-servers"
+  source      = "./modules/common_repository"
+  name        = "ovirt-servers"
+  description = "oVirt/RHEV server configuration"
 }
 
 module "repo-papers" {
-  source     = "./modules/common_repository"
-  name       = "papers"
-  visibility = "private"
-  has_issues = false
+  source      = "./modules/common_repository"
+  name        = "papers"
+  description = "Academic papers and publications"
+  visibility  = "private"
+  has_issues  = false
 
   teams = {
     "paper_readers" = "pull"
-    "writers" = "push"
+    "writers"       = "push"
   }
   collaborators = {
     "trevornogues" = "push"
@@ -1201,13 +1269,15 @@ module "repo-pfsense-firewall-ansible" {
 }
 
 module "repo-pfsense-tools" {
-  source = "./modules/common_repository"
-  name   = "pfsense-tools"
+  source      = "./modules/common_repository"
+  name        = "pfsense-tools"
+  description = "Tools for managing pfSense firewalls"
 }
 
 module "repo-postgres-k8s-example" {
-  source = "./modules/common_repository"
-  name   = "postgres-k8s-example"
+  source      = "./modules/common_repository"
+  name        = "postgres-k8s-example"
+  description = "Example PostgreSQL deployment in Kubernetes"
 }
 
 module "repo-prototype-reporting" {
@@ -1218,35 +1288,39 @@ module "repo-prototype-reporting" {
 }
 
 module "repo-pvc-obc-example" {
-  source = "./modules/common_repository"
-  name   = "pvc-obc-example"
+  source      = "./modules/common_repository"
+  name        = "pvc-obc-example"
+  description = "Example PersistentVolumeClaim and ObjectBucketClaim usage in Kubernetes"
 }
 
 module "repo-python-esiclient" {
   source           = "./modules/common_repository"
   name             = "python-esiclient"
+  description      = "OpenStack CLI extensions for simplified ESI workflows"
   allow_auto_merge = true
 
   teams = {
-    "esi-core" = "admin"
+    "esi-core"    = "admin"
     "esi-workers" = "push"
-    "redhat" = "maintain"
+    "redhat"      = "maintain"
   }
 }
 
 module "repo-python-esiclient-1" {
-  source     = "./modules/common_repository"
-  name       = "python-esiclient-1"
-  has_issues = false
+  source      = "./modules/common_repository"
+  name        = "python-esiclient-1"
+  description = "OpenStack CLI extensions for simplified ESI workflows"
+  has_issues  = false
 }
 
 module "repo-python-esileapclient" {
-  source = "./modules/common_repository"
-  name   = "python-esileapclient"
+  source      = "./modules/common_repository"
+  name        = "python-esileapclient"
+  description = "Python client for the ESI-Leap OpenStack Lease API"
 
   teams = {
-    "esi" = "push"
-    "esi-core" = "admin"
+    "esi"         = "push"
+    "esi-core"    = "admin"
     "esi-workers" = "push"
   }
   collaborators = {
@@ -1268,13 +1342,15 @@ module "repo-racadm-scripts" {
 }
 
 module "repo-repomirror-rhel-6" {
-  source = "./modules/common_repository"
-  name   = "repomirror-rhel-6"
+  source      = "./modules/common_repository"
+  name        = "repomirror-rhel-6"
+  description = "RHEL 6 repository mirror configuration"
 }
 
 module "repo-reporting" {
-  source = "./modules/common_repository"
-  name   = "reporting"
+  source      = "./modules/common_repository"
+  name        = "reporting"
+  description = "OpenStack utilization reporting and billing tools for the MOC"
 }
 
 module "repo-rfi-iarpa-seccloud-17" {
@@ -1284,14 +1360,15 @@ module "repo-rfi-iarpa-seccloud-17" {
   visibility  = "private"
 
   collaborators = {
-    "henn" = "push"
+    "henn"     = "push"
     "rudolpht" = "push"
   }
 }
 
 module "repo-rhosp-13-post-deploy" {
-  source = "./modules/common_repository"
-  name   = "rhosp-13-post-deploy"
+  source      = "./modules/common_repository"
+  name        = "rhosp-13-post-deploy"
+  description = "Post-deployment scripts for Red Hat OpenStack Platform 13"
 }
 
 module "repo-roce-testing" {
@@ -1305,13 +1382,14 @@ module "repo-roce-testing" {
 }
 
 module "repo-rubicon-issues" {
-  source   = "./modules/common_repository"
-  name     = "rubicon-issues"
-  has_wiki = true
+  source      = "./modules/common_repository"
+  name        = "rubicon-issues"
+  description = "Issue tracking for the Rubicon project"
+  has_wiki    = true
 
   teams = {
     "ops-core" = "admin"
-    "rubicon" = "maintain"
+    "rubicon"  = "maintain"
   }
 }
 
@@ -1337,9 +1415,10 @@ module "repo-seccloud" {
 }
 
 module "repo-seccloud_13" {
-  source     = "./modules/common_repository"
-  name       = "seccloud_13"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "seccloud_13"
+  description = "Secure Cloud OpenStack 13 deployment configuration"
+  visibility  = "private"
 
   teams = {
     "cloud-sec" = "push"
@@ -1347,9 +1426,10 @@ module "repo-seccloud_13" {
 }
 
 module "repo-sensu-checks" {
-  source     = "./modules/common_repository"
-  name       = "sensu-checks"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "sensu-checks"
+  description = "Sensu monitoring checks for compute, controller, and Ceilometer nodes"
+  visibility  = "private"
 
   collaborators = {
     "tiwarid" = "push"
@@ -1357,8 +1437,9 @@ module "repo-sensu-checks" {
 }
 
 module "repo-service-tag-lookup" {
-  source = "./modules/common_repository"
-  name   = "service-tag-lookup"
+  source      = "./modules/common_repository"
+  name        = "service-tag-lookup"
+  description = "Server inventory lookup by Dell service tag or HP serial number"
 
   teams = {
     "ops-core" = "maintain"
@@ -1366,9 +1447,10 @@ module "repo-service-tag-lookup" {
 }
 
 module "repo-sprint-notes" {
-  source     = "./modules/common_repository"
-  name       = "sprint-notes"
-  visibility = "private"
+  source      = "./modules/common_repository"
+  name        = "sprint-notes"
+  description = "Sprint planning notes and meeting records"
+  visibility  = "private"
 }
 
 module "repo-sso" {
@@ -1387,10 +1469,11 @@ module "repo-storage-benchmarks" {
 }
 
 module "repo-tracing" {
-  source     = "./modules/common_repository"
-  name       = "tracing"
-  visibility = "private"
-  has_wiki   = true
+  source      = "./modules/common_repository"
+  name        = "tracing"
+  description = "OpenStack distributed tracing research and configuration"
+  visibility  = "private"
+  has_wiki    = true
 
   teams = {
     "tracing" = "push"
@@ -1398,11 +1481,13 @@ module "repo-tracing" {
 }
 
 module "repo-virtual-desktop-docs" {
-  source = "./modules/common_repository"
-  name   = "virtual-desktop-docs"
+  source      = "./modules/common_repository"
+  name        = "virtual-desktop-docs"
+  description = "Documentation for the Shaw University Virtual Desktop deployment on MOC"
 }
 
 module "repo-virtualbmc" {
-  source = "./modules/common_repository"
-  name   = "virtualbmc"
+  source      = "./modules/common_repository"
+  name        = "virtualbmc"
+  description = "Virtual BMC for Ironic nodes using the IPMI protocol"
 }
