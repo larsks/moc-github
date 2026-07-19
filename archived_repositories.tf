@@ -165,7 +165,7 @@ module "repo-eng1-liberty" {
 
   collaborators = {
     "kamfonik" = "admin"
-    "lokI8" = "admin"
+    "lokI8"    = "admin"
     "rahulait" = "admin"
   }
 }
@@ -176,7 +176,7 @@ module "repo-flocx" {
   archived = true
 
   teams = {
-    "flocx" = "pull"
+    "flocx"        = "pull"
     "flocx-owners" = "admin"
   }
 }
@@ -203,7 +203,7 @@ module "repo-flocx-market" {
   archived = true
 
   teams = {
-    "flocx" = "pull"
+    "flocx"        = "pull"
     "flocx-owners" = "admin"
   }
 }
@@ -214,7 +214,7 @@ module "repo-flocx-matcher" {
   archived = true
 
   teams = {
-    "flocx" = "pull"
+    "flocx"        = "pull"
     "flocx-owners" = "admin"
   }
 }
@@ -226,7 +226,6 @@ module "repo-flocx-ui" {
 
   teams = {
     "flocx-owners" = "admin"
-    "flocx-workers" = "push"
   }
 }
 
@@ -295,7 +294,7 @@ module "repo-hil" {
   archived    = true
 
   teams = {
-    "haas-rw" = "push"
+    "haas-rw"   = "push"
     "hil-affil" = "pull"
   }
 }
@@ -319,12 +318,12 @@ module "repo-kilo-puppet" {
 
   collaborators = {
     "LeonLee88" = "pull"
-    "anuj-rt" = "pull"
-    "genagain" = "pull"
-    "kamfonik" = "admin"
-    "lokI8" = "admin"
-    "qqli" = "pull"
-    "rahulait" = "admin"
+    "anuj-rt"   = "pull"
+    "genagain"  = "pull"
+    "kamfonik"  = "admin"
+    "lokI8"     = "admin"
+    "qqli"      = "pull"
+    "rahulait"  = "admin"
   }
 }
 
@@ -362,11 +361,11 @@ module "repo-moc" {
 
   teams = {
     "moc-readonly" = "pull"
-    "moc-rw" = "push"
+    "moc-rw"       = "push"
   }
   collaborators = {
     "portante" = "push"
-    "tiwarid" = "pull"
+    "tiwarid"  = "pull"
   }
 }
 
@@ -463,7 +462,7 @@ module "repo-moc-public" {
   homepage_url = "http://massopencloud.org/"
 
   teams = {
-    "moc-rw" = "push"
+    "moc-rw"      = "push"
     "white-paper" = "push"
   }
 }
@@ -486,8 +485,8 @@ module "repo-moc-website" {
   archived = true
 
   teams = {
-    "moc-website" = "triage"
-    "moc-website-owners" = "admin"
+    "moc-website"         = "triage"
+    "moc-website-owners"  = "admin"
     "moc-website-workers" = "push"
   }
 }
@@ -590,9 +589,8 @@ module "repo-python-flocxclient" {
   archived = true
 
   teams = {
-    "flocx-owners" = "admin"
+    "flocx-owners"  = "admin"
     "flocx-viewers" = "pull"
-    "flocx-workers" = "push"
   }
 }
 
