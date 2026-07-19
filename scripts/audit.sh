@@ -1,14 +1,19 @@
 #!/bin/bash
 
 log() {
-  if ((use_gum)); then
-    cmd="gum log --level $1"
-  else
-    cmd="echo"
-  fi
+  level=$1
   shift
+  if [[ -t 1 ]] && ((use_gum)); then
+    if [[ $level = success ]]; then
+      cmd=(gum style --foreground 2)
+    else
+      cmd=(gum log --level "$level")
+    fi
+  else
+    cmd=(echo)
+  fi
 
-  $cmd "$*"
+  "${cmd[@]}" "$*" >&2
 }
 
 if type gum >&/dev/null; then
@@ -45,15 +50,19 @@ exitcode=0
 
 log info "checking for drift"
 if [[ -n "$unmanaged_repositories" ]]; then
-  log error "found unmanaged repositories:" >&2
-  log error "$unmanaged_repositories" >&2
+  log error "found unmanaged repositories:"
+  log error "$unmanaged_repositories"
   exitcode=1
 fi
 
 if [[ -n "$unmanaged_members" ]]; then
-  log error "Found unmanaged members:" >&2
-  log error "$unmanaged_members" >&2
+  log error "Found unmanaged members:"
+  log error "$unmanaged_members"
   exitcode=1
+fi
+
+if ! ((exitcode)); then
+  log success "no drift detected"
 fi
 
 exit $exitcode
