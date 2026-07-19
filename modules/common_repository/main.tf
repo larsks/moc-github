@@ -29,3 +29,17 @@ resource "github_repository" "this" {
     }
   }
 }
+
+resource "github_team_repository" "this" {
+  for_each   = var.teams
+  team_id    = each.key
+  repository = github_repository.this.name
+  permission = each.value
+}
+
+resource "github_repository_collaborator" "this" {
+  for_each   = var.collaborators
+  repository = github_repository.this.name
+  username   = each.key
+  permission = each.value
+}
