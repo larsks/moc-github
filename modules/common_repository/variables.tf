@@ -49,7 +49,7 @@ variable "is_template" {
 
 variable "allow_auto_merge" {
   type    = bool
-  default = false
+  default = true
 }
 
 variable "delete_branch_on_merge" {
@@ -59,7 +59,7 @@ variable "delete_branch_on_merge" {
 
 variable "allow_update_branch" {
   type    = bool
-  default = false
+  default = true
 }
 
 variable "template" {
