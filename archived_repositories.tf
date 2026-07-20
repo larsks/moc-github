@@ -27,7 +27,7 @@ module "repo-ansible-moc-web" {
   visibility  = "private"
   archived    = true
 
-  collaborators = {
+  users = {
     "xuhang57" = "push"
   }
 }
@@ -137,7 +137,7 @@ module "repo-atmosphere-ansible" {
   has_issues  = false
   archived    = true
 
-  collaborators = {
+  users = {
     "xuhang57" = "push"
   }
 }
@@ -149,7 +149,7 @@ module "repo-cci-moc_github_io" {
   visibility  = "private"
   archived    = true
 
-  collaborators = {
+  users = {
     "xuhang57" = "push"
   }
 }
@@ -167,7 +167,7 @@ module "repo-django-giji-auth" {
   description = "Support Keystone Auth in GIJI"
   archived    = true
 
-  collaborators = {
+  users = {
     "xuhang57" = "push"
   }
 }
@@ -178,7 +178,7 @@ module "repo-eng1-liberty" {
   description = "OpenStack Liberty deployment for Engage1"
   archived    = true
 
-  collaborators = {
+  users = {
     "kamfonik" = "admin"
     "lokI8"    = "admin"
     "rahulait" = "admin"
@@ -203,7 +203,7 @@ module "repo-flocx-design" {
   description = "UI designs for FLOCX and ESI"
   archived    = true
 
-  collaborators = {
+  users = {
     "mairin" = "push"
   }
 }
@@ -257,7 +257,7 @@ module "repo-giji-backend" {
   archived     = true
   homepage_url = "https://giji.massopen.cloud"
 
-  collaborators = {
+  users = {
     "xuhang57" = "push"
   }
 }
@@ -269,7 +269,7 @@ module "repo-giji-frontend" {
   archived     = true
   homepage_url = "https://giji.massopen.cloud"
 
-  collaborators = {
+  users = {
     "xuhang57" = "push"
   }
 }
@@ -280,7 +280,7 @@ module "repo-giji-rtwo" {
   description = "a unified interface into multiple cloud providers."
   archived    = true
 
-  collaborators = {
+  users = {
     "xuhang57" = "push"
   }
 }
@@ -291,7 +291,7 @@ module "repo-gui-backend" {
   description = "MOC simple GUI built on top of Atmosphere "
   archived    = true
 
-  collaborators = {
+  users = {
     "xuhang57" = "admin"
   }
 }
@@ -302,7 +302,7 @@ module "repo-gui-frontend" {
   description = "MOC simple GUI built on top of Troposphere"
   archived    = true
 
-  collaborators = {
+  users = {
     "xuhang57" = "admin"
   }
 }
@@ -337,7 +337,7 @@ module "repo-kilo-puppet" {
   description = "Puppet modules to configure openstack kilo"
   archived    = true
 
-  collaborators = {
+  users = {
     "LeonLee88" = "pull"
     "anuj-rt"   = "pull"
     "genagain"  = "pull"
@@ -386,7 +386,7 @@ module "repo-moc" {
     "moc-readonly" = "pull"
     "moc-rw"       = "push"
   }
-  collaborators = {
+  users = {
     "portante" = "push"
     "tiwarid"  = "pull"
   }
@@ -463,7 +463,7 @@ module "repo-moc-billing" {
   visibility  = "private"
   archived    = true
 
-  collaborators = {
+  users = {
     "tiwarid" = "pull"
   }
 }
@@ -508,7 +508,7 @@ module "repo-moc-pyslurm" {
   archived     = true
   homepage_url = "https://slurm.schedmd.com"
 
-  collaborators = {
+  users = {
     "xuhang57" = "push"
   }
 }
@@ -574,7 +574,7 @@ module "repo-old-ui" {
   description = "Legacy user interface for the MOC"
   archived    = true
 
-  collaborators = {
+  users = {
     "lokI8" = "admin"
   }
 }
@@ -691,7 +691,7 @@ module "repo-ui" {
   description = "Alternative OpenStack Dashboard to Horizon for the MOC"
   archived    = true
 
-  collaborators = {
+  users = {
     "xuhang57" = "push"
   }
 }
