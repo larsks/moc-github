@@ -30,16 +30,36 @@ resource "github_repository" "this" {
   }
 }
 
-resource "github_team_repository" "this" {
-  for_each   = var.teams
-  team_id    = each.key
+resource "github_repository_collaborators" "this" {
   repository = github_repository.this.name
-  permission = each.value
+
+  dynamic "team" {
+    for_each = var.teams
+    content {
+      team_id    = team.key
+      permission = team.value
+    }
+  }
+
+  dynamic "user" {
+    for_each = var.collaborators
+    content {
+      username   = user.key
+      permission = user.value
+    }
+  }
 }
 
-resource "github_repository_collaborator" "this" {
-  for_each   = var.collaborators
-  repository = github_repository.this.name
-  username   = each.key
-  permission = each.value
+removed {
+  from = github_team_repository.this
+  lifecycle {
+    destroy = false
+  }
+}
+
+removed {
+  from = github_repository_collaborator.this
+  lifecycle {
+    destroy = false
+  }
 }
