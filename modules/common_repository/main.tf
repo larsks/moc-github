@@ -42,7 +42,7 @@ resource "github_repository_collaborators" "this" {
   }
 
   dynamic "user" {
-    for_each = var.collaborators
+    for_each = var.users
     content {
       username   = user.key
       permission = user.value

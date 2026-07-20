@@ -76,7 +76,7 @@ variable "teams" {
   default     = {}
 }
 
-variable "collaborators" {
+variable "users" {
   description = "Map of GitHub username to permission level (e.g. {\"username\" = \"push\"})"
   type        = map(string)
   default     = {}

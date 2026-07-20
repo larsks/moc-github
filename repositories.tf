@@ -4,7 +4,7 @@ module "repo-2020-nsf-convergence" {
   description = "NSF 2020 Convergence Accelerator proposal materials"
   visibility  = "private"
 
-  collaborators = {
+  users = {
     "kolaczyk-bu" = "admin"
   }
 }
@@ -114,7 +114,7 @@ module "repo-chromogenic" {
   description = "The chromogenic cloud library can be used to create machine images from instances or existing images and make them portable across providers, as well as support for exporting to localized virtualization (i.e. Virtualbox/VMware)."
   has_issues  = false
 
-  collaborators = {
+  users = {
     "xuhang57" = "push"
   }
 }
@@ -125,7 +125,7 @@ module "repo-cici2017" {
   description = "proposal"
   visibility  = "private"
 
-  collaborators = {
+  users = {
     "frederickjansen" = "push"
     "lapets"          = "push"
     "mercecrosas"     = "push"
@@ -138,7 +138,7 @@ module "repo-clank" {
   description = "clankity clankity clankity clank"
   has_wiki    = true
 
-  collaborators = {
+  users = {
     "xuhang57" = "push"
   }
 }
@@ -169,7 +169,7 @@ module "repo-clouddv" {
   visibility  = "private"
   has_wiki    = true
 
-  collaborators = {
+  users = {
     "thaorell" = "push"
   }
 }
@@ -250,7 +250,7 @@ module "repo-doe-2022-objects" {
   description = "DOE 2022 object storage proposal materials"
   visibility  = "private"
 
-  collaborators = {
+  users = {
     "trachten" = "push"
   }
 }
@@ -291,7 +291,7 @@ module "repo-esi" {
     "ops-collab"  = "triage"
     "redhat"      = "maintain"
   }
-  collaborators = {
+  users = {
     "aayushi363"  = "push"
     "rd4398"      = "push"
     "samuel-zuk"  = "push"
@@ -398,7 +398,7 @@ module "repo-esi-ui" {
   name        = "esi-ui"
   description = "OpenStack Horizon plugin that supports ESI"
 
-  collaborators = {
+  users = {
     "sheldor1510" = "push"
   }
 }
@@ -622,7 +622,7 @@ module "repo-lsvd-rbd" {
     "ops-core"         = "push"
     "storage-research" = "maintain"
   }
-  collaborators = {
+  users = {
     "kyokeunpark" = "maintain"
   }
 }
@@ -651,7 +651,7 @@ module "repo-macs" {
     "macs"   = "push"
     "moc-rw" = "pull"
   }
-  collaborators = {
+  users = {
     "henn"      = "push"
     "kamfonik"  = "push"
     "kylehogan" = "push"
@@ -825,7 +825,7 @@ module "repo-moc-openstackwatcher" {
   description = "OpenStack resource monitoring and alerting"
   visibility  = "private"
 
-  collaborators = {
+  users = {
     "thaorell" = "pull"
     "tiwarid"  = "pull"
   }
@@ -913,7 +913,7 @@ module "repo-mocmon" {
   description = "Sensu monitoring configuration for the MOC"
   visibility  = "private"
 
-  collaborators = {
+  users = {
     "tiwarid" = "push"
   }
 }
@@ -1002,7 +1002,7 @@ module "repo-notmonero" {
   description = "Research on Monero cryptocurrency privacy attacks and countermeasures"
   visibility  = "private"
 
-  collaborators = {
+  users = {
     "EthanHeilman" = "admin"
     "HenryHeffan"  = "push"
     "ShashvatS"    = "push"
@@ -1027,7 +1027,7 @@ module "repo-nsf-18-531" {
   visibility  = "private"
   has_issues  = false
 
-  collaborators = {
+  users = {
     "SaulYoussef"   = "push"
     "jtgoodhue"     = "push"
     "lapets"        = "push"
@@ -1041,7 +1041,7 @@ module "repo-nsf-19-512-open-cloudlab" {
   description = "NSF CCRI proposal for Open CloudLab"
   visibility  = "private"
 
-  collaborators = {
+  users = {
     "martinherbordt" = "admin"
     "mleeser"        = "admin"
   }
@@ -1239,7 +1239,7 @@ module "repo-papers" {
     "paper_readers" = "pull"
     "writers"       = "push"
   }
-  collaborators = {
+  users = {
     "trevornogues" = "push"
   }
 }
@@ -1250,7 +1250,7 @@ module "repo-partner_y3" {
   description = "1 page reports to partners for end of year 3"
   visibility  = "private"
 
-  collaborators = {
+  users = {
     "bgoodmanfsc" = "push"
   }
 }
@@ -1317,7 +1317,7 @@ module "repo-python-esileapclient" {
     "esi-core"    = "admin"
     "esi-workers" = "push"
   }
-  collaborators = {
+  users = {
     "samuel-zuk" = "push"
   }
 }
@@ -1353,7 +1353,7 @@ module "repo-rfi-iarpa-seccloud-17" {
   description = "response to RFI from IARPA-RFI-17-04"
   visibility  = "private"
 
-  collaborators = {
+  users = {
     "henn"     = "push"
     "rudolpht" = "push"
   }
@@ -1403,7 +1403,7 @@ module "repo-seccloud" {
   teams = {
     "seccloud" = "push"
   }
-  collaborators = {
+  users = {
     "gfedorkow" = "pull"
   }
 }
@@ -1425,7 +1425,7 @@ module "repo-sensu-checks" {
   description = "Sensu monitoring checks for compute, controller, and Ceilometer nodes"
   visibility  = "private"
 
-  collaborators = {
+  users = {
     "tiwarid" = "push"
   }
 }
