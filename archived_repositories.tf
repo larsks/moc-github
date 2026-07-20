@@ -25,14 +25,14 @@ module "repo-ansible-moc-web" {
   name        = "ansible-moc-web"
   description = "Ansible playbooks for the MOC web infrastructure"
   visibility  = "private"
-  archived    = false
+  archived    = true
 }
 
 module "repo-ansible-role-httpd" {
   source      = "./modules/common_repository"
   name        = "ansible-role-httpd"
   description = "Ansible role for configuring Apache HTTPD"
-  archived    = false
+  archived    = true
 }
 
 module "repo-ansible-role-mailman" {
@@ -46,7 +46,7 @@ module "repo-ansible-role-moc-base" {
   source      = "./modules/common_repository"
   name        = "ansible-role-moc-base"
   description = "Ansible role for base configuration of MOC hosts"
-  archived    = false
+  archived    = true
 }
 
 module "repo-ansible-role-moc-control" {
@@ -60,14 +60,14 @@ module "repo-ansible-role-moc-firewall" {
   source      = "./modules/common_repository"
   name        = "ansible-role-moc-firewall"
   description = "Ansible role for configuring MOC firewall rules"
-  archived    = false
+  archived    = true
 }
 
 module "repo-ansible-role-moc-sshd" {
   source      = "./modules/common_repository"
   name        = "ansible-role-moc-sshd"
   description = "Ansible role for configuring SSH daemon on MOC hosts"
-  archived    = false
+  archived    = true
 }
 
 module "repo-ansible-role-podman" {
@@ -81,21 +81,21 @@ module "repo-ansible-role-repomirror" {
   source      = "./modules/common_repository"
   name        = "ansible-role-repomirror"
   description = "Ansible role for configuring RHEL repository mirrors"
-  archived    = false
+  archived    = true
 }
 
 module "repo-ansible-role-root-authorized-keys" {
   source      = "./modules/common_repository"
   name        = "ansible-role-root-authorized-keys"
   description = "Ansible role for managing root authorized SSH keys"
-  archived    = false
+  archived    = true
 }
 
 module "repo-ansible-role-systemd" {
   source      = "./modules/common_repository"
   name        = "ansible-role-systemd"
   description = "Ansible role providing a systemd daemon-reload handler"
-  archived    = false
+  archived    = true
 }
 
 module "repo-atmosphere-ansible" {
@@ -103,7 +103,7 @@ module "repo-atmosphere-ansible" {
   name        = "atmosphere-ansible"
   description = "Ansible instance deployment code for Atmosphere"
   has_issues  = false
-  archived    = false
+  archived    = true
 }
 
 module "repo-cci-moc_github_io" {
@@ -111,7 +111,7 @@ module "repo-cci-moc_github_io" {
   name        = "CCI-MOC.github.io"
   description = "GitHub Pages site for the CCI-MOC organization"
   visibility  = "private"
-  archived    = false
+  archived    = true
 }
 
 module "repo-cephfs-provisioner-example" {
@@ -125,28 +125,28 @@ module "repo-django-giji-auth" {
   source      = "./modules/common_repository"
   name        = "django-giji-auth"
   description = "Support Keystone Auth in GIJI"
-  archived    = false
+  archived    = true
 }
 
 module "repo-eng1-liberty" {
   source      = "./modules/common_repository"
   name        = "eng1-liberty"
   description = "OpenStack Liberty deployment for Engage1"
-  archived    = false
+  archived    = true
 }
 
 module "repo-flocx" {
   source      = "./modules/common_repository"
   name        = "flocx"
   description = "First Layer of the Open Cloud Exchange"
-  archived    = false
+  archived    = true
 }
 
 module "repo-flocx-design" {
   source      = "./modules/common_repository"
   name        = "flocx-design"
   description = "UI designs for FLOCX and ESI"
-  archived    = false
+  archived    = true
 }
 
 module "repo-flocx-keystone-dev" {
@@ -160,28 +160,28 @@ module "repo-flocx-market" {
   source      = "./modules/common_repository"
   name        = "flocx-market"
   description = "OpenStack marketplace service for FLOCX resource trading"
-  archived    = false
+  archived    = true
 }
 
 module "repo-flocx-matcher" {
   source      = "./modules/common_repository"
   name        = "flocx-matcher"
   description = "Resource matching service for the FLOCX marketplace"
-  archived    = false
+  archived    = true
 }
 
 module "repo-flocx-ui" {
   source      = "./modules/common_repository"
   name        = "flocx-ui"
   description = "Horizon plugin for managing FLOCX bids, offers, and contracts"
-  archived    = false
+  archived    = true
 }
 
 module "repo-giji-backend" {
   source       = "./modules/common_repository"
   name         = "giji-backend"
   description  = "GIJI API Server"
-  archived     = false
+  archived     = true
   homepage_url = "https://giji.massopen.cloud"
 }
 
@@ -190,28 +190,28 @@ module "repo-giji-frontend" {
   name         = "giji-frontend"
   description  = "GIJI  web client"
   homepage_url = "https://giji.massopen.cloud"
-  archived     = false
+  archived     = true
 }
 
 module "repo-giji-rtwo" {
   source      = "./modules/common_repository"
   name        = "giji-rtwo"
   description = "a unified interface into multiple cloud providers."
-  archived    = false
+  archived    = true
 }
 
 module "repo-gui-backend" {
   source      = "./modules/common_repository"
   name        = "GUI-Backend"
   description = "MOC simple GUI built on top of Atmosphere "
-  archived    = false
+  archived    = true
 }
 
 module "repo-gui-frontend" {
   source      = "./modules/common_repository"
   name        = "GUI-Frontend"
   description = "MOC simple GUI built on top of Troposphere"
-  archived    = false
+  archived    = true
 }
 
 module "repo-hil" {
@@ -219,21 +219,21 @@ module "repo-hil" {
   name        = "hil"
   description = "Hardware Isolation Layer, formerly Hardware as a Service"
   has_wiki    = true
-  archived    = false
+  archived    = true
 }
 
 module "repo-hil-vpn" {
   source      = "./modules/common_repository"
   name        = "hil-vpn"
   description = "vpn microservice for use with HIL"
-  archived    = false
+  archived    = true
 }
 
 module "repo-kilo-puppet" {
   source      = "./modules/common_repository"
   name        = "kilo-puppet"
   description = "Puppet modules to configure openstack kilo"
-  archived    = false
+  archived    = true
 }
 
 module "repo-ksproj" {
@@ -255,7 +255,7 @@ module "repo-m2" {
   source      = "./modules/common_repository"
   name        = "m2"
   description = "Bare Metal Imaging (Malleable Metal as a Service)"
-  archived    = false
+  archived    = true
 }
 
 module "repo-moc" {
@@ -264,7 +264,7 @@ module "repo-moc" {
   description = "Private repository for sensitive MOC configuration files"
   visibility  = "private"
   has_wiki    = true
-  archived    = false
+  archived    = true
 }
 
 module "repo-moc-ansible-cnv-common" {
@@ -306,14 +306,14 @@ module "repo-moc-ansible-netbox" {
   source      = "./modules/common_repository"
   name        = "moc-ansible-netbox"
   description = "Ansible playbooks for populating MOC NetBox instance"
-  archived    = false
+  archived    = true
 }
 
 module "repo-moc-ansible-ops-common" {
   source      = "./modules/common_repository"
   name        = "moc-ansible-ops-common"
   description = "Common Ansible roles for MOC operations"
-  archived    = false
+  archived    = true
 }
 
 module "repo-moc-ansible-ssh" {
@@ -328,7 +328,7 @@ module "repo-moc-billing" {
   name        = "moc-billing"
   description = "Flask application for MOC resource allocation and usage reporting"
   visibility  = "private"
-  archived    = false
+  archived    = true
 }
 
 module "repo-moc-forms" {
@@ -343,7 +343,7 @@ module "repo-moc-prometheus" {
   name        = "moc-prometheus"
   description = "Prometheus monitoring configuration for the MOC"
   visibility  = "private"
-  archived    = false
+  archived    = true
 }
 
 module "repo-moc-public" {
@@ -352,7 +352,7 @@ module "repo-moc-public" {
   description  = "Central repo for non-project specific information about the MOC"
   has_wiki     = true
   homepage_url = "http://massopencloud.org/"
-  archived     = false
+  archived     = true
 }
 
 module "repo-moc-pyslurm" {
@@ -360,21 +360,21 @@ module "repo-moc-pyslurm" {
   name         = "moc-pyslurm"
   description  = "Python Interface to Slurm"
   homepage_url = "https://slurm.schedmd.com"
-  archived     = false
+  archived     = true
 }
 
 module "repo-moc-website" {
   source      = "./modules/common_repository"
   name        = "moc-website"
   description = "Development pipeline for the MOC WordPress website"
-  archived    = false
+  archived    = true
 }
 
 module "repo-mocbot-k8s" {
   source      = "./modules/common_repository"
   name        = "mocbot-k8s"
   description = "Kubernetes deployment for the MOC Slack bot"
-  archived    = false
+  archived    = true
 }
 
 module "repo-nova" {
@@ -390,21 +390,21 @@ module "repo-obmd" {
   source      = "./modules/common_repository"
   name        = "obmd"
   description = "OBM management microservice for use with HIL"
-  archived    = false
+  archived    = true
 }
 
 module "repo-ocp-on-power9" {
   source      = "./modules/common_repository"
   name        = "ocp-on-power9"
   description = " OCP on Power 9 IL Project"
-  archived    = false
+  archived    = true
 }
 
 module "repo-old-ui" {
   source      = "./modules/common_repository"
   name        = "old-UI"
   description = "Legacy user interface for the MOC"
-  archived    = false
+  archived    = true
 }
 
 module "repo-openstack-quota-migration" {
@@ -426,7 +426,7 @@ module "repo-puppet-csail-examples" {
   name        = "puppet-csail-examples"
   description = "a redacted version of puppet bits from CSAIL's Openstack deploy"
   visibility  = "private"
-  archived    = false
+  archived    = true
 }
 
 module "repo-puppet-internal" {
@@ -449,7 +449,7 @@ module "repo-python-flocxclient" {
   source      = "./modules/common_repository"
   name        = "python-flocxclient"
   description = "Python client for the FLOCX Market API"
-  archived    = false
+  archived    = true
 }
 
 module "repo-python-novaclient" {
@@ -479,7 +479,7 @@ module "repo-setpass" {
   source      = "./modules/common_repository"
   name        = "setpass"
   description = "Microservice for setting initial OpenStack user passwords"
-  archived    = false
+  archived    = true
 }
 
 module "repo-sosreporter" {
@@ -493,21 +493,21 @@ module "repo-sprint-tools" {
   source      = "./modules/common_repository"
   name        = "sprint-tools"
   description = "Task automation for MOC sprint planning"
-  archived    = false
+  archived    = true
 }
 
 module "repo-ui" {
   source      = "./modules/common_repository"
   name        = "ui"
   description = "Alternative OpenStack Dashboard to Horizon for the MOC"
-  archived    = false
+  archived    = true
 }
 
 module "repo-xdmod-cntr" {
   source      = "./modules/common_repository"
   name        = "xdmod-cntr"
   description = "A project to prototype the use of XDMOD with OpenStack and OpenShift on the MOC"
-  archived    = false
+  archived    = true
 }
 
 module "repo-zabbix-ceph" {
