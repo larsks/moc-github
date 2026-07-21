@@ -6,6 +6,25 @@ terraform {
   }
 }
 
+locals {
+  default_labels = {
+    "bug"              = { color = "d73a4a", description = "Something isn't working" }
+    "documentation"    = { color = "0075ca", description = "Improvements or additions to documentation" }
+    "duplicate"        = { color = "cfd3d7", description = "This issue or pull request already exists" }
+    "enhancement"      = { color = "a2eeef", description = "New feature or request" }
+    "good first issue" = { color = "7057ff", description = "Good for newcomers" }
+    "help wanted"      = { color = "008672", description = "Extra attention is needed" }
+    "invalid"          = { color = "e4e669", description = "This doesn't seem right" }
+    "question"         = { color = "d876e3", description = "Further information is requested" }
+    "wontfix"          = { color = "ffffff", description = "This will not be worked on" }
+  }
+
+  all_labels = merge(
+    var.include_default_labels ? local.default_labels : {},
+    var.labels
+  )
+}
+
 resource "github_repository" "this" {
   name                   = var.name
   description            = var.description
@@ -46,6 +65,19 @@ resource "github_repository_collaborators" "this" {
     content {
       username   = user.key
       permission = user.value
+    }
+  }
+}
+
+resource "github_issue_labels" "this" {
+  repository = github_repository.this.name
+
+  dynamic "label" {
+    for_each = local.all_labels
+    content {
+      name        = label.key
+      color       = label.value.color
+      description = label.value.description
     }
   }
 }

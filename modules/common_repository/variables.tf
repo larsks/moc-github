@@ -81,3 +81,18 @@ variable "users" {
   type        = map(string)
   default     = {}
 }
+
+variable "labels" {
+  description = "Map of label name to label attributes (e.g. {\"my-label\" = {color = \"d73a4a\", description = \"My label\"}})"
+  type = map(object({
+    color       = string
+    description = optional(string, "")
+  }))
+  default = {}
+}
+
+variable "include_default_labels" {
+  description = "Whether to include the default GitHub labels (bug, documentation, duplicate, enhancement, good first issue, help wanted, invalid, question, wontfix)"
+  type        = bool
+  default     = true
+}
