@@ -245,13 +245,6 @@ module "repo-debugconnectiontimeout" {
   description = "This is a test repo to debug the connection timeout issue discovered when connecting to mariadb"
 }
 
-module "repo-demo-esi-api" {
-  source      = "./modules/common_repository"
-  name        = "demo-esi-api"
-  description = "For integrating with ESI for requesting bare metal servers"
-  archived    = true
-}
-
 module "repo-distro-packages" {
   source      = "./modules/common_repository"
   name        = "distro-packages"
@@ -305,84 +298,6 @@ module "repo-engage1" {
   teams = {
     "engage1" = "push"
   }
-}
-
-module "repo-esi" {
-  source      = "./modules/common_repository"
-  name        = "esi"
-  description = "Elastic Secure Infrastructure project"
-  archived    = true
-}
-
-module "repo-esi-common" {
-  source      = "./modules/common_repository"
-  name        = "esi-common"
-  description = "Shared OpenStack library for the ESI project"
-  archived    = true
-}
-
-module "repo-esi-event-actions" {
-  source      = "./modules/common_repository"
-  name        = "esi-event-actions"
-  description = "Event listener that runs scripts in response to messaging queue events"
-  archived    = true
-}
-
-module "repo-esi-ha-config" {
-  source      = "./modules/common_repository"
-  name        = "esi-ha-config"
-  description = "High availability configuration for ESI"
-  archived    = true
-}
-
-module "repo-esi-leap" {
-  source      = "./modules/common_repository"
-  name        = "esi-leap"
-  description = "ESI lease policy manager"
-  archived    = true
-}
-
-module "repo-esi-pilot" {
-  source      = "./modules/common_repository"
-  name        = "esi-pilot"
-  description = "Configuration and scripts for the ESI pilot deployment"
-  archived    = true
-}
-
-module "repo-esi-pilot-cluster" {
-  source      = "./modules/common_repository"
-  name        = "esi-pilot-cluster"
-  description = "ESI pilot cluster deployment configuration"
-  visibility  = "private"
-  archived    = true
-}
-
-module "repo-esi-rally-plugin" {
-  source      = "./modules/common_repository"
-  name        = "esi-rally-plugin"
-  description = "Contains a plugin for running ESI commands with Rally"
-  archived    = true
-}
-
-module "repo-esi-sandbox" {
-  source      = "./modules/common_repository"
-  name        = "esi-sandbox"
-  description = "Standalone TripleO deployment for ESI development and testing"
-  archived    = true
-}
-
-module "repo-esi-ui" {
-  source      = "./modules/common_repository"
-  name        = "esi-ui"
-  description = "OpenStack Horizon plugin that supports ESI"
-  archived    = true
-}
-
-module "repo-esisdk" {
-  source      = "./modules/common_repository"
-  name        = "esisdk"
-  description = "Unified SDK for ESI"
-  archived    = true
 }
 
 module "repo-everpure-moc" {
@@ -706,13 +621,6 @@ module "repo-moc-dns" {
   teams = {
     "ops-core" = "admin"
   }
-}
-
-module "repo-moc-esi-network-config" {
-  source      = "./modules/common_repository"
-  name        = "moc-esi-network-config"
-  description = "Ansible playbook for connecting ESI private networks to floating IPs"
-  archived    = true
 }
 
 module "repo-moc-iam" {
@@ -1480,21 +1388,6 @@ module "repo-pvc-obc-example" {
   source      = "./modules/common_repository"
   name        = "pvc-obc-example"
   description = "Example PersistentVolumeClaim and ObjectBucketClaim usage in Kubernetes"
-}
-
-module "repo-python-esiclient" {
-  source           = "./modules/common_repository"
-  name             = "python-esiclient"
-  description      = "OpenStack CLI extensions for simplified ESI workflows"
-  allow_auto_merge = true
-  archived         = true
-}
-
-module "repo-python-esileapclient" {
-  source      = "./modules/common_repository"
-  name        = "python-esileapclient"
-  description = "Python client for the ESI-Leap OpenStack Lease API"
-  archived    = true
 }
 
 module "repo-quotes" {
