@@ -432,12 +432,6 @@ module "repo-gh-tools-image" {
   description = "Container image with tools for managing GitHub repositories"
 }
 
-module "repo-github-event-sandbox" {
-  source      = "./modules/common_repository"
-  name        = "github-event-sandbox"
-  description = "Sandbox for testing GitHub event webhooks"
-}
-
 module "repo-gpfs-storage" {
   source      = "./modules/common_repository"
   name        = "gpfs-storage"
@@ -520,13 +514,6 @@ module "repo-invoicing-private-data" {
     "open-source-contributors" = "pull"
     "ops-core"                 = "maintain"
   }
-}
-
-module "repo-issue-sandbox" {
-  source      = "./modules/common_repository"
-  name        = "issue-sandbox"
-  description = "A place for playing around with the github api"
-  visibility  = "private"
 }
 
 module "repo-iucrc-stuff" {
