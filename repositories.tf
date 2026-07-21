@@ -249,6 +249,7 @@ module "repo-demo-esi-api" {
   source      = "./modules/common_repository"
   name        = "demo-esi-api"
   description = "For integrating with ESI for requesting bare metal servers"
+  archived    = true
 }
 
 module "repo-distro-packages" {
@@ -310,113 +311,42 @@ module "repo-esi" {
   source      = "./modules/common_repository"
   name        = "esi"
   description = "Elastic Secure Infrastructure project"
-
-  teams = {
-    "esi"         = "push"
-    "esi-core"    = "admin"
-    "esi-viewers" = "push"
-    "nercdev"     = "pull"
-    "ops-collab"  = "triage"
-    "redhat"      = "maintain"
-  }
-  users = {
-    "aayushi363"  = "push"
-    "rd4398"      = "push"
-    "samuel-zuk"  = "push"
-    "sheldor1510" = "push"
-  }
-
-  labels = {
-    "accepted"                    = { color = "ededed", description = "" }
-    "added_post_planning"         = { color = "ccff4c", description = "" }
-    "development"                 = { color = "49FD99", description = "" }
-    "epic"                        = { color = "BBDA16", description = "" }
-    "ESI"                         = { color = "5b0d01", description = "" }
-    "General Availability of ESI" = { color = "7f8a57", description = "" }
-    "generateMoreTasks"           = { color = "FBCA04", description = "This label indicates the assign should breakdown the complex task assigned to many subtasks." }
-    "mghpcc"                      = { color = "5319e7", description = "MGHPCC related tasks" }
-    "MOC 1.0"                     = { color = "9f70a7", description = "" }
-    "MOC 2.0"                     = { color = "aaaaaa", description = "" }
-    "MOC 2.0?"                    = { color = "5f2521", description = "" }
-    "moc esi"                     = { color = "A745A5", description = "" }
-    "needs_description"           = { color = "ededed", description = "" }
-    "Performance Enhancements"    = { color = "1757b9", description = "" }
-    "research"                    = { color = "D4C5F9", description = "investigative task" }
-    "size/extra large"            = { color = "5319e7", description = "Not been done before, new research, lot of time, risks to finishing in sprint, require extra help." }
-    "size/extra small"            = { color = "9BCC95", description = "Most requirements are understood, relatively easy, likely completed in a day or less." }
-    "size/large"                  = { color = "16AE23", description = "Similar work done, complex, often requires assistance, commonly largest size done in sprint." }
-    "size/medium"                 = { color = "103AD3", description = "Similar work has been done before, it is clear what needs to be done, a few steps beyond a small." }
-    "size/milestone"              = { color = "24653B", description = "needs to be broken down into multiple issues and a milestone created for it" }
-    "size/small"                  = { color = "c5def5", description = "Small thought and effort required, similar work has been done, or extra small with small unknown." }
-    "standup"                     = { color = "7CCCF3", description = "Issues that need to be discussed in the standup meeting with other teammates." }
-    "techsquare"                  = { color = "d93f0b", description = "" }
-    "vendor-ticket"               = { color = "1c946d", description = "To help keep track of issues that are associated with Vendor Tickets." }
-  }
+  archived    = true
 }
 
 module "repo-esi-common" {
   source      = "./modules/common_repository"
   name        = "esi-common"
   description = "Shared OpenStack library for the ESI project"
-
-  teams = {
-    "esi-core"     = "admin"
-    "flocx"        = "pull"
-    "flocx-owners" = "admin"
-    "redhat"       = "maintain"
-  }
+  archived    = true
 }
 
 module "repo-esi-event-actions" {
   source      = "./modules/common_repository"
   name        = "esi-event-actions"
   description = "Event listener that runs scripts in response to messaging queue events"
-
-  teams = {
-    "redhat" = "maintain"
-  }
+  archived    = true
 }
 
 module "repo-esi-ha-config" {
   source      = "./modules/common_repository"
   name        = "esi-ha-config"
   description = "High availability configuration for ESI"
-
-  teams = {
-    "redhat" = "maintain"
-  }
+  archived    = true
 }
 
 module "repo-esi-leap" {
   source      = "./modules/common_repository"
   name        = "esi-leap"
   description = "ESI lease policy manager"
-
-  teams = {
-    "esi-core"       = "admin"
-    "esi-leap-admin" = "admin"
-    "flocx"          = "pull"
-    "flocx-owners"   = "admin"
-    "ops-core"       = "push"
-    "redhat"         = "maintain"
-  }
-
-  labels = {
-    "MOC 1.0" = { color = "9f70a7", description = "" }
-  }
+  archived    = true
 }
 
 module "repo-esi-pilot" {
   source      = "./modules/common_repository"
   name        = "esi-pilot"
   description = "Configuration and scripts for the ESI pilot deployment"
-
-  teams = {
-    "esi-core"    = "admin"
-    "esi-workers" = "maintain"
-    "ops-core"    = "push"
-    "redhat"      = "maintain"
-  }
+  archived    = true
 }
 
 module "repo-esi-pilot-cluster" {
@@ -424,56 +354,35 @@ module "repo-esi-pilot-cluster" {
   name        = "esi-pilot-cluster"
   description = "ESI pilot cluster deployment configuration"
   visibility  = "private"
-
-  teams = {
-    "esi"    = "admin"
-    "redhat" = "maintain"
-  }
+  archived    = true
 }
 
 module "repo-esi-rally-plugin" {
   source      = "./modules/common_repository"
   name        = "esi-rally-plugin"
   description = "Contains a plugin for running ESI commands with Rally"
-
-  teams = {
-    "redhat" = "maintain"
-  }
+  archived    = true
 }
 
 module "repo-esi-sandbox" {
   source      = "./modules/common_repository"
   name        = "esi-sandbox"
   description = "Standalone TripleO deployment for ESI development and testing"
-
-  teams = {
-    "esi-core" = "admin"
-    "redhat"   = "maintain"
-  }
+  archived    = true
 }
 
 module "repo-esi-ui" {
   source      = "./modules/common_repository"
   name        = "esi-ui"
   description = "OpenStack Horizon plugin that supports ESI"
-
-  users = {
-    "sheldor1510" = "push"
-  }
+  archived    = true
 }
 
 module "repo-esisdk" {
   source      = "./modules/common_repository"
   name        = "esisdk"
   description = "Unified SDK for ESI"
-
-  teams = {
-    "redhat" = "maintain"
-  }
-
-  labels = {
-    "MOC 1.0" = { color = "9f70a7", description = "" }
-  }
+  archived    = true
 }
 
 module "repo-everpure-moc" {
@@ -803,6 +712,7 @@ module "repo-moc-esi-network-config" {
   source      = "./modules/common_repository"
   name        = "moc-esi-network-config"
   description = "Ansible playbook for connecting ESI private networks to floating IPs"
+  archived    = true
 }
 
 module "repo-moc-iam" {
@@ -1577,38 +1487,14 @@ module "repo-python-esiclient" {
   name             = "python-esiclient"
   description      = "OpenStack CLI extensions for simplified ESI workflows"
   allow_auto_merge = true
-
-  teams = {
-    "esi-core"    = "admin"
-    "esi-workers" = "push"
-    "redhat"      = "maintain"
-  }
-
-  labels = {
-    "MOC 1.0" = { color = "9f70a7", description = "" }
-  }
-}
-
-module "repo-python-esiclient-1" {
-  source      = "./modules/common_repository"
-  name        = "python-esiclient-1"
-  description = "OpenStack CLI extensions for simplified ESI workflows"
-  has_issues  = false
+  archived         = true
 }
 
 module "repo-python-esileapclient" {
   source      = "./modules/common_repository"
   name        = "python-esileapclient"
   description = "Python client for the ESI-Leap OpenStack Lease API"
-
-  teams = {
-    "esi"         = "push"
-    "esi-core"    = "admin"
-    "esi-workers" = "push"
-  }
-  users = {
-    "samuel-zuk" = "push"
-  }
+  archived    = true
 }
 
 module "repo-quotes" {
