@@ -46,6 +46,11 @@ module "repo-adjutant-moc" {
   name        = "adjutant-moc"
   description = "MOC Onboarding plugin for Adjutant"
   has_wiki    = true
+
+  labels = {
+    "accepted"          = { color = "ededed", description = "" }
+    "needs_description" = { color = "ededed", description = "" }
+  }
 }
 
 module "repo-ai-accelerator" {
@@ -69,6 +74,10 @@ module "repo-ai-ivp" {
     "external-triage" = "triage"
     "redhat"          = "maintain"
   }
+
+  labels = {
+    "MOC 2.0" = { color = "aaaaaa", description = "" }
+  }
 }
 
 module "repo-al-folio" {
@@ -87,6 +96,10 @@ module "repo-ansible-switches" {
   teams = {
     "redhat" = "maintain"
   }
+
+  labels = {
+    "AAA Test" = { color = "e99695", description = "" }
+  }
 }
 
 module "repo-ansible-switches-auto-deploy" {
@@ -99,6 +112,11 @@ module "repo-bare-metal-usage-scripts" {
   source      = "./modules/common_repository"
   name        = "bare-metal-usage-scripts"
   description = "Scripts for tracking bare metal resource usage"
+
+  labels = {
+    "MOC 1.0" = { color = "9f70a7", description = "" }
+    "MOC 2.0" = { color = "aaaaaa", description = "" }
+  }
 }
 
 module "repo-ceph" {
@@ -194,6 +212,11 @@ module "repo-coldfront-plugin-allocation-api" {
   source      = "./modules/common_repository"
   name        = "coldfront-plugin-allocation-api"
   description = "ColdFront plugin providing an allocation API"
+
+  labels = {
+    "accepted"          = { color = "ededed", description = "" }
+    "needs_description" = { color = "ededed", description = "" }
+  }
 }
 
 module "repo-curator-openshift-infra" {
@@ -241,6 +264,11 @@ module "repo-documentation" {
 
   teams = {
     "ops-core" = "admin"
+  }
+
+  labels = {
+    "accepted"          = { color = "ededed", description = "" }
+    "needs_description" = { color = "ededed", description = "" }
   }
 }
 
@@ -297,6 +325,33 @@ module "repo-esi" {
     "samuel-zuk"  = "push"
     "sheldor1510" = "push"
   }
+
+  labels = {
+    "accepted"                    = { color = "ededed", description = "" }
+    "added_post_planning"         = { color = "ccff4c", description = "" }
+    "development"                 = { color = "49FD99", description = "" }
+    "epic"                        = { color = "BBDA16", description = "" }
+    "ESI"                         = { color = "5b0d01", description = "" }
+    "General Availability of ESI" = { color = "7f8a57", description = "" }
+    "generateMoreTasks"           = { color = "FBCA04", description = "This label indicates the assign should breakdown the complex task assigned to many subtasks." }
+    "mghpcc"                      = { color = "5319e7", description = "MGHPCC related tasks" }
+    "MOC 1.0"                     = { color = "9f70a7", description = "" }
+    "MOC 2.0"                     = { color = "aaaaaa", description = "" }
+    "MOC 2.0?"                    = { color = "5f2521", description = "" }
+    "moc esi"                     = { color = "A745A5", description = "" }
+    "needs_description"           = { color = "ededed", description = "" }
+    "Performance Enhancements"    = { color = "1757b9", description = "" }
+    "research"                    = { color = "D4C5F9", description = "investigative task" }
+    "size/extra large"            = { color = "5319e7", description = "Not been done before, new research, lot of time, risks to finishing in sprint, require extra help." }
+    "size/extra small"            = { color = "9BCC95", description = "Most requirements are understood, relatively easy, likely completed in a day or less." }
+    "size/large"                  = { color = "16AE23", description = "Similar work done, complex, often requires assistance, commonly largest size done in sprint." }
+    "size/medium"                 = { color = "103AD3", description = "Similar work has been done before, it is clear what needs to be done, a few steps beyond a small." }
+    "size/milestone"              = { color = "24653B", description = "needs to be broken down into multiple issues and a milestone created for it" }
+    "size/small"                  = { color = "c5def5", description = "Small thought and effort required, similar work has been done, or extra small with small unknown." }
+    "standup"                     = { color = "7CCCF3", description = "Issues that need to be discussed in the standup meeting with other teammates." }
+    "techsquare"                  = { color = "d93f0b", description = "" }
+    "vendor-ticket"               = { color = "1c946d", description = "To help keep track of issues that are associated with Vendor Tickets." }
+  }
 }
 
 module "repo-esi-common" {
@@ -344,6 +399,10 @@ module "repo-esi-leap" {
     "flocx-owners"   = "admin"
     "ops-core"       = "push"
     "redhat"         = "maintain"
+  }
+
+  labels = {
+    "MOC 1.0" = { color = "9f70a7", description = "" }
   }
 }
 
@@ -411,6 +470,10 @@ module "repo-esisdk" {
   teams = {
     "redhat" = "maintain"
   }
+
+  labels = {
+    "MOC 1.0" = { color = "9f70a7", description = "" }
+  }
 }
 
 module "repo-everpure-moc" {
@@ -462,6 +525,11 @@ module "repo-horizon-onboarding" {
   source      = "./modules/common_repository"
   name        = "horizon-onboarding"
   description = "Horizon-based Dashboard for MOC Onboarding"
+
+  labels = {
+    "accepted"            = { color = "ededed", description = "" }
+    "added_post_planning" = { color = "ccff4c", description = "" }
+  }
 }
 
 module "repo-hpc" {
@@ -499,6 +567,12 @@ module "repo-invoicing" {
     "open-source-contributors" = "triage"
     "ops-core"                 = "maintain"
   }
+
+  labels = {
+    "MOC 1.0"  = { color = "9f70a7", description = "" }
+    "MOC 2.0"  = { color = "aaaaaa", description = "" }
+    "MOC 2.0?" = { color = "5f2521", description = "" }
+  }
 }
 
 module "repo-invoicing-private-data" {
@@ -513,6 +587,10 @@ module "repo-invoicing-private-data" {
     "nercpis"                  = "pull"
     "open-source-contributors" = "pull"
     "ops-core"                 = "maintain"
+  }
+
+  labels = {
+    "MOC 1.0" = { color = "9f70a7", description = "" }
   }
 }
 
@@ -533,6 +611,11 @@ module "repo-k-hammer" {
   source      = "./modules/common_repository"
   name        = "k-hammer"
   description = "Kubernetes jobs for running HammerDB database benchmarks"
+
+  labels = {
+    "AAA Test" = { color = "e99695", description = "" }
+    "MOC 1.0"  = { color = "9f70a7", description = "" }
+  }
 }
 
 module "repo-k2k-fed" {
@@ -551,6 +634,10 @@ module "repo-k2k-proxy" {
   name         = "k2k-proxy"
   description  = "K2K-Aware Proxy for OpenStack"
   homepage_url = "http://k2k-proxy.readthedocs.io"
+
+  labels = {
+    "wip" = { color = "e99695", description = "" }
+  }
 }
 
 module "repo-k8s-tools-image" {
@@ -681,6 +768,19 @@ module "repo-moc-apps" {
   teams = {
     "ops-core" = "maintain"
   }
+
+  labels = {
+    "AAA Test"         = { color = "e99695", description = "" }
+    "accepted"         = { color = "ededed", description = "" }
+    "MOC 1.0"          = { color = "9f70a7", description = "" }
+    "MOC 2.0?"         = { color = "5f2521", description = "" }
+    "size/extra large" = { color = "5319e7", description = "Not been done before, new research, lot of time, risks to finishing in sprint, require extra help." }
+    "size/extra small" = { color = "9BCC95", description = "Most requirements are understood, relatively easy, likely completed in a day or less." }
+    "size/large"       = { color = "16AE23", description = "Similar work done, complex, often requires assistance, commonly largest size done in sprint." }
+    "size/medium"      = { color = "103AD3", description = "Similar work has been done before, it is clear what needs to be done, a few steps beyond a small." }
+    "size/milestone"   = { color = "24653B", description = "needs to be broken down into multiple issues and a milestone created for it" }
+    "size/small"       = { color = "c5def5", description = "Small thought and effort required, similar work has been done, or extra small with small unknown." }
+  }
 }
 
 module "repo-moc-aws" {
@@ -722,6 +822,11 @@ module "repo-moc-infra-config" {
     "open-source-contributors" = "triage"
     "ops-core"                 = "push"
   }
+
+  labels = {
+    "MOC 1.0" = { color = "9f70a7", description = "" }
+    "MOC 2.0" = { color = "ededed", description = "" }
+  }
 }
 
 module "repo-moc-inventory-dev" {
@@ -761,6 +866,79 @@ module "repo-moc-issues" {
     "ops-core"                 = "pull"
     "redhat"                   = "maintain"
   }
+
+  labels = {
+    "AAA Test"                               = { color = "e99695", description = "" }
+    "accepted"                               = { color = "ededed", description = "" }
+    "added_post_planning"                    = { color = "ccff4c", description = "" }
+    "ai-telemetry"                           = { color = "2E4C86", description = "" }
+    "Billing"                                = { color = "5bbaac", description = "" }
+    "blocked"                                = { color = "873719", description = "Include reason issue is blocked in the description" }
+    "coldfront"                              = { color = "A73DC0", description = "This issue pertains to NERC ColdFront" }
+    "CrossRepoTest"                          = { color = "a0201d", description = "" }
+    "development"                            = { color = "49FD99", description = "" }
+    "Engagement"                             = { color = "5f348e", description = "" }
+    "epic"                                   = { color = "BBDA16", description = "" }
+    "ESI"                                    = { color = "5b0d01", description = "" }
+    "flax"                                   = { color = "F0D3F7", description = "issues we are working on with Flax" }
+    "GDPR"                                   = { color = "9f4f21", description = "" }
+    "General Availability of ESI"            = { color = "7f8a57", description = "" }
+    "generateMoreTasks"                      = { color = "FBCA04", description = "This label indicates the assign should breakdown the complex task assigned to many subtasks." }
+    "gitopsify"                              = { color = "e99695", description = "" }
+    "gpu"                                    = { color = "006b75", description = "" }
+    "H100 Optimization"                      = { color = "aaaaaa", description = "" }
+    "Harvard Disengagement"                  = { color = "786ff4", description = "Harvard is disengaging from NERC." }
+    "invoice processing"                     = { color = "aaaaaa", description = "" }
+    "loki-logs"                              = { color = "3A5F3D", description = "" }
+    "mghpcc"                                 = { color = "5319e7", description = "MGHPCC related tasks" }
+    "MOC 1.0"                                = { color = "9f70a7", description = "" }
+    "MOC 2.0"                                = { color = "ededed", description = "" }
+    "MOC 2.0?"                               = { color = "5f2521", description = "" }
+    "moc esi"                                = { color = "A745A5", description = "" }
+    "monitoring"                             = { color = "4eed68", description = "" }
+    "Multiple Production OpenShift Clusters" = { color = "780941", description = "" }
+    "NAIRR"                                  = { color = "2301bc", description = "NAIRR — Tracks work associated with NAIRR research projects (NSF)" }
+    "needs_clarification"                    = { color = "F5CA41", description = "This issue needs to be clarified" }
+    "needs_description"                      = { color = "ededed", description = "" }
+    "Networking & Security"                  = { color = "a62600", description = "" }
+    "Non Roadmap Cost"                       = { color = "043a00", description = "" }
+    "object-storage"                         = { color = "aaaaaa", description = "" }
+    "observability"                          = { color = "997D3E", description = "" }
+    "ocp_metrics_access_request"             = { color = "e99695", description = "Requesting access to NESE OpenShift Metrics and Logs" }
+    "ope"                                    = { color = "407965", description = "This issue pertains to ope projects" }
+    "openshift"                              = { color = "61C264", description = "This issue pertains to NERC OpenShift" }
+    "openshift-virtualization"               = { color = "13EA94", description = "" }
+    "openstack"                              = { color = "0052cc", description = "This issue pertains to NERC OpenStack" }
+    "operator"                               = { color = "C9752E", description = "" }
+    "Organized Training"                     = { color = "402712", description = "" }
+    "Performance Enhancements"               = { color = "1757b9", description = "" }
+    "postgres"                               = { color = "aaaaaa", description = "" }
+    "Quickly integrating Lenovo GPUs"        = { color = "9c4242", description = "" }
+    "Required for Sign-Off"                  = { color = "D5831E", description = "This issue is required for sign-off of the Epic is is part of" }
+    "research"                               = { color = "e99695", description = "This task is primarily about information discovery" }
+    "RH Onboarding"                          = { color = "650299", description = "" }
+    "rhoai"                                  = { color = "d4c5f9", description = "RHOAI" }
+    "RHRoadmap"                              = { color = "2617ef", description = "" }
+    "security"                               = { color = "B60205", description = "Label for Security Issues" }
+    "size/extra large"                       = { color = "5319e7", description = "Not been done before, new research, lot of time, risks to finishing in sprint, require extra help." }
+    "size/extra small"                       = { color = "9BCC95", description = "Most requirements are understood, relatively easy, likely completed in a day or less." }
+    "size/large"                             = { color = "16AE23", description = "Similar work done, complex, often requires assistance, commonly largest size done in sprint." }
+    "size/medium"                            = { color = "103AD3", description = "Similar work has been done before, it is clear what needs to be done, a few steps beyond a small." }
+    "size/milestone"                         = { color = "24653B", description = "needs to be broken down into multiple issues and a milestone created for it" }
+    "size/small"                             = { color = "c5def5", description = "Small thought and effort required, similar work has been done, or extra small with small unknown." }
+    "spike"                                  = { color = "C3DB0B", description = "evaluating the impact new technology has on the current implementation" }
+    "standup"                                = { color = "7CCCF3", description = "Issues that need to be discussed in the standup meeting with other teammates." }
+    "Storage"                                = { color = "5bdae8", description = "" }
+    "support-ticket"                         = { color = "006b75", description = "" }
+    "Technical Debt"                         = { color = "b6ff32", description = "" }
+    "techsquare"                             = { color = "d93f0b", description = "" }
+    "Upgrades"                               = { color = "f70db5", description = "" }
+    "User Experience Enhancements"           = { color = "a8fa76", description = "" }
+    "vendor-ticket"                          = { color = "1c946d", description = "To help keep track of issues that are associated with Vendor Tickets." }
+    "vLLM"                                   = { color = "97ca36", description = "" }
+    "VM"                                     = { color = "b70a00", description = "" }
+    "website"                                = { color = "334A9E", description = "" }
+  }
 }
 
 module "repo-moc-labels" {
@@ -790,6 +968,10 @@ module "repo-moc-openshift-projects" {
     "moc-project-makers" = "push"
     "ops-core"           = "maintain"
   }
+
+  labels = {
+    "accepted" = { color = "ededed", description = "" }
+  }
 }
 
 module "repo-moc-openshift-tools" {
@@ -804,6 +986,14 @@ module "repo-moc-openstack-tools" {
   source      = "./modules/common_repository"
   name        = "moc-openstack-tools"
   description = "Tools for OpenStack administration, user/project management, etc."
+
+  labels = {
+    "easy"            = { color = "f9d0c4", description = "" }
+    "feature request" = { color = "84b6eb", description = "" }
+    "major change"    = { color = "d4c5f9", description = "" }
+    "waiting on +2"   = { color = "c2e0c6", description = "" }
+    "WIP"             = { color = "b60205", description = "" }
+  }
 }
 
 module "repo-moc-openstackwatcher" {
@@ -892,6 +1082,11 @@ module "repo-moca-requests" {
     "ops-core"             = "admin"
     "redhat"               = "maintain"
   }
+
+  labels = {
+    "AAA Test"   = { color = "e99695", description = "" }
+    "Techsquare" = { color = "d93f0b", description = "" }
+  }
 }
 
 module "repo-mocmon" {
@@ -937,6 +1132,11 @@ module "repo-nerc-rates" {
   teams = {
     "open-source-contributors" = "triage"
     "ops-core"                 = "maintain"
+  }
+
+  labels = {
+    "MOC 1.0" = { color = "9f70a7", description = "" }
+    "MOC 2.0" = { color = "aaaaaa", description = "" }
   }
 }
 
@@ -1088,6 +1288,10 @@ module "repo-onboarding-tools" {
   source      = "./modules/common_repository"
   name        = "onboarding-tools"
   description = "Tools and testing for MOC Onboarding."
+
+  labels = {
+    "accepted" = { color = "ededed", description = "" }
+  }
 }
 
 module "repo-openshift" {
@@ -1104,6 +1308,20 @@ module "repo-openshift-acct-mgt" {
 
   teams = {
     "ops-core" = "admin"
+  }
+
+  labels = {
+    "AAA Test"          = { color = "e99695", description = "" }
+    "accepted"          = { color = "ededed", description = "" }
+    "MOC 1.0"           = { color = "9f70a7", description = "" }
+    "MOC 2.0?"          = { color = "5f2521", description = "" }
+    "needs_description" = { color = "ededed", description = "" }
+    "size/extra large"  = { color = "5319e7", description = "Not been done before, new research, lot of time, risks to finishing in sprint, require extra help." }
+    "size/extra small"  = { color = "9BCC95", description = "Most requirements are understood, relatively easy, likely completed in a day or less." }
+    "size/large"        = { color = "16AE23", description = "Similar work done, complex, often requires assistance, commonly largest size done in sprint." }
+    "size/medium"       = { color = "103AD3", description = "Similar work has been done before, it is clear what needs to be done, a few steps beyond a small." }
+    "size/milestone"    = { color = "24653B", description = "needs to be broken down into multiple issues and a milestone created for it" }
+    "size/small"        = { color = "c5def5", description = "Small thought and effort required, similar work has been done, or extra small with small unknown." }
   }
 }
 
@@ -1130,6 +1348,14 @@ module "repo-openshift-usage-scripts" {
     "open-source-contributors" = "triage"
     "redhat"                   = "maintain"
   }
+
+  labels = {
+    "AAA Test"           = { color = "e99695", description = "" }
+    "invoice processing" = { color = "aaaaaa", description = "" }
+    "MOC 1.0"            = { color = "9f70a7", description = "" }
+    "MOC 2.0"            = { color = "aaaaaa", description = "" }
+    "MOC 2.0?"           = { color = "5f2521", description = "" }
+  }
 }
 
 module "repo-openstack-billing-from-db" {
@@ -1140,6 +1366,13 @@ module "repo-openstack-billing-from-db" {
   teams = {
     "open-source-contributors" = "triage"
     "ops-core"                 = "triage"
+  }
+
+  labels = {
+    "invoice processing" = { color = "aaaaaa", description = "" }
+    "MOC 1.0"            = { color = "9f70a7", description = "" }
+    "MOC 2.0"            = { color = "aaaaaa", description = "" }
+    "MOC 2.0?"           = { color = "5f2521", description = "" }
   }
 }
 
@@ -1157,6 +1390,18 @@ module "repo-ops-docs" {
   teams = {
     "nercpis"  = "pull"
     "ops-core" = "admin"
+  }
+
+  labels = {
+    "accepted"            = { color = "ededed", description = "" }
+    "added_post_planning" = { color = "ccff4c", description = "" }
+    "needs_description"   = { color = "ededed", description = "" }
+    "size/extra large"    = { color = "5319e7", description = "Not been done before, new research, lot of time, risks to finishing in sprint, require extra help." }
+    "size/extra small"    = { color = "9BCC95", description = "Most requirements are understood, relatively easy, likely completed in a day or less." }
+    "size/large"          = { color = "16AE23", description = "Similar work done, complex, often requires assistance, commonly largest size done in sprint." }
+    "size/medium"         = { color = "103AD3", description = "Similar work has been done before, it is clear what needs to be done, a few steps beyond a small." }
+    "size/milestone"      = { color = "24653B", description = "needs to be broken down into multiple issues and a milestone created for it" }
+    "size/small"          = { color = "c5def5", description = "Small thought and effort required, similar work has been done, or extra small with small unknown." }
   }
 }
 
@@ -1176,6 +1421,42 @@ module "repo-ops-issues" {
     "ops-core"                 = "admin"
     "redhat"                   = "maintain"
   }
+
+  labels = {
+    "accepted"                               = { color = "ededed", description = "" }
+    "added_post_planning"                    = { color = "ccff4c", description = "" }
+    "blocked"                                = { color = "873719", description = "Include reason issue is blocked in the description" }
+    "epic"                                   = { color = "BBDA16", description = "" }
+    "flax"                                   = { color = "F0D3F7", description = "issues we are working on with Flax" }
+    "GDPR"                                   = { color = "9f4f21", description = "" }
+    "gitopsify"                              = { color = "e99695", description = "" }
+    "mghpcc"                                 = { color = "5319e7", description = "MGHPCC related tasks" }
+    "MOC 1.0"                                = { color = "9f70a7", description = "" }
+    "MOC 2.0"                                = { color = "ededed", description = "" }
+    "MOC 2.0?"                               = { color = "5f2521", description = "" }
+    "monitoring"                             = { color = "4eed68", description = "" }
+    "Multiple Production OpenShift Clusters" = { color = "780941", description = "" }
+    "NAIRR"                                  = { color = "2301bc", description = "NAIRR — Tracks work associated with NAIRR research projects (NSF)" }
+    "needs_clarification"                    = { color = "F5CA41", description = "This issue needs to be clarified" }
+    "needs_description"                      = { color = "ededed", description = "" }
+    "Networking & Security"                  = { color = "a62600", description = "" }
+    "observability"                          = { color = "997D3E", description = "" }
+    "Quickly integrating Lenovo GPUs"        = { color = "9c4242", description = "" }
+    "research"                               = { color = "e99695", description = "This task is primarily about information discovery" }
+    "security"                               = { color = "B60205", description = "Label for Security Issues" }
+    "size/extra large"                       = { color = "5319e7", description = "Not been done before, new research, lot of time, risks to finishing in sprint, require extra help." }
+    "size/extra small"                       = { color = "9BCC95", description = "Most requirements are understood, relatively easy, likely completed in a day or less." }
+    "size/large"                             = { color = "16AE23", description = "Similar work done, complex, often requires assistance, commonly largest size done in sprint." }
+    "size/medium"                            = { color = "103AD3", description = "Similar work has been done before, it is clear what needs to be done, a few steps beyond a small." }
+    "size/milestone"                         = { color = "24653B", description = "needs to be broken down into multiple issues and a milestone created for it" }
+    "size/small"                             = { color = "c5def5", description = "Small thought and effort required, similar work has been done, or extra small with small unknown." }
+    "spike"                                  = { color = "C3DB0B", description = "evaluating the impact new technology has on the current implementation" }
+    "Storage"                                = { color = "5bdae8", description = "" }
+    "Technical Debt"                         = { color = "b6ff32", description = "" }
+    "techsquare"                             = { color = "d93f0b", description = "" }
+    "vendor-ticket"                          = { color = "1c946d", description = "To help keep track of issues that are associated with Vendor Tickets." }
+    "website"                                = { color = "334A9E", description = "" }
+  }
 }
 
 module "repo-ops-private" {
@@ -1188,6 +1469,19 @@ module "repo-ops-private" {
   teams = {
     "communications" = "triage"
     "ops-core"       = "maintain"
+  }
+
+  labels = {
+    "AAA Test"            = { color = "e99695", description = "" }
+    "accepted"            = { color = "ededed", description = "" }
+    "added_post_planning" = { color = "ccff4c", description = "" }
+    "blocked"             = { color = "873719", description = "Include reason issue is blocked in the description" }
+    "Community Building"  = { color = "A1E35D", description = "Way to track Community/Team Building" }
+    "MOC 1.0"             = { color = "9f70a7", description = "" }
+    "MOC 2.0"             = { color = "ededed", description = "" }
+    "MOC 2.0?"            = { color = "5f2521", description = "" }
+    "Organized Training"  = { color = "402712", description = "Way to track organized training" }
+    "Self-training"       = { color = "D20FA8", description = "Way to track self-training" }
   }
 }
 
@@ -1228,6 +1522,10 @@ module "repo-papers" {
   }
   users = {
     "trevornogues" = "push"
+  }
+
+  labels = {
+    "discussion" = { color = "ccd4ff", description = "" }
   }
 }
 
@@ -1285,6 +1583,10 @@ module "repo-python-esiclient" {
     "esi-workers" = "push"
     "redhat"      = "maintain"
   }
+
+  labels = {
+    "MOC 1.0" = { color = "9f70a7", description = "" }
+  }
 }
 
 module "repo-python-esiclient-1" {
@@ -1332,6 +1634,11 @@ module "repo-reporting" {
   source      = "./modules/common_repository"
   name        = "reporting"
   description = "OpenStack utilization reporting and billing tools for the MOC"
+
+  labels = {
+    "accepted"          = { color = "ededed", description = "" }
+    "needs_description" = { color = "ededed", description = "" }
+  }
 }
 
 module "repo-rfi-iarpa-seccloud-17" {
@@ -1371,6 +1678,11 @@ module "repo-rubicon-issues" {
   teams = {
     "ops-core" = "admin"
     "rubicon"  = "maintain"
+  }
+
+  labels = {
+    "accepted"          = { color = "ededed", description = "" }
+    "needs_description" = { color = "ededed", description = "" }
   }
 }
 
@@ -1432,6 +1744,10 @@ module "repo-sprint-notes" {
   name        = "sprint-notes"
   description = "Sprint planning notes and meeting records"
   visibility  = "private"
+
+  labels = {
+    "accepted" = { color = "ededed", description = "" }
+  }
 }
 
 module "repo-sso" {
@@ -1440,6 +1756,17 @@ module "repo-sso" {
   description  = "Ansible automation for deployment of SSO"
   has_wiki     = true
   homepage_url = "https://sso.massopen.cloud"
+
+  labels = {
+    "AAA Test"         = { color = "e99695", description = "" }
+    "accepted"         = { color = "ededed", description = "" }
+    "size/extra large" = { color = "5319e7", description = "Not been done before, new research, lot of time, risks to finishing in sprint, require extra help." }
+    "size/extra small" = { color = "9BCC95", description = "Most requirements are understood, relatively easy, likely completed in a day or less." }
+    "size/large"       = { color = "16AE23", description = "Similar work done, complex, often requires assistance, commonly largest size done in sprint." }
+    "size/medium"      = { color = "103AD3", description = "Similar work has been done before, it is clear what needs to be done, a few steps beyond a small." }
+    "size/milestone"   = { color = "24653B", description = "needs to be broken down into multiple issues and a milestone created for it" }
+    "size/small"       = { color = "c5def5", description = "Small thought and effort required, similar work has been done, or extra small with small unknown." }
+  }
 }
 
 module "repo-storage-benchmarks" {
