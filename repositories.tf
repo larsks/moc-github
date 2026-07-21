@@ -773,7 +773,7 @@ module "repo-moc-issues" {
     "ai-ivp-bastion-reviewers" = "push"
     "marcomm"                  = "triage"
     "ops-collab"               = "triage"
-    "ops-core"                 = "pull"
+    "ops-core"                 = "push"
     "redhat"                   = "maintain"
   }
 
