@@ -719,3 +719,62 @@ resource "github_repository" "python-esileapclient" {
   archived     = true
   has_projects = false
 }
+
+resource "github_repository" "repo-cloud-apps" {
+  archived    = true
+  name        = "cloud-apps"
+  description = "Research on science and HPC application performance in cloud environments"
+  visibility  = "private"
+  has_wiki    = true
+}
+
+resource "github_repository" "repo-cloudman" {
+  archived    = true
+  name        = "cloudman"
+  description = "Cloud manager for provisioning and managing compute clusters on cloud infrastructure"
+  visibility  = "private"
+  has_wiki    = true
+}
+
+resource "github_repository" "repo-ic-cloud-2013" {
+  archived    = true
+  name        = "ic-cloud-2013"
+  visibility  = "private"
+  description = "Towards a Cloud Marketplace paper"
+}
+
+resource "github_repository" "repo-mghpcc" {
+  archived    = true
+  name        = "MGHPCC"
+  description = "Scripts for collecting and archiving MassDOT data feeds at MGHPCC"
+  has_issues  = false
+}
+
+resource "github_repository" "repo-mlsc" {
+  archived    = true
+  name        = "mlsc"
+  description = "mslc operations"
+  visibility  = "private"
+}
+
+resource "github_repository" "repo-nsf-13-602" {
+  archived    = true
+  name        = "NSF-13-602"
+  description = "NSF 13-602 grant proposal materials"
+  visibility  = "private"
+}
+
+resource "github_repository" "repo-nsf-ccc" {
+  archived    = true
+  name        = "NSF-CCC"
+  description = "NSF Computing Community Consortium proposal materials"
+  visibility  = "private"
+}
+
+resource "github_repository" "repo-seccloud_13" {
+  archived    = true
+  name        = "seccloud_13"
+  description = "Secure Cloud OpenStack 13 deployment configuration"
+  visibility  = "private"
+}
+
