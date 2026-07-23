@@ -22,9 +22,16 @@ module "repo-access-requests" {
   visibility  = "private"
 
   teams = {
-    "ai-ivp"                   = "triage"
-    "ai-ivp-bastion-reviewers" = "maintain"
+    "ai-ivp"                   = "maintain"
+    "ai-ivp-bastion-reviewers" = "triage"
   }
+
+  labels = {
+    "approved" = { color = "008672", description = "Request has been approved" }
+    "denied"   = { color = "d73a4a", description = "Request has been denied" }
+  }
+
+  include_default_labels = false
 }
 
 module "repo-account-request" {
@@ -718,6 +725,7 @@ module "repo-moc-issues" {
     "NAIRR"                                  = { color = "2301bc", description = "NAIRR — Tracks work associated with NAIRR research projects (NSF)" }
     "needs_clarification"                    = { color = "F5CA41", description = "This issue needs to be clarified" }
     "needs_description"                      = { color = "ededed", description = "" }
+    "needs_epic"                             = { color = "F6CB66", description = "Please create an epic for this issue to be added to, remove label once added" }
     "Networking & Security"                  = { color = "a62600", description = "" }
     "Non Roadmap Cost"                       = { color = "043a00", description = "" }
     "object-storage"                         = { color = "aaaaaa", description = "" }
