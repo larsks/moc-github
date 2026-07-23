@@ -34,12 +34,6 @@ module "repo-access-requests" {
   include_default_labels = false
 }
 
-module "repo-account-request" {
-  source      = "./modules/common_repository"
-  name        = "Account-Request"
-  description = "A simple server to handle account requests"
-}
-
 module "repo-adjutant" {
   source       = "./modules/common_repository"
   name         = "adjutant"
@@ -126,13 +120,6 @@ module "repo-bare-metal-usage-scripts" {
   }
 }
 
-module "repo-ceph" {
-  source      = "./modules/common_repository"
-  name        = "ceph"
-  description = "Collaboration area with Redhat partner"
-  has_wiki    = true
-}
-
 module "repo-chromogenic" {
   source      = "./modules/common_repository"
   name        = "chromogenic"
@@ -168,14 +155,6 @@ module "repo-clank" {
   }
 }
 
-module "repo-cloud-apps" {
-  source      = "./modules/common_repository"
-  name        = "cloud-apps"
-  description = "Research on science and HPC application performance in cloud environments"
-  visibility  = "private"
-  has_wiki    = true
-}
-
 module "repo-cloud_dataverse" {
   source      = "./modules/common_repository"
   name        = "cloud_dataverse"
@@ -197,14 +176,6 @@ module "repo-clouddv" {
   users = {
     "thaorell" = "push"
   }
-}
-
-module "repo-cloudman" {
-  source      = "./modules/common_repository"
-  name        = "cloudman"
-  description = "Cloud manager for provisioning and managing compute clusters on cloud infrastructure"
-  visibility  = "private"
-  has_wiki    = true
 }
 
 module "repo-coldfront" {
@@ -320,12 +291,6 @@ module "repo-fx2-ansible" {
   description = "Ansible playbooks for deploying FX2 machines"
 }
 
-module "repo-gh-tools-image" {
-  source      = "./modules/common_repository"
-  name        = "gh-tools-image"
-  description = "Container image with tools for managing GitHub repositories"
-}
-
 module "repo-gpfs-storage" {
   source      = "./modules/common_repository"
   name        = "gpfs-storage"
@@ -373,13 +338,6 @@ module "repo-hpc" {
   teams = {
     "moc-hpc" = "push"
   }
-}
-
-module "repo-ic-cloud-2013" {
-  source      = "./modules/common_repository"
-  name        = "ic-cloud-2013"
-  visibility  = "private"
-  description = "Towards a Cloud Marketplace paper"
 }
 
 module "repo-image-workflow-example" {
@@ -484,20 +442,6 @@ module "repo-kaizen-metrics" {
   visibility  = "private"
 }
 
-module "repo-kaizen-quota-data" {
-  source      = "./modules/common_repository"
-  name        = "kaizen-quota-data"
-  description = "Quota data for the Kaizen OpenStack cluster"
-  visibility  = "private"
-}
-
-module "repo-kaizen2-configuration" {
-  source      = "./modules/common_repository"
-  name        = "kaizen2-configuration"
-  description = "Currently this hosts the nagios configuration files. Could probably keep other configuration files."
-  visibility  = "private"
-}
-
 module "repo-keystone-migration" {
   source      = "./modules/common_repository"
   name        = "keystone-migration"
@@ -544,49 +488,16 @@ module "repo-lsvd-research" {
   }
 }
 
-module "repo-macs" {
-  source      = "./modules/common_repository"
-  name        = "macs"
-  description = "Notes and other stuff for MACs/OpenStack security research"
-  visibility  = "private"
-  has_issues  = false
-  has_wiki    = true
-
-  teams = {
-    "macs"   = "push"
-    "moc-rw" = "pull"
-  }
-  users = {
-    "henn"      = "push"
-    "kamfonik"  = "push"
-    "kylehogan" = "push"
-  }
-}
-
 module "repo-mariadb-nese-test" {
   source      = "./modules/common_repository"
   name        = "mariadb-nese-test"
   description = "Docker files for mariadb tests with NESE"
 }
 
-module "repo-mghpcc" {
-  source      = "./modules/common_repository"
-  name        = "MGHPCC"
-  description = "Scripts for collecting and archiving MassDOT data feeds at MGHPCC"
-  has_issues  = false
-}
-
 module "repo-mghpcc-cablelength-calculator" {
   source      = "./modules/common_repository"
   name        = "mghpcc-cablelength-calculator"
   description = "JS app to calculate cable length between racks"
-}
-
-module "repo-mlsc" {
-  source      = "./modules/common_repository"
-  name        = "mlsc"
-  description = "mslc operations"
-  visibility  = "private"
 }
 
 module "repo-moc-apps" {
@@ -651,26 +562,6 @@ module "repo-moc-infra-config" {
   labels = {
     "MOC 1.0" = { color = "9f70a7", description = "" }
     "MOC 2.0" = { color = "ededed", description = "" }
-  }
-}
-
-module "repo-moc-inventory-dev" {
-  source      = "./modules/common_repository"
-  name        = "moc-inventory-dev"
-  description = "Ansible inventory for MOC development environment"
-
-  teams = {
-    "ops-core" = "push"
-  }
-}
-
-module "repo-moc-inventory-prod" {
-  source      = "./modules/common_repository"
-  name        = "moc-inventory-prod"
-  description = "Ansible inventory for MOC production environment"
-
-  teams = {
-    "ops-core" = "push"
   }
 }
 
@@ -1022,17 +913,6 @@ module "repo-notmonero" {
   }
 }
 
-module "repo-nsf-13-602" {
-  source      = "./modules/common_repository"
-  name        = "NSF-13-602"
-  description = "NSF 13-602 grant proposal materials"
-  visibility  = "private"
-
-  teams = {
-    "nsfcloud" = "push"
-  }
-}
-
 module "repo-nsf-18-531" {
   source      = "./modules/common_repository"
   name        = "NSF-18-531"
@@ -1060,17 +940,6 @@ module "repo-nsf-19-512-open-cloudlab" {
   }
 }
 
-module "repo-nsf-ccc" {
-  source      = "./modules/common_repository"
-  name        = "NSF-CCC"
-  description = "NSF Computing Community Consortium proposal materials"
-  visibility  = "private"
-
-  teams = {
-    "white-paper" = "push"
-  }
-}
-
 module "repo-objects-for-all" {
   source      = "./modules/common_repository"
   name        = "objects-for-all"
@@ -1082,13 +951,6 @@ module "repo-ocp-nerc-storage-tests" {
   source      = "./modules/common_repository"
   name        = "ocp-nerc-storage-tests"
   description = "Manifests for Storage Tests run on NERC Infra"
-}
-
-module "repo-ocp-prod-clusterwide-entitlements" {
-  source      = "./modules/common_repository"
-  name        = "ocp-prod-clusterwide-entitlements"
-  description = "Holds the necessary configuration for creating clusterwide entitlements on ocp-prod openshift cluster "
-  visibility  = "private"
 }
 
 module "repo-ocp-prod-openshift-install" {
@@ -1149,13 +1011,6 @@ module "repo-openshift-acct-mgt" {
     "size/milestone"    = { color = "24653B", description = "needs to be broken down into multiple issues and a milestone created for it" }
     "size/small"        = { color = "c5def5", description = "Small thought and effort required, similar work has been done, or extra small with small unknown." }
   }
-}
-
-module "repo-openshift-rev-proxy" {
-  source      = "./modules/common_repository"
-  name        = "openshift-rev-proxy"
-  description = "This is a reverse proxy server to do 2way authentication"
-  visibility  = "private"
 }
 
 module "repo-openshift-schemas" {
@@ -1491,17 +1346,6 @@ module "repo-seccloud" {
   }
   users = {
     "gfedorkow" = "pull"
-  }
-}
-
-module "repo-seccloud_13" {
-  source      = "./modules/common_repository"
-  name        = "seccloud_13"
-  description = "Secure Cloud OpenStack 13 deployment configuration"
-  visibility  = "private"
-
-  teams = {
-    "cloud-sec" = "push"
   }
 }
 
