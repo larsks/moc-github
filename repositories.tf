@@ -266,18 +266,6 @@ module "repo-e1-metrics" {
   }
 }
 
-module "repo-engage1" {
-  source      = "./modules/common_repository"
-  name        = "Engage1"
-  description = "Engage1 project collaboration and documentation"
-  visibility  = "private"
-  has_wiki    = true
-
-  teams = {
-    "engage1" = "push"
-  }
-}
-
 module "repo-everpure-moc" {
   source      = "./modules/common_repository"
   name        = "everpure-moc"
@@ -295,12 +283,6 @@ module "repo-gpfs-storage" {
   source      = "./modules/common_repository"
   name        = "gpfs-storage"
   description = "Collection of notes and scripts for IBM Scale"
-}
-
-module "repo-haas-ui" {
-  source      = "./modules/common_repository"
-  name        = "haas-ui"
-  description = "Django-based UI for HaaS"
 }
 
 module "repo-hadhcp" {
@@ -404,17 +386,6 @@ module "repo-k-hammer" {
   labels = {
     "AAA Test" = { color = "e99695", description = "" }
     "MOC 1.0"  = { color = "9f70a7", description = "" }
-  }
-}
-
-module "repo-k2k-fed" {
-  source      = "./modules/common_repository"
-  name        = "k2k-fed"
-  description = "k2k federation automation"
-  has_wiki    = true
-
-  teams = {
-    "moc-rw" = "pull"
   }
 }
 
@@ -966,12 +937,6 @@ module "repo-oct-powermon" {
   description = "Files for OCT power monitoring"
 }
 
-module "repo-ocx-library" {
-  source      = "./modules/common_repository"
-  name        = "ocx-library"
-  description = "Client library for Open Cloud Exchange services"
-}
-
 module "repo-onboarding-tools" {
   source      = "./modules/common_repository"
   name        = "onboarding-tools"
@@ -1346,17 +1311,6 @@ module "repo-seccloud" {
   }
   users = {
     "gfedorkow" = "pull"
-  }
-}
-
-module "repo-sensu-checks" {
-  source      = "./modules/common_repository"
-  name        = "sensu-checks"
-  description = "Sensu monitoring checks for compute, controller, and Ceilometer nodes"
-  visibility  = "private"
-
-  users = {
-    "tiwarid" = "push"
   }
 }
 
