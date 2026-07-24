@@ -96,3 +96,13 @@ variable "include_default_labels" {
   type        = bool
   default     = true
 }
+
+variable "branch_protection" {
+  description = "Branch protection rules applied to the default branch"
+  type = object({
+    required_reviews     = optional(number, 1)
+    required_status_checks = optional(list(string), [])
+    require_linear_history = optional(bool, false)
+  })
+  default = null
+}
