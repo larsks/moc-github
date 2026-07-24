@@ -778,3 +778,45 @@ resource "github_repository" "repo-seccloud_13" {
   visibility  = "private"
 }
 
+
+resource "github_repository" "repo-ocx-library" {
+  name         = "ocx-library"
+  description  = "Client library for Open Cloud Exchange services"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-engage1" {
+  name         = "Engage1"
+  description  = "Engage1 project collaboration and documentation"
+  visibility   = "private"
+  has_wiki     = true
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-haas-ui" {
+  name         = "haas-ui"
+  description  = "Django-based UI for HaaS"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-k2k-fed" {
+  name         = "k2k-fed"
+  description  = "k2k federation automation"
+  has_wiki     = true
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-sensu-checks" {
+  name         = "sensu-checks"
+  description  = "Sensu monitoring checks for compute, controller, and Ceilometer nodes"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
