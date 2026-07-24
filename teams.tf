@@ -3,7 +3,7 @@ locals {
   team_slugs = toset([for f in fileset("${path.module}/team-members", "*.csv") : trimsuffix(f, ".csv")])
   all_members = [
     for m in local.members : {
-      username = m.username
+      username = lower(m.username)
       role     = m.role == "admin" ? "maintainer" : "member"
     }
   ]
