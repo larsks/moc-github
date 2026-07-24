@@ -65,6 +65,12 @@ module "repo-ansible-switches" {
   labels = {
     "AAA Test" = { color = "e99695", description = "" }
   }
+
+  branch_protection = {
+    required_status_checks = [
+      "pre-commit"
+    ]
+  }
 }
 
 module "repo-ansible-switches-auto-deploy" {
@@ -294,6 +300,15 @@ module "repo-moc-aws" {
   source      = "./modules/common_repository"
   name        = "moc-aws"
   description = "OpenTofu management of AWS resources for the Mass Open Cloud"
+
+  branch_protection = {
+    required_reviews = 1
+    required_status_checks = [
+      "Pre-commit",
+      "Plan"
+    ]
+    require_linear_history = true
+  }
 }
 
 module "repo-moc-dns" {
