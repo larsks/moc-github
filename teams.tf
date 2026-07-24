@@ -1,9 +1,20 @@
 locals {
   teams      = csvdecode(file("${path.module}/teams.csv"))
   team_slugs = toset([for f in fileset("${path.module}/team-members", "*.csv") : trimsuffix(f, ".csv")])
-  team_members = {
-    for slug in local.team_slugs : slug => csvdecode(file("${path.module}/team-members/${slug}.csv"))
-  }
+  all_members = [
+    for m in local.members : {
+      username = m.username
+      role     = m.role == "admin" ? "maintainer" : "member"
+    }
+  ]
+  team_members = merge(
+    {
+      for slug in local.team_slugs : slug => csvdecode(file("${path.module}/team-members/${slug}.csv"))
+    },
+    {
+      all-members = local.all_members
+    },
+  )
 }
 
 resource "github_team" "this" {
