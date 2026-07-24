@@ -70,6 +70,15 @@ resource "github_repository_collaborators" "this" {
 }
 
 resource "github_issue_labels" "this" {
+  # When attempting to remove labels and archive a repository in a single
+  # operation, the repository is marked as archived before tofu attempts to
+  # delete the labels. This leads to an error because the archive is now
+  # read-only.
+  #
+  # The following construct effectively "hides" the label resource when
+  # archiving a repository (so the repository gets archived and we make no
+  # changes to the labels).
+  count      = var.archived ? 0 : 1
   repository = github_repository.this.name
 
   dynamic "label" {
@@ -80,6 +89,11 @@ resource "github_issue_labels" "this" {
       description = label.value.description
     }
   }
+}
+
+moved {
+  from = github_issue_labels.this
+  to   = github_issue_labels.this[0]
 }
 
 removed {
