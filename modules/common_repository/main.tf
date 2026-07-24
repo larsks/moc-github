@@ -91,6 +91,56 @@ resource "github_issue_labels" "this" {
   }
 }
 
+resource "terraform_data" "remove_legacy_branch_protection" {
+  count = var.branch_protection != null && var.visibility == "public" && !var.archived ? 1 : 0
+
+  triggers_replace = github_repository.this.name
+
+  provisioner "local-exec" {
+    command = <<-EOT
+      gh api -X DELETE \
+        "/repos/${github_repository.this.full_name}/branches/${github_repository.this.default_branch}/protection" \
+        --silent 2>/dev/null || true
+    EOT
+  }
+}
+
+resource "github_repository_ruleset" "this" {
+  count = var.branch_protection != null && var.visibility == "public" && !var.archived ? 1 : 0
+
+  name        = "default-branch-protection"
+  repository  = github_repository.this.name
+  target      = "branch"
+  enforcement = "active"
+
+  conditions {
+    ref_name {
+      include = ["~DEFAULT_BRANCH"]
+      exclude = []
+    }
+  }
+
+  rules {
+    required_linear_history = var.branch_protection.require_linear_history
+
+    pull_request {
+      required_approving_review_count = var.branch_protection.required_reviews
+    }
+
+    dynamic "required_status_checks" {
+      for_each = length(var.branch_protection.required_status_checks) > 0 ? [1] : []
+      content {
+        dynamic "required_check" {
+          for_each = toset(var.branch_protection.required_status_checks)
+          content {
+            context = required_check.value
+          }
+        }
+      }
+    }
+  }
+}
+
 moved {
   from = github_issue_labels.this
   to   = github_issue_labels.this[0]
