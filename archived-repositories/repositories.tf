@@ -820,3 +820,541 @@ resource "github_repository" "repo-sensu-checks" {
   archived     = true
   has_projects = false
 }
+
+resource "github_repository" "repo-k2k-proxy" {
+  name         = "k2k-proxy"
+  description  = "K2K-Aware Proxy for OpenStack"
+  has_wiki     = false
+  homepage_url = "http://k2k-proxy.readthedocs.io"
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-openshift" {
+  name         = "openshift"
+  description  = "OpenShift installation guides and image build sources"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-cici2017" {
+  name         = "cici2017"
+  description  = "proposal"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-chromogenic" {
+  name         = "chromogenic"
+  description  = "The chromogenic cloud library can be used to create machine images from instances or existing images and make them portable across providers, as well as support for exporting to localized virtualization (i.e. Virtualbox/VMware)."
+  has_issues   = false
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-rfi-iarpa-seccloud-17" {
+  name         = "RFI-iarpa-seccloud-17"
+  description  = "response to RFI from IARPA-RFI-17-04"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-mocmon" {
+  name         = "mocmon"
+  description  = "Sensu monitoring configuration for the MOC"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-osprofiler" {
+  name         = "osprofiler"
+  description  = "OpenStack cross service/project profiler"
+  has_issues   = false
+  has_wiki     = false
+  homepage_url = "http://openstack.org"
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-partner_y3" {
+  name         = "partner_y3"
+  description  = "1 page reports to partners for end of year 3"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-notmonero" {
+  name         = "notmonero"
+  description  = "Research on Monero cryptocurrency privacy attacks and countermeasures"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-tracing" {
+  name         = "tracing"
+  description  = "OpenStack distributed tracing research and configuration"
+  visibility   = "private"
+  has_wiki     = true
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-hpc" {
+  name         = "hpc"
+  description  = "HPC infrastructure planning and documentation"
+  visibility   = "private"
+  has_wiki     = true
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-cloud_dataverse" {
+  name         = "cloud_dataverse"
+  description  = "repository for papers for cloud data verse"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-clank" {
+  name         = "clank"
+  description  = "clankity clankity clankity clank"
+  has_wiki     = true
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc-openstackwatcher" {
+  name         = "moc-OpenstackWatcher"
+  description  = "OpenStack resource monitoring and alerting"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-clouddv" {
+  name         = "cloudDV"
+  description  = "Anything Cloud Dataverse"
+  visibility   = "private"
+  has_wiki     = true
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-e1-metrics" {
+  name         = "e1-metrics"
+  description  = "Any source code for metrics related software of Engage1"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-mocosppuppet" {
+  name         = "MOCOSPpuppet"
+  description  = "Puppet manifests for MOC OpenStack Platform deployment"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-nsf-18-531" {
+  name         = "NSF-18-531"
+  description  = "NSF 18-531 grant proposal materials"
+  visibility   = "private"
+  has_issues   = false
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-seccloud" {
+  name         = "seccloud"
+  description  = "Secure Cloud stuff"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-keystone-migration" {
+  name         = "keystone-migration"
+  description  = "Tools for migrating users between Keystone installations"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc-openshift-tools" {
+  name         = "moc-openshift-tools"
+  description  = "Scripts and configurations for OpenShift setup and maintenance"
+  visibility   = "private"
+  has_wiki     = true
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-abmi" {
+  name         = "ABMI"
+  description  = "Agentless Bare-Metal Introspection"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc-wordpress" {
+  name         = "moc-wordpress"
+  description  = "MOC Wordpress site"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-kaizen-metrics" {
+  name         = "kaizen-metrics"
+  description  = "OpenStack usage metrics and charts for the Kaizen cluster"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-nsf-19-512-open-cloudlab" {
+  name         = "NSF-19-512-Open-CloudLab"
+  description  = "NSF CCRI proposal for Open CloudLab"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-ovirt-scripts" {
+  name         = "ovirt-scripts"
+  description  = "Repository to store our ovirt/rhev related configuration files and scripts."
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc-openstack-tools" {
+  name         = "moc-openstack-tools"
+  description  = "Tools for OpenStack administration, user/project management, etc."
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-rhosp-13-post-deploy" {
+  name         = "rhosp-13-post-deploy"
+  description  = "Post-deployment scripts for Red Hat OpenStack Platform 13"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-logstash-config" {
+  name         = "logstash-config"
+  description  = "Logstash configuration files for log aggregation"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-2020-nsf-convergence" {
+  name         = "2020-NSF-convergence"
+  description  = "NSF 2020 Convergence Accelerator proposal materials"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-openstack-validation" {
+  name         = "openstack-validation"
+  description  = "Ansible playbooks for testing OpenStack cloud features"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-repomirror-rhel-6" {
+  name         = "repomirror-rhel-6"
+  description  = "RHEL 6 repository mirror configuration"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-ovirt-servers" {
+  name         = "ovirt-servers"
+  description  = "oVirt/RHEV server configuration"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-postgres-k8s-example" {
+  name         = "postgres-k8s-example"
+  description  = "Example PostgreSQL deployment in Kubernetes"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-sprint-notes" {
+  name         = "sprint-notes"
+  description  = "Sprint planning notes and meeting records"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-rubicon-issues" {
+  name         = "rubicon-issues"
+  description  = "Issue tracking for the Rubicon project"
+  has_wiki     = true
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-adjutant" {
+  name         = "adjutant"
+  description  = "A simple workflow framework to help automate admin and user tasks in and around OpenStack via a pluggable API exposing tasks made up of easily chainable actions."
+  has_issues   = false
+  has_wiki     = false
+  homepage_url = "http://openstack.org"
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-rucs-paper" {
+  name         = "RUCS-Paper"
+  description  = "RUCS paper"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-reporting" {
+  name         = "reporting"
+  description  = "OpenStack utilization reporting and billing tools for the MOC"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-curator-openshift-infra" {
+  name         = "curator-openshift-infra"
+  description  = "OpenShift infrastructure management using Curator"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-curator-openshift-install" {
+  name         = "curator-openshift-install"
+  description  = "OpenShift installation automation using Curator"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc-wp-plugin" {
+  name         = "moc-wp-plugin"
+  description  = "WordPress plugin for MOC site customizations"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-adjutant-moc" {
+  archived = true
+  name        = "adjutant-moc"
+  description = "MOC Onboarding plugin for Adjutant"
+  has_wiki    = true
+}
+
+resource "github_repository" "repo-horizon-onboarding" {
+  archived = true
+  name        = "horizon-onboarding"
+  description = "Horizon-based Dashboard for MOC Onboarding"
+}
+
+resource "github_repository" "repo-prototype-reporting" {
+  name         = "prototype-reporting"
+  description  = "A prototype reporting project"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-service-tag-lookup" {
+  name         = "service-tag-lookup"
+  description  = "Server inventory lookup by Dell service tag or HP serial number"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-ocp-prod-openshift-install" {
+  name         = "ocp-prod-openshift-install"
+  description  = "Holds the necessary files required for our production OCP installation"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc_theme" {
+  name         = "moc_theme"
+  description  = "Horizon theme"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc-project-api-spec" {
+  name         = "moc-project-api-spec"
+  description  = "OpenAPI specification for a project management API"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-hadhcp" {
+  name         = "hadhcp"
+  description  = "Highly available DHCP service using ISC DHCPd"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-k8s-tools-image" {
+  name         = "k8s-tools-image"
+  description  = "Container image with Kubernetes and OpenShift management tools"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc-project-tool" {
+  name         = "moc-project-tool"
+  description  = "Ansible tool for managing OpenShift projects, quotas, and groups"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-objects-for-all" {
+  name         = "objects-for-all"
+  description  = "Grant proposal 2019"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-onboarding-tools" {
+  name         = "onboarding-tools"
+  description  = "Tools and testing for MOC Onboarding."
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-openshift-schemas" {
+  name         = "openshift-schemas"
+  description  = "JSON schemas for OpenShift resource validation with Kubeval"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-coldfront-plugin-allocation-api" {
+  name         = "coldfront-plugin-allocation-api"
+  description  = "ColdFront plugin providing an allocation API"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-sso" {
+  name         = "sso"
+  description  = "Ansible automation for deployment of SSO"
+  has_wiki     = true
+  homepage_url = "https://sso.massopen.cloud"
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-virtual-desktop-docs" {
+  name         = "virtual-desktop-docs"
+  description  = "Documentation for the Shaw University Virtual Desktop deployment on MOC"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc-nerc-migration-image" {
+  name         = "moc-nerc-migration-image"
+  description  = "Scripts to build an image for OpenStack volume migrations"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-doe-2022-objects" {
+  name         = "DOE-2022-objects"
+  description  = "DOE 2022 object storage proposal materials"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-netbox-docker-plugins" {
+  name         = "netbox-docker-plugins"
+  description  = "🐳  Docker Image of NetBox, with MOC plugins included"
+  has_issues   = false
+  has_wiki     = false
+  homepage_url = "https://github.com/netbox-community/netbox-docker/wiki"
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-netbox-topology" {
+  name         = "netbox-topology"
+  description  = "Image from https://github.com/netbox-community/netbox-docker extended with topology plugin"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-quotes" {
+  name         = "quotes"
+  description  = "Quotes for MOC Alliance"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
