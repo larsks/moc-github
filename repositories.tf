@@ -1,19 +1,3 @@
-module "repo-2020-nsf-convergence" {
-  source      = "./modules/common_repository"
-  name        = "2020-NSF-convergence"
-  description = "NSF 2020 Convergence Accelerator proposal materials"
-  visibility  = "private"
-
-  users = {
-    "kolaczyk-bu" = "admin"
-  }
-}
-
-module "repo-abmi" {
-  source      = "./modules/common_repository"
-  name        = "ABMI"
-  description = "Agentless Bare-Metal Introspection"
-}
 
 module "repo-access-requests" {
   source      = "./modules/common_repository"
@@ -32,26 +16,6 @@ module "repo-access-requests" {
   }
 
   include_default_labels = false
-}
-
-module "repo-adjutant" {
-  source       = "./modules/common_repository"
-  name         = "adjutant"
-  description  = "A simple workflow framework to help automate admin and user tasks in and around OpenStack via a pluggable API exposing tasks made up of easily chainable actions."
-  has_issues   = false
-  homepage_url = "http://openstack.org"
-}
-
-module "repo-adjutant-moc" {
-  source      = "./modules/common_repository"
-  name        = "adjutant-moc"
-  description = "MOC Onboarding plugin for Adjutant"
-  has_wiki    = true
-
-  labels = {
-    "accepted"          = { color = "ededed", description = "" }
-    "needs_description" = { color = "ededed", description = "" }
-  }
 }
 
 module "repo-ai-accelerator" {
@@ -120,95 +84,12 @@ module "repo-bare-metal-usage-scripts" {
   }
 }
 
-module "repo-chromogenic" {
-  source      = "./modules/common_repository"
-  name        = "chromogenic"
-  description = "The chromogenic cloud library can be used to create machine images from instances or existing images and make them portable across providers, as well as support for exporting to localized virtualization (i.e. Virtualbox/VMware)."
-  has_issues  = false
-
-  users = {
-    "xuhang57" = "push"
-  }
-}
-
-module "repo-cici2017" {
-  source      = "./modules/common_repository"
-  name        = "cici2017"
-  description = "proposal"
-  visibility  = "private"
-
-  users = {
-    "frederickjansen" = "push"
-    "lapets"          = "push"
-    "mercecrosas"     = "push"
-  }
-}
-
-module "repo-clank" {
-  source      = "./modules/common_repository"
-  name        = "clank"
-  description = "clankity clankity clankity clank"
-  has_wiki    = true
-
-  users = {
-    "xuhang57" = "push"
-  }
-}
-
-module "repo-cloud_dataverse" {
-  source      = "./modules/common_repository"
-  name        = "cloud_dataverse"
-  description = "repository for papers for cloud data verse"
-  visibility  = "private"
-
-  teams = {
-    "cloud_dataverse_papers" = "push"
-  }
-}
-
-module "repo-clouddv" {
-  source      = "./modules/common_repository"
-  name        = "cloudDV"
-  description = "Anything Cloud Dataverse"
-  visibility  = "private"
-  has_wiki    = true
-
-  users = {
-    "thaorell" = "push"
-  }
-}
-
 module "repo-coldfront" {
   source       = "./modules/common_repository"
   name         = "coldfront"
   description  = "HPC Resource Allocation System"
   has_issues   = false
   homepage_url = "https://coldfront.readthedocs.io"
-}
-
-module "repo-coldfront-plugin-allocation-api" {
-  source      = "./modules/common_repository"
-  name        = "coldfront-plugin-allocation-api"
-  description = "ColdFront plugin providing an allocation API"
-
-  labels = {
-    "accepted"          = { color = "ededed", description = "" }
-    "needs_description" = { color = "ededed", description = "" }
-  }
-}
-
-module "repo-curator-openshift-infra" {
-  source      = "./modules/common_repository"
-  name        = "curator-openshift-infra"
-  description = "OpenShift infrastructure management using Curator"
-  visibility  = "private"
-}
-
-module "repo-curator-openshift-install" {
-  source      = "./modules/common_repository"
-  name        = "curator-openshift-install"
-  description = "OpenShift installation automation using Curator"
-  visibility  = "private"
 }
 
 module "repo-dbex" {
@@ -244,28 +125,6 @@ module "repo-documentation" {
   }
 }
 
-module "repo-doe-2022-objects" {
-  source      = "./modules/common_repository"
-  name        = "DOE-2022-objects"
-  description = "DOE 2022 object storage proposal materials"
-  visibility  = "private"
-
-  users = {
-    "trachten" = "push"
-  }
-}
-
-module "repo-e1-metrics" {
-  source      = "./modules/common_repository"
-  name        = "e1-metrics"
-  description = "Any source code for metrics related software of Engage1"
-  visibility  = "private"
-
-  teams = {
-    "moc-rw" = "pull"
-  }
-}
-
 module "repo-everpure-moc" {
   source      = "./modules/common_repository"
   name        = "everpure-moc"
@@ -285,41 +144,12 @@ module "repo-gpfs-storage" {
   description = "Collection of notes and scripts for IBM Scale"
 }
 
-module "repo-hadhcp" {
-  source      = "./modules/common_repository"
-  name        = "hadhcp"
-  description = "Highly available DHCP service using ISC DHCPd"
-}
-
 module "repo-hammerdb" {
   source       = "./modules/common_repository"
   name         = "HammerDB"
   description  = "HammerDB Database Load Testing and Benchmarking Tool"
   has_issues   = false
   homepage_url = "http://www.hammerdb.com"
-}
-
-module "repo-horizon-onboarding" {
-  source      = "./modules/common_repository"
-  name        = "horizon-onboarding"
-  description = "Horizon-based Dashboard for MOC Onboarding"
-
-  labels = {
-    "accepted"            = { color = "ededed", description = "" }
-    "added_post_planning" = { color = "ccff4c", description = "" }
-  }
-}
-
-module "repo-hpc" {
-  source      = "./modules/common_repository"
-  name        = "hpc"
-  description = "HPC infrastructure planning and documentation"
-  visibility  = "private"
-  has_wiki    = true
-
-  teams = {
-    "moc-hpc" = "push"
-  }
 }
 
 module "repo-image-workflow-example" {
@@ -387,42 +217,6 @@ module "repo-k-hammer" {
     "AAA Test" = { color = "e99695", description = "" }
     "MOC 1.0"  = { color = "9f70a7", description = "" }
   }
-}
-
-module "repo-k2k-proxy" {
-  source       = "./modules/common_repository"
-  name         = "k2k-proxy"
-  description  = "K2K-Aware Proxy for OpenStack"
-  homepage_url = "http://k2k-proxy.readthedocs.io"
-
-  labels = {
-    "wip" = { color = "e99695", description = "" }
-  }
-}
-
-module "repo-k8s-tools-image" {
-  source      = "./modules/common_repository"
-  name        = "k8s-tools-image"
-  description = "Container image with Kubernetes and OpenShift management tools"
-}
-
-module "repo-kaizen-metrics" {
-  source      = "./modules/common_repository"
-  name        = "kaizen-metrics"
-  description = "OpenStack usage metrics and charts for the Kaizen cluster"
-  visibility  = "private"
-}
-
-module "repo-keystone-migration" {
-  source      = "./modules/common_repository"
-  name        = "keystone-migration"
-  description = "Tools for migrating users between Keystone installations"
-}
-
-module "repo-logstash-config" {
-  source      = "./modules/common_repository"
-  name        = "logstash-config"
-  description = "Logstash configuration files for log aggregation"
 }
 
 module "repo-lsvd-atc24" {
@@ -629,22 +423,6 @@ module "repo-moc-issues" {
   }
 }
 
-module "repo-moc-labels" {
-  source      = "./modules/common_repository"
-  name        = "moc-labels"
-  description = "GitHub issue and PR label taxonomy with automated application"
-
-  teams = {
-    "ops-core" = "push"
-  }
-}
-
-module "repo-moc-nerc-migration-image" {
-  source      = "./modules/common_repository"
-  name        = "moc-nerc-migration-image"
-  description = "Scripts to build an image for OpenStack volume migrations"
-}
-
 module "repo-moc-openshift-projects" {
   source           = "./modules/common_repository"
   name             = "moc-openshift-projects"
@@ -660,53 +438,6 @@ module "repo-moc-openshift-projects" {
   labels = {
     "accepted" = { color = "ededed", description = "" }
   }
-}
-
-module "repo-moc-openshift-tools" {
-  source      = "./modules/common_repository"
-  name        = "moc-openshift-tools"
-  description = "Scripts and configurations for OpenShift setup and maintenance"
-  visibility  = "private"
-  has_wiki    = true
-}
-
-module "repo-moc-openstack-tools" {
-  source      = "./modules/common_repository"
-  name        = "moc-openstack-tools"
-  description = "Tools for OpenStack administration, user/project management, etc."
-
-  labels = {
-    "easy"            = { color = "f9d0c4", description = "" }
-    "feature request" = { color = "84b6eb", description = "" }
-    "major change"    = { color = "d4c5f9", description = "" }
-    "waiting on +2"   = { color = "c2e0c6", description = "" }
-    "WIP"             = { color = "b60205", description = "" }
-  }
-}
-
-module "repo-moc-openstackwatcher" {
-  source      = "./modules/common_repository"
-  name        = "moc-OpenstackWatcher"
-  description = "OpenStack resource monitoring and alerting"
-  visibility  = "private"
-
-  users = {
-    "thaorell" = "pull"
-    "tiwarid"  = "pull"
-  }
-}
-
-module "repo-moc-project-api-spec" {
-  source      = "./modules/common_repository"
-  name        = "moc-project-api-spec"
-  description = "OpenAPI specification for a project management API"
-}
-
-module "repo-moc-project-tool" {
-  source           = "./modules/common_repository"
-  name             = "moc-project-tool"
-  description      = "Ansible tool for managing OpenShift projects, quotas, and groups"
-  allow_auto_merge = true
 }
 
 module "repo-moc-status" {
@@ -737,28 +468,6 @@ module "repo-moc-template" {
   }
 }
 
-module "repo-moc-wordpress" {
-  source      = "./modules/common_repository"
-  name        = "moc-wordpress"
-  description = "MOC Wordpress site"
-
-  teams = {
-    "wp-website" = "admin"
-  }
-}
-
-module "repo-moc-wp-plugin" {
-  source      = "./modules/common_repository"
-  name        = "moc-wp-plugin"
-  description = "WordPress plugin for MOC site customizations"
-}
-
-module "repo-moc_theme" {
-  source      = "./modules/common_repository"
-  name        = "moc_theme"
-  description = "Horizon theme"
-}
-
 module "repo-moca-requests" {
   source       = "./modules/common_repository"
   name         = "moca-requests"
@@ -775,23 +484,6 @@ module "repo-moca-requests" {
     "AAA Test"   = { color = "e99695", description = "" }
     "Techsquare" = { color = "d93f0b", description = "" }
   }
-}
-
-module "repo-mocmon" {
-  source      = "./modules/common_repository"
-  name        = "mocmon"
-  description = "Sensu monitoring configuration for the MOC"
-  visibility  = "private"
-
-  users = {
-    "tiwarid" = "push"
-  }
-}
-
-module "repo-mocosppuppet" {
-  source      = "./modules/common_repository"
-  name        = "MOCOSPpuppet"
-  description = "Puppet manifests for MOC OpenStack Platform deployment"
 }
 
 module "repo-nerc-bmh" {
@@ -834,24 +526,10 @@ module "repo-netbox-ansible" {
   description = "Ansible site to keep netbox up-to-date"
 }
 
-module "repo-netbox-docker-plugins" {
-  source       = "./modules/common_repository"
-  name         = "netbox-docker-plugins"
-  description  = "🐳  Docker Image of NetBox, with MOC plugins included"
-  has_issues   = false
-  homepage_url = "https://github.com/netbox-community/netbox-docker/wiki"
-}
-
 module "repo-netbox-sync" {
   source      = "./modules/common_repository"
   name        = "netbox-sync"
   description = "Script to sync two netbox sites for specific cabinets"
-}
-
-module "repo-netbox-topology" {
-  source      = "./modules/common_repository"
-  name        = "netbox-topology"
-  description = "Image from https://github.com/netbox-community/netbox-docker extended with topology plugin"
 }
 
 module "repo-network-runner" {
@@ -871,87 +549,16 @@ module "repo-networking-ansible" {
   }
 }
 
-module "repo-notmonero" {
-  source      = "./modules/common_repository"
-  name        = "notmonero"
-  description = "Research on Monero cryptocurrency privacy attacks and countermeasures"
-  visibility  = "private"
-
-  users = {
-    "EthanHeilman" = "admin"
-    "HenryHeffan"  = "push"
-    "ShashvatS"    = "push"
-  }
-}
-
-module "repo-nsf-18-531" {
-  source      = "./modules/common_repository"
-  name        = "NSF-18-531"
-  description = "NSF 18-531 grant proposal materials"
-  visibility  = "private"
-  has_issues  = false
-
-  users = {
-    "SaulYoussef"   = "push"
-    "jtgoodhue"     = "push"
-    "lapets"        = "push"
-    "rajivshridhar" = "push"
-  }
-}
-
-module "repo-nsf-19-512-open-cloudlab" {
-  source      = "./modules/common_repository"
-  name        = "NSF-19-512-Open-CloudLab"
-  description = "NSF CCRI proposal for Open CloudLab"
-  visibility  = "private"
-
-  users = {
-    "martinherbordt" = "admin"
-    "mleeser"        = "admin"
-  }
-}
-
-module "repo-objects-for-all" {
-  source      = "./modules/common_repository"
-  name        = "objects-for-all"
-  description = "Grant proposal 2019"
-  visibility  = "private"
-}
-
 module "repo-ocp-nerc-storage-tests" {
   source      = "./modules/common_repository"
   name        = "ocp-nerc-storage-tests"
   description = "Manifests for Storage Tests run on NERC Infra"
 }
 
-module "repo-ocp-prod-openshift-install" {
-  source      = "./modules/common_repository"
-  name        = "ocp-prod-openshift-install"
-  description = "Holds the necessary files required for our production OCP installation"
-  visibility  = "private"
-}
-
 module "repo-oct-powermon" {
   source      = "./modules/common_repository"
   name        = "oct-powermon"
   description = "Files for OCT power monitoring"
-}
-
-module "repo-onboarding-tools" {
-  source      = "./modules/common_repository"
-  name        = "onboarding-tools"
-  description = "Tools and testing for MOC Onboarding."
-
-  labels = {
-    "accepted" = { color = "ededed", description = "" }
-  }
-}
-
-module "repo-openshift" {
-  source      = "./modules/common_repository"
-  name        = "openshift"
-  description = "OpenShift installation guides and image build sources"
-  visibility  = "private"
 }
 
 module "repo-openshift-acct-mgt" {
@@ -976,12 +583,6 @@ module "repo-openshift-acct-mgt" {
     "size/milestone"    = { color = "24653B", description = "needs to be broken down into multiple issues and a milestone created for it" }
     "size/small"        = { color = "c5def5", description = "Small thought and effort required, similar work has been done, or extra small with small unknown." }
   }
-}
-
-module "repo-openshift-schemas" {
-  source      = "./modules/common_repository"
-  name        = "openshift-schemas"
-  description = "JSON schemas for OpenShift resource validation with Kubeval"
 }
 
 module "repo-openshift-usage-scripts" {
@@ -1020,12 +621,6 @@ module "repo-openstack-billing-from-db" {
     "MOC 2.0"            = { color = "aaaaaa", description = "" }
     "MOC 2.0?"           = { color = "5f2521", description = "" }
   }
-}
-
-module "repo-openstack-validation" {
-  source      = "./modules/common_repository"
-  name        = "openstack-validation"
-  description = "Ansible playbooks for testing OpenStack cloud features"
 }
 
 module "repo-ops-docs" {
@@ -1131,30 +726,6 @@ module "repo-ops-private" {
   }
 }
 
-module "repo-osprofiler" {
-  source       = "./modules/common_repository"
-  name         = "osprofiler"
-  description  = "OpenStack cross service/project profiler"
-  has_issues   = false
-  homepage_url = "http://openstack.org"
-
-  teams = {
-    "tracing" = "push"
-  }
-}
-
-module "repo-ovirt-scripts" {
-  source      = "./modules/common_repository"
-  name        = "ovirt-scripts"
-  description = "Repository to store our ovirt/rhev related configuration files and scripts."
-}
-
-module "repo-ovirt-servers" {
-  source      = "./modules/common_repository"
-  name        = "ovirt-servers"
-  description = "oVirt/RHEV server configuration"
-}
-
 module "repo-papers" {
   source      = "./modules/common_repository"
   name        = "papers"
@@ -1175,17 +746,6 @@ module "repo-papers" {
   }
 }
 
-module "repo-partner_y3" {
-  source      = "./modules/common_repository"
-  name        = "partner_y3"
-  description = "1 page reports to partners for end of year 3"
-  visibility  = "private"
-
-  users = {
-    "bgoodmanfsc" = "push"
-  }
-}
-
 module "repo-pfsense-firewall-ansible" {
   source      = "./modules/common_repository"
   name        = "pfsense-firewall-ansible"
@@ -1199,71 +759,10 @@ module "repo-pfsense-tools" {
   description = "Tools for managing pfSense firewalls"
 }
 
-module "repo-postgres-k8s-example" {
-  source      = "./modules/common_repository"
-  name        = "postgres-k8s-example"
-  description = "Example PostgreSQL deployment in Kubernetes"
-}
-
-module "repo-prototype-reporting" {
-  source      = "./modules/common_repository"
-  name        = "prototype-reporting"
-  description = "A prototype reporting project"
-  visibility  = "private"
-}
-
-module "repo-pvc-obc-example" {
-  source      = "./modules/common_repository"
-  name        = "pvc-obc-example"
-  description = "Example PersistentVolumeClaim and ObjectBucketClaim usage in Kubernetes"
-}
-
-module "repo-quotes" {
-  source      = "./modules/common_repository"
-  name        = "quotes"
-  description = "Quotes for MOC Alliance"
-  visibility  = "private"
-}
-
 module "repo-racadm-scripts" {
   source      = "./modules/common_repository"
   name        = "racadm-scripts"
   description = "Some scripts for Dell machine provisioning using racadm"
-}
-
-module "repo-repomirror-rhel-6" {
-  source      = "./modules/common_repository"
-  name        = "repomirror-rhel-6"
-  description = "RHEL 6 repository mirror configuration"
-}
-
-module "repo-reporting" {
-  source      = "./modules/common_repository"
-  name        = "reporting"
-  description = "OpenStack utilization reporting and billing tools for the MOC"
-
-  labels = {
-    "accepted"          = { color = "ededed", description = "" }
-    "needs_description" = { color = "ededed", description = "" }
-  }
-}
-
-module "repo-rfi-iarpa-seccloud-17" {
-  source      = "./modules/common_repository"
-  name        = "RFI-iarpa-seccloud-17"
-  description = "response to RFI from IARPA-RFI-17-04"
-  visibility  = "private"
-
-  users = {
-    "henn"     = "push"
-    "rudolpht" = "push"
-  }
-}
-
-module "repo-rhosp-13-post-deploy" {
-  source      = "./modules/common_repository"
-  name        = "rhosp-13-post-deploy"
-  description = "Post-deployment scripts for Red Hat OpenStack Platform 13"
 }
 
 module "repo-roce-testing" {
@@ -1276,107 +775,11 @@ module "repo-roce-testing" {
   }
 }
 
-module "repo-rubicon-issues" {
-  source      = "./modules/common_repository"
-  name        = "rubicon-issues"
-  description = "Issue tracking for the Rubicon project"
-  has_wiki    = true
-
-  teams = {
-    "ops-core" = "admin"
-    "rubicon"  = "maintain"
-  }
-
-  labels = {
-    "accepted"          = { color = "ededed", description = "" }
-    "needs_description" = { color = "ededed", description = "" }
-  }
-}
-
-module "repo-rucs-paper" {
-  source      = "./modules/common_repository"
-  name        = "RUCS-Paper"
-  description = "RUCS paper"
-  visibility  = "private"
-}
-
-module "repo-seccloud" {
-  source      = "./modules/common_repository"
-  name        = "seccloud"
-  description = "Secure Cloud stuff"
-  visibility  = "private"
-
-  teams = {
-    "seccloud" = "push"
-  }
-  users = {
-    "gfedorkow" = "pull"
-  }
-}
-
-module "repo-service-tag-lookup" {
-  source      = "./modules/common_repository"
-  name        = "service-tag-lookup"
-  description = "Server inventory lookup by Dell service tag or HP serial number"
-
-  teams = {
-    "ops-core" = "maintain"
-  }
-}
-
-module "repo-sprint-notes" {
-  source      = "./modules/common_repository"
-  name        = "sprint-notes"
-  description = "Sprint planning notes and meeting records"
-  visibility  = "private"
-
-  labels = {
-    "accepted" = { color = "ededed", description = "" }
-  }
-}
-
-module "repo-sso" {
-  source       = "./modules/common_repository"
-  name         = "sso"
-  description  = "Ansible automation for deployment of SSO"
-  has_wiki     = true
-  homepage_url = "https://sso.massopen.cloud"
-
-  labels = {
-    "AAA Test"         = { color = "e99695", description = "" }
-    "accepted"         = { color = "ededed", description = "" }
-    "size/extra large" = { color = "5319e7", description = "Not been done before, new research, lot of time, risks to finishing in sprint, require extra help." }
-    "size/extra small" = { color = "9BCC95", description = "Most requirements are understood, relatively easy, likely completed in a day or less." }
-    "size/large"       = { color = "16AE23", description = "Similar work done, complex, often requires assistance, commonly largest size done in sprint." }
-    "size/medium"      = { color = "103AD3", description = "Similar work has been done before, it is clear what needs to be done, a few steps beyond a small." }
-    "size/milestone"   = { color = "24653B", description = "needs to be broken down into multiple issues and a milestone created for it" }
-    "size/small"       = { color = "c5def5", description = "Small thought and effort required, similar work has been done, or extra small with small unknown." }
-  }
-}
-
 module "repo-storage-benchmarks" {
   source      = "./modules/common_repository"
   name        = "storage-benchmarks"
   description = "Measuring NERC storage performance"
   has_wiki    = true
-}
-
-module "repo-tracing" {
-  source      = "./modules/common_repository"
-  name        = "tracing"
-  description = "OpenStack distributed tracing research and configuration"
-  visibility  = "private"
-  has_wiki    = true
-
-  teams = {
-    "tracing" = "push"
-  }
-}
-
-module "repo-virtual-desktop-docs" {
-  source      = "./modules/common_repository"
-  name        = "virtual-desktop-docs"
-  description = "Documentation for the Shaw University Virtual Desktop deployment on MOC"
 }
 
 module "repo-virtualbmc" {
