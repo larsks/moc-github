@@ -224,18 +224,25 @@ def main():
     step_header(1, "Validate")
     content = open(REPOSITORIES_TF).read()
     repo_attrs = {}
+    skipped = []
     for repo_name in repo_names:
         module_name = make_module_name(repo_name)
         start, end = find_module_block(content, repo_name)
         if start is None:
-            print(f'Error: module "{module_name}" not found in {REPOSITORIES_TF}')
-            sys.exit(1)
+            print(f'  Warning: module "{module_name}" not found in {REPOSITORIES_TF}, skipping')
+            skipped.append(repo_name)
+            continue
         lines = content.splitlines(keepends=True)
         block_lines = lines[start : end + 1]
         attrs = parse_module_attrs(block_lines)
         repo_attrs[repo_name] = attrs
         github_name = attrs["name"].strip('"')
         print(f'  Found module "{module_name}" (repo: {github_name})')
+    for repo_name in skipped:
+        repo_names.remove(repo_name)
+    if not repo_names:
+        print("\nNo repositories to archive.")
+        sys.exit(0)
     print(f"\n{len(repo_names)} repositories to archive.")
 
     # Step 2: Remove collaborators from all repos
