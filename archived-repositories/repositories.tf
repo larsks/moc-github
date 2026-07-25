@@ -1358,3 +1358,122 @@ resource "github_repository" "repo-quotes" {
   archived     = true
   has_projects = false
 }
+
+resource "github_repository" "repo-image-workflow-example" {
+  name         = "image-workflow-example"
+  description  = "Example of automated Docker image building and tagging with GitHub workflows"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc-switch-ansible" {
+  name         = "moc-switch-ansible"
+  description  = "Ansible playbooks for network switches"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc-apps" {
+  name         = "moc-apps"
+  description  = "ArgoCD applications deployed on MOC managed OpenShift clusters"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-johonnot-pdf-to-csv" {
+  name         = "johonnot-pdf-to-csv"
+  description  = "Script to convert wipe report PDFs into a csv file"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc-openshift-projects" {
+  name         = "moc-openshift-projects"
+  description  = "Project management for the MOC production OpenShift cluster"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-moc-iam" {
+  name         = "moc-iam"
+  description  = "AWS IAM configuration for the Mass Open Cloud"
+  visibility   = "private"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-hammerdb" {
+  name         = "HammerDB"
+  description  = "HammerDB Database Load Testing and Benchmarking Tool"
+  has_issues   = false
+  has_wiki     = false
+  homepage_url = "http://www.hammerdb.com"
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-netbox-sync" {
+  name         = "netbox-sync"
+  description  = "Script to sync two netbox sites for specific cabinets"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-nerc-bmh" {
+  name         = "nerc-bmh"
+  description  = "Bare metal host configuration for NERC OpenShift"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-mariadb-nese-test" {
+  name         = "mariadb-nese-test"
+  description  = "Docker files for mariadb tests with NESE"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-ocp-nerc-storage-tests" {
+  name         = "ocp-nerc-storage-tests"
+  description  = "Manifests for Storage Tests run on NERC Infra"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-k-hammer" {
+  name         = "k-hammer"
+  description  = "Kubernetes jobs for running HammerDB database benchmarks"
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-coldfront" {
+  name         = "coldfront"
+  description  = "HPC Resource Allocation System"
+  has_issues   = false
+  has_wiki     = false
+  homepage_url = "https://coldfront.readthedocs.io"
+  archived     = true
+  has_projects = false
+}
+
+resource "github_repository" "repo-al-folio" {
+  name         = "al-folio"
+  description  = "A beautiful, simple, clean, and responsive Jekyll theme for academics"
+  has_issues   = false
+  has_wiki     = false
+  archived     = true
+  has_projects = false
+}

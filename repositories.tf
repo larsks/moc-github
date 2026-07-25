@@ -45,14 +45,6 @@ module "repo-ai-ivp" {
   }
 }
 
-module "repo-al-folio" {
-  source      = "./modules/common_repository"
-  name        = "al-folio"
-  description = "A beautiful, simple, clean, and responsive Jekyll theme for academics"
-  has_issues  = false
-  is_template = true
-}
-
 module "repo-ansible-switches" {
   source      = "./modules/common_repository"
   name        = "ansible-switches"
@@ -88,14 +80,6 @@ module "repo-bare-metal-usage-scripts" {
     "MOC 1.0" = { color = "9f70a7", description = "" }
     "MOC 2.0" = { color = "aaaaaa", description = "" }
   }
-}
-
-module "repo-coldfront" {
-  source       = "./modules/common_repository"
-  name         = "coldfront"
-  description  = "HPC Resource Allocation System"
-  has_issues   = false
-  homepage_url = "https://coldfront.readthedocs.io"
 }
 
 module "repo-dbex" {
@@ -150,20 +134,6 @@ module "repo-gpfs-storage" {
   description = "Collection of notes and scripts for IBM Scale"
 }
 
-module "repo-hammerdb" {
-  source       = "./modules/common_repository"
-  name         = "HammerDB"
-  description  = "HammerDB Database Load Testing and Benchmarking Tool"
-  has_issues   = false
-  homepage_url = "http://www.hammerdb.com"
-}
-
-module "repo-image-workflow-example" {
-  source      = "./modules/common_repository"
-  name        = "image-workflow-example"
-  description = "Example of automated Docker image building and tagging with GitHub workflows"
-}
-
 module "repo-invoicing" {
   source      = "./modules/common_repository"
   name        = "invoicing"
@@ -208,23 +178,6 @@ module "repo-iucrc-stuff" {
   visibility  = "private"
 }
 
-module "repo-johonnot-pdf-to-csv" {
-  source      = "./modules/common_repository"
-  name        = "johonnot-pdf-to-csv"
-  description = "Script to convert wipe report PDFs into a csv file"
-}
-
-module "repo-k-hammer" {
-  source      = "./modules/common_repository"
-  name        = "k-hammer"
-  description = "Kubernetes jobs for running HammerDB database benchmarks"
-
-  labels = {
-    "AAA Test" = { color = "e99695", description = "" }
-    "MOC 1.0"  = { color = "9f70a7", description = "" }
-  }
-}
-
 module "repo-lsvd-atc24" {
   source      = "./modules/common_repository"
   name        = "lsvd-atc24"
@@ -259,41 +212,10 @@ module "repo-lsvd-research" {
   }
 }
 
-module "repo-mariadb-nese-test" {
-  source      = "./modules/common_repository"
-  name        = "mariadb-nese-test"
-  description = "Docker files for mariadb tests with NESE"
-}
-
 module "repo-mghpcc-cablelength-calculator" {
   source      = "./modules/common_repository"
   name        = "mghpcc-cablelength-calculator"
   description = "JS app to calculate cable length between racks"
-}
-
-module "repo-moc-apps" {
-  source                 = "./modules/common_repository"
-  name                   = "moc-apps"
-  description            = "ArgoCD applications deployed on MOC managed OpenShift clusters"
-  allow_auto_merge       = true
-  delete_branch_on_merge = true
-
-  teams = {
-    "ops-core" = "maintain"
-  }
-
-  labels = {
-    "AAA Test"         = { color = "e99695", description = "" }
-    "accepted"         = { color = "ededed", description = "" }
-    "MOC 1.0"          = { color = "9f70a7", description = "" }
-    "MOC 2.0?"         = { color = "5f2521", description = "" }
-    "size/extra large" = { color = "5319e7", description = "Not been done before, new research, lot of time, risks to finishing in sprint, require extra help." }
-    "size/extra small" = { color = "9BCC95", description = "Most requirements are understood, relatively easy, likely completed in a day or less." }
-    "size/large"       = { color = "16AE23", description = "Similar work done, complex, often requires assistance, commonly largest size done in sprint." }
-    "size/medium"      = { color = "103AD3", description = "Similar work has been done before, it is clear what needs to be done, a few steps beyond a small." }
-    "size/milestone"   = { color = "24653B", description = "needs to be broken down into multiple issues and a milestone created for it" }
-    "size/small"       = { color = "c5def5", description = "Small thought and effort required, similar work has been done, or extra small with small unknown." }
-  }
 }
 
 module "repo-moc-aws" {
@@ -319,13 +241,6 @@ module "repo-moc-dns" {
   teams = {
     "ops-core" = "admin"
   }
-}
-
-module "repo-moc-iam" {
-  source      = "./modules/common_repository"
-  name        = "moc-iam"
-  description = "AWS IAM configuration for the Mass Open Cloud"
-  visibility  = "private"
 }
 
 module "repo-moc-infra-config" {
@@ -438,23 +353,6 @@ module "repo-moc-issues" {
   }
 }
 
-module "repo-moc-openshift-projects" {
-  source           = "./modules/common_repository"
-  name             = "moc-openshift-projects"
-  description      = "Project management for the MOC production OpenShift cluster"
-  visibility       = "private"
-  allow_auto_merge = true
-
-  teams = {
-    "moc-project-makers" = "push"
-    "ops-core"           = "maintain"
-  }
-
-  labels = {
-    "accepted" = { color = "ededed", description = "" }
-  }
-}
-
 module "repo-moc-status" {
   source      = "./modules/common_repository"
   name        = "moc-status"
@@ -464,12 +362,6 @@ module "repo-moc-status" {
   teams = {
     "ops-core" = "push"
   }
-}
-
-module "repo-moc-switch-ansible" {
-  source      = "./modules/common_repository"
-  name        = "moc-switch-ansible"
-  description = "Ansible playbooks for network switches"
 }
 
 module "repo-moc-template" {
@@ -499,12 +391,6 @@ module "repo-moca-requests" {
     "AAA Test"   = { color = "e99695", description = "" }
     "Techsquare" = { color = "d93f0b", description = "" }
   }
-}
-
-module "repo-nerc-bmh" {
-  source      = "./modules/common_repository"
-  name        = "nerc-bmh"
-  description = "Bare metal host configuration for NERC OpenShift"
 }
 
 module "repo-nerc-ocp-config" {
@@ -541,12 +427,6 @@ module "repo-netbox-ansible" {
   description = "Ansible site to keep netbox up-to-date"
 }
 
-module "repo-netbox-sync" {
-  source      = "./modules/common_repository"
-  name        = "netbox-sync"
-  description = "Script to sync two netbox sites for specific cabinets"
-}
-
 module "repo-network-runner" {
   source      = "./modules/common_repository"
   name        = "network-runner"
@@ -562,12 +442,6 @@ module "repo-networking-ansible" {
   teams = {
     "ops-core" = "maintain"
   }
-}
-
-module "repo-ocp-nerc-storage-tests" {
-  source      = "./modules/common_repository"
-  name        = "ocp-nerc-storage-tests"
-  description = "Manifests for Storage Tests run on NERC Infra"
 }
 
 module "repo-oct-powermon" {
