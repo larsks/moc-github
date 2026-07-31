@@ -3,31 +3,19 @@
 : "${GITHUB_ORG:=CCI-MOC}"
 
 log() {
-  level=$1
-  shift
-  if [[ -t 1 ]] && ((use_gum)); then
-    if [[ $level = success ]]; then
-      cmd=(gum style --foreground 2)
-    else
-      cmd=(gum log --level "$level")
-    fi
-  else
-    cmd=(echo)
-  fi
-
-  "${cmd[@]}" "$*" >&2
+  printf "[%s] %s\n" "$@"
 }
-
-if type gum >&/dev/null; then
-  use_gum=1
-fi
 
 log info "loading state"
 state=$(tofu show -json)
+archived_state=$(tofu -chdir=archived-repositories show -json)
 
 log info "finding managed repositories"
 managed_repositories=$(
-  jq '.values.root_module | .. | select(.type? == "github_repository") | .values.name' -r <<<"$state" | sort
+  (
+    jq '.values.root_module | .. | select(.type? == "github_repository") | .values.name' -r <<<"$state"
+    jq '.values.root_module | .. | select(.type? == "github_repository") | .values.name' -r <<<"$archived_state"
+  ) | sort
 )
 
 log info "finding managed members"
@@ -55,28 +43,34 @@ github_teams=$(
   gh api --paginate "/orgs/${GITHUB_ORG}/teams" | jq '.[]|.slug' -r | sort
 )
 
-unmanaged_repositories=$(comm -13 <(echo "$managed_repositories") <(echo "$github_repositories"))
-unmanaged_members=$(comm -13 <(echo "$managed_members") <(echo "$github_members"))
-unmanaged_teams=$(comm -13 <(echo "$managed_teams") <(echo "$github_teams"))
+mapfile -t unmanaged_repositories < <(comm -13 <(echo "$managed_repositories") <(echo "$github_repositories"))
+mapfile -t unmanaged_members < <(comm -13 <(echo "$managed_members") <(echo "$github_members"))
+mapfile -t unmanaged_teams < <(comm -13 <(echo "$managed_teams") <(echo "$github_teams"))
 
 exitcode=0
 
 log info "checking for drift"
-if [[ -n "$unmanaged_repositories" ]]; then
+if [[ ${#unmanaged_repositories[@]} -ne 0 ]]; then
   log error "found unmanaged repositories:"
-  log error "$unmanaged_repositories"
+  for repo in "${unmanaged_repositories[@]}"; do
+    log error "  $repo"
+  done
   exitcode=1
 fi
 
-if [[ -n "$unmanaged_members" ]]; then
+if [[ ${#unmanaged_members[@]} -ne 0 ]]; then
   log error "Found unmanaged members:"
-  log error "$unmanaged_members"
+  for member in "${unmanaged_members[@]}"; do
+    log error "  $member"
+  done
   exitcode=1
 fi
 
-if [[ -n "$unmanaged_teams" ]]; then
+if [[ ${#unmanaged_teams[@]} -ne 0 ]]; then
   log error "Found unmanaged teams:"
-  log error "$unmanaged_teams"
+  for team in "${unmanaged_teams[@]}"; do
+    log error "  $team"
+  done
   exitcode=1
 fi
 
