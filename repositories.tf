@@ -119,7 +119,6 @@ module "repo-everpure-moc" {
   source      = "./modules/common_repository"
   name        = "everpure-moc"
   description = "Repo housing instructions and manifests for deploying and managing Pure storage resources in the MOC"
-  has_issues  = false
 }
 
 module "repo-fx2-ansible" {
@@ -676,4 +675,14 @@ module "repo-virtualbmc" {
   source      = "./modules/common_repository"
   name        = "virtualbmc"
   description = "Virtual BMC for Ironic nodes using the IPMI protocol"
+}
+
+module "repo-open-accelerator-infra" {
+  source      = "./modules/common_repository"
+  name        = "open-accelerator-infra"
+  description = "Infrastructure configuration for the open accelerator project"
+
+  teams = {
+    open-accelerator = "maintain"
+  }
 }
