@@ -686,3 +686,13 @@ module "repo-open-accelerator-infra" {
     open-accelerator = "maintain"
   }
 }
+
+module "repo-rhoso18-deployment" {
+  source      = "./modules/common_repository"
+  name        = "rhoso18-deployment"
+  description = "Deployment scripts for RHOSO (openstack-on-openshift) 18"
+
+  teams = {
+    open-accelerator = "maintain"
+  }
+}
