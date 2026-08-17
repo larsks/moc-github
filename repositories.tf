@@ -57,12 +57,6 @@ module "repo-ansible-switches" {
   labels = {
     "AAA Test" = { color = "e99695", description = "" }
   }
-
-  branch_protection = {
-    required_status_checks = [
-      "pre-commit"
-    ]
-  }
 }
 
 module "repo-ansible-switches-auto-deploy" {
@@ -119,6 +113,10 @@ module "repo-everpure-moc" {
   source      = "./modules/common_repository"
   name        = "everpure-moc"
   description = "Repo housing instructions and manifests for deploying and managing Pure storage resources in the MOC"
+
+  users = {
+    "DanNiESh" = "push"
+  }
 }
 
 module "repo-fx2-ansible" {
@@ -277,7 +275,7 @@ module "repo-moc-issues" {
     "ai-ivp-bastion-reviewers" = "push"
     "marcomm"                  = "triage"
     "ops-collab"               = "triage"
-    "ops-core"                 = "push"
+    "ops-core"                 = "admin"
     "redhat"                   = "maintain"
   }
 
@@ -354,6 +352,7 @@ module "repo-moc-issues" {
     "VM"                                     = { color = "b70a00", description = "" }
     "website"                                = { color = "334A9E", description = "" }
     "open-accelerator"                       = { color = "0e8a16", description = "Open Accelerator environment" }
+    "NIST 800-171"                           = { color = "aaaaaa" }
   }
 }
 
@@ -698,5 +697,9 @@ module "repo-rhoso18-deployment" {
 
   teams = {
     open-accelerator = "maintain"
+  }
+
+  users = {
+    "tzumainn" = "admin"
   }
 }
