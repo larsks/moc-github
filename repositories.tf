@@ -690,6 +690,16 @@ module "repo-open-accelerator-infra" {
   }
 }
 
+module "repo-oac-apps" {
+  source      = "./modules/common_repository"
+  name        = "oac-apps"
+  description = "Cluster configuration for the Open Accelerator environment"
+
+  teams = {
+    open-accelerator = "maintain"
+  }
+}
+
 module "repo-rhoso18-deployment" {
   source      = "./modules/common_repository"
   name        = "rhoso18-deployment"
