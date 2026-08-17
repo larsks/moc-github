@@ -9,7 +9,12 @@ locals {
   ]
   team_members = merge(
     {
-      for slug in local.team_slugs : slug => csvdecode(file("${path.module}/team-members/${slug}.csv"))
+      for slug in local.team_slugs : slug => [
+        for m in csvdecode(file("${path.module}/team-members/${slug}.csv")) : {
+          username = lower(m.username)
+          role     = m.role
+        }
+      ]
     },
     {
       all-members = local.all_members
