@@ -113,6 +113,18 @@ resource "github_repository_ruleset" "this" {
   target      = "branch"
   enforcement = "active"
 
+  bypass_actors {
+    actor_type  = "OrganizationAdmin"
+    bypass_mode = "always"
+  }
+
+  # actor_id 5 is the built-in "Admin" repository role
+  bypass_actors {
+    actor_id    = 5
+    actor_type  = "RepositoryRole"
+    bypass_mode = "always"
+  }
+
   conditions {
     ref_name {
       include = ["~DEFAULT_BRANCH"]
