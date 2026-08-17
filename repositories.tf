@@ -230,6 +230,10 @@ module "repo-moc-aws" {
     ]
     require_linear_history = true
   }
+
+  teams = {
+    ops-core = "admin"
+  }
 }
 
 module "repo-moc-dns" {
