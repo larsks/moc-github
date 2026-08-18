@@ -223,8 +223,8 @@ module "repo-moc-aws" {
   branch_protection = {
     required_reviews = 1
     required_status_checks = [
-      "Pre-commit",
-      "Plan"
+      "pre-commit",
+      "plan"
     ]
     require_linear_history = true
   }
