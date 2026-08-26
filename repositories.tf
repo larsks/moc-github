@@ -713,3 +713,9 @@ module "repo-rhoso18-deployment" {
     "tzumainn" = "admin"
   }
 }
+
+module "repo-moc-private" {
+  source     = "./modules/common_repository"
+  name       = "moc-private"
+  visibility = "private"
+}
