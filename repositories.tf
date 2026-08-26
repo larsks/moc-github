@@ -719,3 +719,9 @@ module "repo-moc-private" {
   name       = "moc-private"
   visibility = "private"
 }
+
+module "repo-pure-cosi" {
+  source      = "./modules/common_repository"
+  name        = "pure-cosi"
+  description = "COSI driver for everpure flashblade"
+}
