@@ -725,3 +725,9 @@ module "repo-pure-cosi" {
   name        = "pure-cosi"
   description = "COSI driver for everpure flashblade"
 }
+
+module "repo-moc-services-config" {
+  source      = "./modules/common_repository"
+  name        = "moc-services-config"
+  description = "COSI driver for everpure flashblade"
+}
