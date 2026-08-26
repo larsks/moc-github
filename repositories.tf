@@ -730,6 +730,16 @@ module "repo-pure-cosi" {
   source      = "./modules/common_repository"
   name        = "pure-cosi"
   description = "COSI driver for everpure flashblade"
+
+  teams = {
+    "open-source-contributors" = "pull"
+    "ops-collab"               = "pull"
+    "ops-core"                 = "pull"
+  }
+
+  users = {
+    "naved001" = "admin"
+  }
 }
 
 module "repo-moc-services-config" {
