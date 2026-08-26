@@ -724,6 +724,10 @@ module "repo-moc-private" {
   source     = "./modules/common_repository"
   name       = "moc-private"
   visibility = "private"
+
+  teams = {
+    "ops-core" = "maintain"
+  }
 }
 
 module "repo-pure-cosi" {
@@ -746,4 +750,9 @@ module "repo-moc-services-config" {
   source      = "./modules/common_repository"
   name        = "moc-services-config"
   description = "COSI driver for everpure flashblade"
+
+  labels = {
+    "github_actions" = { color = "000000", description = "Pull requests that update GitHub Actions code" }
+    "dependencies"   = { color = "0366d6", description = "Pull requests that update a dependency file" }
+  }
 }
