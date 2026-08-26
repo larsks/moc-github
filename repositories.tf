@@ -645,6 +645,10 @@ module "repo-pfsense-firewall-ansible" {
   name        = "pfsense-firewall-ansible"
   description = "Ansible playbooks to manage our pfsense firewalls"
   visibility  = "private"
+
+  users = {
+    "tzumainn" = "push"
+  }
 }
 
 module "repo-pfsense-tools" {
