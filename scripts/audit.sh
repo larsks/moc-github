@@ -10,6 +10,11 @@ log info "loading state"
 state=$(tofu show -json)
 archived_state=$(tofu -chdir=archived-repositories show -json)
 
+if [[ -z "$state" ]]; then
+  echo "ERROR: unable to read tofu state" >&2
+  exit 1
+fi
+
 log info "finding managed repositories"
 managed_repositories=$(
   (
