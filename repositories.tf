@@ -353,6 +353,8 @@ module "repo-moc-issues" {
     "website"                                = { color = "334A9E", description = "" }
     "open-accelerator"                       = { color = "0e8a16", description = "Open Accelerator environment" }
     "NIST 800-171"                           = { color = "aaaaaa" }
+    "NIST 800-53"                            = { color = "76cf17", description = "NIST 800-53 compliance related" }
+    "HIPAA"                                  = { color = "8951ec", description = "HIPAA compliance related" }
   }
 }
 
