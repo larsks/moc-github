@@ -756,3 +756,9 @@ module "repo-moc-services-config" {
     "dependencies"   = { color = "0366d6", description = "Pull requests that update a dependency file" }
   }
 }
+
+module "repo-coldfront-moc" {
+  source      = "./modules/common_repository"
+  name        = "coldfront-moc"
+  description = "ColdFront container and kubernetes manifests for the MOC"
+}
