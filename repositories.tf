@@ -762,3 +762,13 @@ module "repo-coldfront-moc" {
   name        = "coldfront-moc"
   description = "ColdFront container and kubernetes manifests for the MOC"
 }
+
+module "repo-moc-keycloak" {
+  source      = "./modules/common_repository"
+  name        = "moc-keycloak"
+  description = "Keycloak configuration for sso.massopen.cloud"
+
+  teams = {
+    "keycloak-workers" = "maintain"
+  }
+}
