@@ -771,4 +771,13 @@ module "repo-moc-keycloak" {
   teams = {
     "keycloak-workers" = "maintain"
   }
+
+  branch_protection = {
+    required_reviews = 1
+    required_status_checks = [
+      "pre-commit",
+      "bootstrap"
+    ]
+    require_linear_history = true
+  }
 }
