@@ -793,3 +793,13 @@ module "repo-coldfront-openshift-operator" {
     "QuanMPhm" = "admin"
   }
 }
+
+module "repo-oac-user-docs" {
+  source      = "./modules/common_repository"
+  name        = "oac-user-docs"
+  description = "Open Accelerator user documentation"
+
+  teams = {
+    "open-accelerator" = "write"
+  }
+}
