@@ -771,7 +771,7 @@ module "repo-moc-keycloak" {
 
   teams = {
     "keycloak-workers" = "maintain"
-    "open-accelerator" = "write"
+    "open-accelerator" = "push"
   }
 
   branch_protection = {
@@ -800,6 +800,11 @@ module "repo-oac-user-docs" {
   description = "Open Accelerator user documentation"
 
   teams = {
-    "open-accelerator" = "write"
+    "open-accelerator" = "push"
+  }
+
+  pages = {
+    cname      = "docs.oac.massopen.cloud"
+    build_type = "workflow"
   }
 }
