@@ -771,6 +771,7 @@ module "repo-moc-keycloak" {
 
   teams = {
     "keycloak-workers" = "maintain"
+    "open-accelerator" = "write"
   }
 
   branch_protection = {
