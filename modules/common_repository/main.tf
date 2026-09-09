@@ -49,6 +49,24 @@ resource "github_repository" "this" {
   }
 }
 
+resource "github_repository_pages" "this" {
+  count      = var.archived || var.pages == null ? 0 : 1
+  repository = github_repository.this.name
+
+  cname          = var.pages.cname
+  build_type     = var.pages.build_type
+  https_enforced = var.pages.https_enforced
+
+  dynamic "source" {
+    for_each = var.pages.source != null ? [var.pages.source] : []
+
+    content {
+      branch = source.value.branch
+      path   = source.value.path
+    }
+  }
+}
+
 resource "github_repository_collaborators" "this" {
   repository = github_repository.this.name
 
