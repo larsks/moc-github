@@ -782,3 +782,13 @@ module "repo-moc-keycloak" {
     require_linear_history = true
   }
 }
+
+module "repo-coldfront-openshift-operator" {
+  source      = "./modules/common_repository"
+  name        = "coldfront-openshift-operator"
+  description = "Proof-of-concept for MOC Coldfront Openshift operator using Kopf"
+
+  users = {
+    "QuanMPhm" = "admin"
+  }
+}
