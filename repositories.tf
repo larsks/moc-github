@@ -705,6 +705,11 @@ module "repo-oac-apps" {
   teams = {
     open-accelerator = "maintain"
   }
+
+  branch_protection = {
+    required_reviews       = 1
+    require_linear_history = true
+  }
 }
 
 module "repo-rhoso18-deployment" {
