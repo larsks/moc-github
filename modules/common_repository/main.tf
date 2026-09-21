@@ -116,8 +116,9 @@ resource "terraform_data" "remove_legacy_branch_protection" {
 
   provisioner "local-exec" {
     command = <<-EOT
-      gh api -X DELETE \
-        "/repos/${github_repository.this.full_name}/branches/${github_repository.this.default_branch}/protection" \
+      repo="${github_repository.this.full_name}"
+      branch="$(gh api "/repos/$repo" --jq .default_branch 2>/dev/null)" || exit 0
+      gh api -X DELETE "/repos/$repo/branches/$branch/protection" \
         --silent 2>/dev/null || true
     EOT
   }
