@@ -756,6 +756,10 @@ module "repo-moc-services-config" {
   source      = "./modules/common_repository"
   name        = "moc-services-config"
   description = "COSI driver for everpure flashblade"
+  template = {
+    owner      = "CCI-MOC"
+    repository = "moc-template"
+  }
 
   labels = {
     "github_actions" = { color = "000000", description = "Pull requests that update GitHub Actions code" }
@@ -773,6 +777,10 @@ module "repo-moc-keycloak" {
   source      = "./modules/common_repository"
   name        = "moc-keycloak"
   description = "Keycloak configuration for sso.massopen.cloud"
+  template = {
+    owner      = "CCI-MOC"
+    repository = "moc-template"
+  }
 
   teams = {
     "keycloak-workers" = "maintain"
