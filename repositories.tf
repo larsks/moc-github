@@ -689,7 +689,7 @@ module "repo-virtualbmc" {
 
 module "repo-open-accelerator-infra" {
   source      = "./modules/common_repository"
-  name        = "open-accelerator-infra"
+  name        = "oac-infra"
   description = "Infrastructure configuration for the open accelerator project"
 
   teams = {
