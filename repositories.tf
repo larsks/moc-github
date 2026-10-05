@@ -825,3 +825,13 @@ module "repo-oac-user-docs" {
     build_type = "workflow"
   }
 }
+
+module "repo-moc-github" {
+  source      = "./modules/common_repository"
+  name        = "moc-github"
+  description = "OpenTofu configuration for managing CCI-MOC github organization"
+
+  teams = {
+    "ops-core" = "push"
+  }
+}
