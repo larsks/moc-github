@@ -230,9 +230,9 @@ module "repo-moc-aws" {
   }
 
   teams = {
-    ops-core                = "admin"
-    ops-collab              = "triage"
-    open-accelerator-admins = "triage"
+    ops-core         = "admin"
+    ops-collab       = "triage"
+    open-accelerator = "triage"
   }
 }
 
